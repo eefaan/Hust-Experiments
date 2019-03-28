@@ -50,7 +50,7 @@ void MainWindow::count_1_1000()
 void MainWindow::display_time()
 {
     QDateTime time = QDateTime::currentDateTime();
-    QString str = time.toString("hh:mm:ss dddd");
+    QString str = time.toString("yyyy-MM-dd hh:mm:ss dddd");
     qDebug()<<str;
     ui->label->setText(str);
 }

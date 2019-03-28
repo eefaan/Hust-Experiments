@@ -11,8 +11,11 @@
 #include <QProcess>
 #include <time.h>
 #include <unistd.h>
+#include <pthread.h>
+//#include "qcustomplot.h"
 //#include <linux/reboot.h>
 
+//using namespace std;
 namespace Ui {
 class MainWindow;
 }
@@ -28,7 +31,7 @@ public:
 private:
     Ui::MainWindow *ui;
 
-
+friend void* a_new_thread();
 
 public:
     int cell_row;
@@ -40,6 +43,12 @@ public:
     QString cpuinfo_file;
     QString stat_file;
     QString meminfo_file;
+    double cpu_n;
+    double cpu_num[100];
+    double mem_n;
+    double mem_num[100];
+    double swap_n;
+    double swap_num[100];
 
 signals:
     void sys_info(int num, QString Msg);
@@ -56,6 +65,9 @@ public slots:
     void process_shut();
     void process_creat();
     void search_pid(QString text);
+    void graph_cpu();
+    void graph_memory();
+    void graph_swap();
 };
 
 #endif // MAINWINDOW_H

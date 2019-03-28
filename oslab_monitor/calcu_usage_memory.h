@@ -15,7 +15,7 @@ public:
 
 public:
     string file_name;
-    string show_usage();
+    string show_usage(double &mem_n, double&swap_n);
 };
 
 #endif // CALCU_USAGE_MEMORY_H

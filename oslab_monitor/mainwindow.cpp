@@ -7,13 +7,13 @@
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow),
-    hostname_file("/Users/yifanliu/Desktop/stat_temp/proc_sys_kernel/hostname"),
-    uptime_file("/Users/yifanliu/Desktop/stat_temp/proc_uptime"),
-    ostype_file("/Users/yifanliu/Desktop/stat_temp/proc_sys_kernel/ostype"),
-    osrelease_file("/Users/yifanliu/Desktop/stat_temp/proc_sys_kernel/osrelease"),
-    cpuinfo_file("/Users/yifanliu/Desktop/stat_temp/proc_cpuinfo"),
-    stat_file("/Users/yifanliu/Desktop/stat_temp/proc_stat"),
-    meminfo_file("/Users/yifanliu/Desktop/stat_temp/proc_meminfo")
+    hostname_file("/proc/sys/kernel/hostname"),
+    uptime_file("/proc/uptime"),
+    ostype_file("/proc/sys/kernel/ostype"),
+    osrelease_file("/proc/sys/kernel/osrelease"),
+    cpuinfo_file("/proc/cpuinfo"),
+    stat_file("/proc/stat"),
+    meminfo_file("/proc/meminfo")
 {
     ui->setupUi(this);
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
@@ -40,6 +40,18 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->proc_creat, SIGNAL(clicked()), this, SLOT(process_creat()));
     connect(ui->Edit_pid, SIGNAL(textEdited(QString)), this, SLOT(search_pid(QString)));
 
+    // initial graph
+    for (int i=0; i<100; i++){
+        cpu_num[i]=0;
+        mem_num[i]=0;
+        swap_num[i]=0;
+    }
+
+
+    // show graph
+    connect(mytimer, SIGNAL(timeout()), this, SLOT(graph_cpu()));
+    connect(mytimer, SIGNAL(timeout()), this, SLOT(graph_memory()));
+    connect(mytimer, SIGNAL(timeout()), this, SLOT(graph_swap()));
 }
 
 MainWindow::~MainWindow()
@@ -49,11 +61,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::shut()
 {
-//    reboot(LINUX_REBOOT_MAGIC1,
-//               LINUX_REBOOT_MAGIC2,
-//               LINUX_REBOOT_CMD_POWER_OFF, 0);
     QProcess process;
-    process.startDetached("shutdown");
+    process.startDetached("shutdown -h now");
 }
 
 void MainWindow::reboot()
@@ -229,16 +238,17 @@ void MainWindow::set_status_time()
 void MainWindow::set_status_cpu_usage()
 {
     QString str="";
-    calcu_usage_cpu cpu("/Users/yifanliu/Desktop/stat_temp/proc_stat");
-    str = QString::fromStdString(cpu.show_usage());
+    calcu_usage_cpu cpu("/proc/stat");
+//    str = QString::fromStdString(cpu.show_usage(this->cpu_n));
+    str = QString::fromStdString(cpu.show_usage(cpu_n));
     ui->label_cpu->setText(str);
 }
 
 void MainWindow::set_status_memory_usage()
 {
     QString str="";
-    calcu_usage_memory mem("/Users/yifanliu/Desktop/stat_temp/proc_meminfo");
-    str = QString::fromStdString(mem.show_usage());
+    calcu_usage_memory mem("/proc/meminfo");
+    str = QString::fromStdString(mem.show_usage(mem_n,swap_n));
     ui->label_memory->setText(str);
 }
 
@@ -358,9 +368,28 @@ void MainWindow::process_shut()
     process.kill();
 }
 
+void* a_new_thread(void* args)
+{
+//    execv();
+    qDebug()<<"new thread";
+    QProcess process;
+    process.startDetached("/home/parallels/build-oslab_3wins-Desktop_Qt_5_0_2_GCC_64bit-Debug/oslab_3wins");
+    pthread_exit(NULL);
+    qDebug()<<"thread dead";
+    return 0;
+}
+
+
 void MainWindow::process_creat()
 {
-
+    // 定义线程的 id 变量，多个变量使用数组
+    pthread_t tids;
+    //参数依次是：创建的线程id，线程参数，调用的函数，传入的函数参数
+    int ret = pthread_create(&tids, NULL, a_new_thread, NULL);
+    if (ret != 0)
+    {
+       qDebug() << "pthread_create error: error_code=" << ret << endl;
+    }
 }
 
 void MainWindow::search_pid(QString text)
@@ -395,4 +424,175 @@ void MainWindow::search_pid(QString text)
         this->cell_column=-1;
         return;
     }
+}
+
+void MainWindow::graph_cpu()
+{
+    //设置画布颜色
+    QLinearGradient plotGradient;
+    plotGradient.setColorAt(0, QColor(80, 80, 80));
+    ui->widget_cpu->setBackground(plotGradient);
+
+    //设置坐标颜色/坐标名称颜色
+    ui->widget_cpu->xAxis->setLabelColor(Qt::white);//文字颜色
+    ui->widget_cpu->yAxis->setLabelColor(Qt::white);
+    ui->widget_cpu->xAxis->setTickLabelColor(Qt::white);//坐标轴数字颜色
+    ui->widget_cpu->yAxis->setTickLabelColor(Qt::white);
+    ui->widget_cpu->xAxis->setBasePen(QPen(Qt::white, 1));//坐标轴颜色及宽度
+    ui->widget_cpu->yAxis->setBasePen(QPen(Qt::white, 1));
+    ui->widget_cpu->xAxis->setTickPen(QPen(Qt::white, 1));//主刻度
+    ui->widget_cpu->yAxis->setTickPen(QPen(Qt::white, 1));
+    ui->widget_cpu->xAxis->setSubTickPen(QPen(Qt::white, 1));//副刻度
+    ui->widget_cpu->yAxis->setSubTickPen(QPen(Qt::white, 1));
+
+    //设置属性可缩放，移动等
+//    CustomPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
+//                                     QCP::iSelectLegend | QCP::iSelectPlottables);
+
+//    QTime t;
+//    t=QTime::currentTime();
+//    qsrand(QTime(0, 0, 0).secsTo(QTime::currentTime()));
+//    n=qrand()%50;
+
+    QVector<double> temp(100);
+    QVector<double> temp1(100);
+
+
+    for(int i=0; i<99; i++)
+    {
+        cpu_num[i]=cpu_num[i+1];
+    }
+    cpu_num[99]=cpu_n;
+//    for(int i=0;i<120;i++){
+//        temp[i]=i;
+//    }
+    for(int i=0;i<100;i++)
+    {
+        temp[i] = i;
+        temp1[i] = cpu_num[i];
+    }
+    ui->widget_cpu->addGraph();
+    ui->widget_cpu->graph(0)->setPen(QPen(Qt::green));
+    ui->widget_cpu->graph(0)->setData(temp,temp1);
+
+    ui->widget_cpu->xAxis->setLabel("time");
+    ui->widget_cpu->yAxis->setLabel("rate");
+
+    ui->widget_cpu->xAxis->setRange(0,100);
+    ui->widget_cpu->yAxis->setRange(0,100);
+    ui->widget_cpu->replot();
+}
+
+void MainWindow::graph_memory()
+{
+    //设置画布颜色
+    QLinearGradient plotGradient;
+    plotGradient.setColorAt(0, QColor(80, 80, 80));
+    ui->widget_mem->setBackground(plotGradient);
+
+    //设置坐标颜色/坐标名称颜色
+    ui->widget_mem->xAxis->setLabelColor(Qt::white);//文字颜色
+    ui->widget_mem->yAxis->setLabelColor(Qt::white);
+    ui->widget_mem->xAxis->setTickLabelColor(Qt::white);//坐标轴数字颜色
+    ui->widget_mem->yAxis->setTickLabelColor(Qt::white);
+    ui->widget_mem->xAxis->setBasePen(QPen(Qt::white, 1));//坐标轴颜色及宽度
+    ui->widget_mem->yAxis->setBasePen(QPen(Qt::white, 1));
+    ui->widget_mem->xAxis->setTickPen(QPen(Qt::white, 1));//主刻度
+    ui->widget_mem->yAxis->setTickPen(QPen(Qt::white, 1));
+    ui->widget_mem->xAxis->setSubTickPen(QPen(Qt::white, 1));//副刻度
+    ui->widget_mem->yAxis->setSubTickPen(QPen(Qt::white, 1));
+
+    //设置属性可缩放，移动等
+//    CustomPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
+//                                     QCP::iSelectLegend | QCP::iSelectPlottables);
+
+//    QTime t;
+//    t=QTime::currentTime();
+//    qsrand(QTime(0, 0, 0).secsTo(QTime::currentTime()));
+//    n=qrand()%50;
+
+    QVector<double> temp(100);
+    QVector<double> temp1(100);
+
+
+    for(int i=0; i<99; i++)
+    {
+        mem_num[i]=mem_num[i+1];
+    }
+    mem_num[99]=mem_n;
+//    for(int i=0;i<120;i++){
+//        temp[i]=i;
+//    }
+    for(int i=0;i<100;i++)
+    {
+        temp[i] = i;
+        temp1[i] = mem_num[i];
+    }
+    ui->widget_mem->addGraph();
+    ui->widget_mem->graph(0)->setPen(QPen(Qt::green));
+    ui->widget_mem->graph(0)->setData(temp,temp1);
+
+    ui->widget_mem->xAxis->setLabel("time");
+    ui->widget_mem->yAxis->setLabel("rate");
+
+    ui->widget_mem->xAxis->setRange(0,100);
+    ui->widget_mem->yAxis->setRange(0,100);
+    ui->widget_mem->replot();
+}
+
+void MainWindow::graph_swap()
+{
+    //设置画布颜色
+    QLinearGradient plotGradient;
+    plotGradient.setColorAt(0, QColor(80, 80, 80));
+    ui->widget_swap->setBackground(plotGradient);
+
+    //设置坐标颜色/坐标名称颜色
+    ui->widget_swap->xAxis->setLabelColor(Qt::white);//文字颜色
+    ui->widget_swap->yAxis->setLabelColor(Qt::white);
+    ui->widget_swap->xAxis->setTickLabelColor(Qt::white);//坐标轴数字颜色
+    ui->widget_swap->yAxis->setTickLabelColor(Qt::white);
+    ui->widget_swap->xAxis->setBasePen(QPen(Qt::white, 1));//坐标轴颜色及宽度
+    ui->widget_swap->yAxis->setBasePen(QPen(Qt::white, 1));
+    ui->widget_swap->xAxis->setTickPen(QPen(Qt::white, 1));//主刻度
+    ui->widget_swap->yAxis->setTickPen(QPen(Qt::white, 1));
+    ui->widget_swap->xAxis->setSubTickPen(QPen(Qt::white, 1));//副刻度
+    ui->widget_swap->yAxis->setSubTickPen(QPen(Qt::white, 1));
+
+    //设置属性可缩放，移动等
+//    CustomPlot->setInteractions(QCP::iRangeDrag | QCP::iRangeZoom | QCP::iSelectAxes |
+//                                     QCP::iSelectLegend | QCP::iSelectPlottables);
+
+//    QTime t;
+//    t=QTime::currentTime();
+//    qsrand(QTime(0, 0, 0).secsTo(QTime::currentTime()));
+//    n=qrand()%50;
+
+    QVector<double> temp(100);
+    QVector<double> temp1(100);
+
+
+    for(int i=0; i<99; i++)
+    {
+        swap_num[i]=swap_num[i+1];
+    }
+    swap_num[99]=swap_n;
+//    for(int i=0;i<120;i++){
+//        temp[i]=i;
+//    }
+    for(int i=0;i<100;i++)
+    {
+        temp[i] = i;
+        temp1[i] = swap_num[i];
+    }
+    ui->widget_swap->addGraph();
+    ui->widget_swap->graph(0)->setPen(QPen(Qt::green));
+    ui->widget_swap->graph(0)->setData(temp,temp1);
+
+    ui->widget_swap->xAxis->setLabel("time");
+    ui->widget_swap->yAxis->setLabel("rate");
+
+    ui->widget_swap->xAxis->setRange(0,100);
+    ui->widget_swap->yAxis->setRange(0,100);
+    ui->widget_swap->replot();
 }

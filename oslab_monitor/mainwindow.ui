@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>591</width>
-    <height>565</height>
+    <width>721</width>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>591</width>
+      <width>721</width>
       <height>461</height>
      </rect>
     </property>
@@ -71,13 +71,13 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>591</width>
+        <width>721</width>
         <height>431</height>
        </rect>
       </property>
       <property name="maximumSize">
        <size>
-        <width>591</width>
+        <width>1000</width>
         <height>431</height>
        </size>
       </property>
@@ -153,7 +153,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>461</width>
+        <width>581</width>
         <height>431</height>
        </rect>
       </property>
@@ -186,7 +186,7 @@
      <widget class="QLabel" name="label_pNum">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>590</x>
         <y>130</y>
         <width>111</width>
         <height>16</height>
@@ -199,7 +199,7 @@
      <widget class="QLabel" name="label_pRun">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>590</x>
         <y>170</y>
         <width>111</width>
         <height>16</height>
@@ -212,7 +212,7 @@
      <widget class="QLabel" name="label_pSleep">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>590</x>
         <y>210</y>
         <width>111</width>
         <height>16</height>
@@ -225,7 +225,7 @@
      <widget class="QPushButton" name="proc_creat">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>590</x>
         <y>370</y>
         <width>121</width>
         <height>32</height>
@@ -238,7 +238,7 @@
      <widget class="QPushButton" name="proc_shut">
       <property name="geometry">
        <rect>
-        <x>460</x>
+        <x>590</x>
         <y>400</y>
         <width>121</width>
         <height>32</height>
@@ -251,7 +251,7 @@
      <widget class="QLabel" name="label_pZombie">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>590</x>
         <y>250</y>
         <width>111</width>
         <height>16</height>
@@ -264,11 +264,24 @@
      <widget class="QLineEdit" name="Edit_pid">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>600</x>
         <y>330</y>
         <width>101</width>
         <height>21</height>
        </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>590</x>
+        <y>300</y>
+        <width>76</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Search:</string>
       </property>
      </widget>
     </widget>
@@ -276,6 +289,75 @@
      <attribute name="title">
       <string>Graph</string>
      </attribute>
+     <widget class="QCustomPlot" name="widget_cpu" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>691</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CPU Usage:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Memory Usage:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>111</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Swap Usage:</string>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="widget_mem" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>691</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QCustomPlot" name="widget_swap" native="true">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>310</y>
+        <width>691</width>
+        <height>121</height>
+       </rect>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QLabel" name="label_now">
@@ -320,7 +402,7 @@
    <widget class="QPushButton" name="button_shut">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>600</x>
       <y>490</y>
       <width>111</width>
       <height>32</height>
@@ -333,7 +415,7 @@
    <widget class="QPushButton" name="button_reboot">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>600</x>
       <y>460</y>
       <width>111</width>
       <height>32</height>
@@ -349,8 +431,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>591</width>
-     <height>22</height>
+     <width>721</width>
+     <height>24</height>
     </rect>
    </property>
   </widget>
@@ -367,6 +449,14 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QCustomPlot</class>
+   <extends>QWidget</extends>
+   <header>qcustomplot.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

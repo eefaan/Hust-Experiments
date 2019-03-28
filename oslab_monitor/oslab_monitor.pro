@@ -5,6 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT += printsupport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,12 +29,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     calcu_usage_cpu.cpp \
-    calcu_usage_memory.cpp
+    calcu_usage_memory.cpp \
+    qcustomplot.cpp
 
 HEADERS += \
         mainwindow.h \
     calcu_usage_cpu.h \
-    calcu_usage_memory.h
+    calcu_usage_memory.h \
+    qcustomplot.h
 
 FORMS += \
         mainwindow.ui

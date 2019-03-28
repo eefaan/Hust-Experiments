@@ -14,7 +14,7 @@ calcu_usage_cpu::calcu_usage_cpu(string file):
 
 calcu_usage_cpu::~calcu_usage_cpu(){}
 
-string calcu_usage_cpu::show_usage()
+string calcu_usage_cpu::show_usage(double &n)
 {
     fstream fs;
     string line;
@@ -56,6 +56,7 @@ string calcu_usage_cpu::show_usage()
         result += (name+":");
         result += to_string(us_num);
         result += "% ";
+        n=us_num;
 
 //        qDebug() << QString::fromStdString(result);
         fs.getline(buffer,1000);

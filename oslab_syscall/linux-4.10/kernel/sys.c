@@ -2445,21 +2445,21 @@ asmlinkage long sys_mycopy(const char* src_file, const char* tar_file)
 	// open src_file
 	if((infd=sys_open(src_file, O_RDONLY, 0)) == -1){// open src_file failed, return 1
 		printk("Open src_file failed!\n");
-		return 1;	
+		return 1;
 	}
 	// open tar_file
 	if((outfd=sys_open(tar_file, O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR)) == -1){// open tar_file failed, return 2
 		printk("Open tar_file failed!\n");
 		return 2;
 	}
-	
+
 	while((size = sys_read(infd, buf, 256)) > 0){// read data from infd to buf
-		if(sys_write(outfd, buf, count) != size){// if write failed, return 3
+		if(sys_write(outfd, buf, size) != size){// if write failed, return 3
 			printk("Write to tar_file failed!\n");
 			return 3;
-		}	
+		}
 	}
-	if(count == -1){// if read failed, return 4
+	if(size == -1){// if read failed, return 4
 		printk("Read from src_file failed!\n");
 		return 4;
 	}

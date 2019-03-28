@@ -1,5 +1,4 @@
 #include "mainwindow.h"
-#include "mywidget.h"
 #include <QApplication>
 
 int main(int argc, char *argv[])
@@ -14,9 +13,6 @@ int main(int argc, char *argv[])
     x.show();
     y.show();
     z.show();
-//    mywidget h;
-//    h.show();
-
 
     return a.exec();
 }

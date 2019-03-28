@@ -14,7 +14,7 @@ calcu_usage_memory::calcu_usage_memory(string file):
 
 calcu_usage_memory::~calcu_usage_memory(){}
 
-string calcu_usage_memory::show_usage()
+string calcu_usage_memory::show_usage(double &mem_n, double&swap_n)
 {
     fstream fs;
     string line;
@@ -61,10 +61,46 @@ string calcu_usage_memory::show_usage()
         return "mem data read error!";
     }
 
+    // make result
     double me_num = (1.0-(free/total))*100;
+    mem_n = me_num;
     result += "memory:";
     result += to_string(me_num);
     result += "%";
+
+
+
+    for(int i=0; i<13; i++){
+        fs.getline(buffer,1000);
+        line=buffer;
+    }
+    patterm = "SwapTotal:";
+    re = regex(patterm);
+    if(regex_search(line,sm,re)){
+        line = sm.suffix();
+        patterm = "[0-9]+";
+        re = regex(patterm);
+        regex_search(line, sm, re);
+        total = stod(sm.str());
+    }
+    else {
+        return "swap data read error!";
+    }
+    fs.getline(buffer,1000);
+    line=buffer;
+    patterm = "SwapFree:";
+    re = regex(patterm);
+    if(regex_search(line,sm,re)){
+        line = sm.suffix();
+        patterm = "[0-9]+";
+        re = regex(patterm);
+        regex_search(line, sm, re);
+        free = stod(sm.str());
+    }
+    else {
+        return "swap data read error!";
+    }
+    swap_n = (1.0-(free/total))*100;
 
     return result;
 }
