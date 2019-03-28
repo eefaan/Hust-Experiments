@@ -188,7 +188,7 @@ void Run(FILE *fp)
 			}
 			switch (p)
 			{
-			case 0:// quit
+			case 0:// exit
 				WriteToFile(fp);
 				return;
 			case 1:// help
@@ -239,7 +239,7 @@ void Run(FILE *fp)
 			case 13:// info
 				show_info();
 				break;
-			case 14:// exit
+			case 14:// logout
 				logout(fp);
 				break;
 			case 15:// switch
@@ -252,14 +252,14 @@ void Run(FILE *fp)
 				scanf("%s", tmp);
 				change_mode(tmp);
 				break;
-			case 17:// chusr
+			case 17:// manage
 				manage_user();
 				break;
-			case 18:
+			case 18:// testread
 				scanf("%s", tmp);
 				read_shared_file(tmp);
 				break;
-			case 19:// write
+			case 19:// testwrite
 				scanf("%s", tmp);
 				write_shared_file(tmp);
 				break;
