@@ -3,9 +3,9 @@ Hust-OS-Experiments on 2019.3.10
 
 ## Problems
 ### Step1:
-![1b4eab2de59802ec710bb0b24560cc21.png](evernotecid://77DA6CCE-76EB-43BB-8369-649F8CF903C2/appyinxiangcom/22165047/ENResource/p1)
+![1b4eab2de59802ec710bb0b24560cc21.png](https://raw.githubusercontent.com/eefaan/Hust-OS-Experiments/master/src/pic/Step1.png)
 ### Step2:
-![76ce81dde88c89874261942abc171c9d.png](evernotecid://77DA6CCE-76EB-43BB-8369-649F8CF903C2/appyinxiangcom/22165047/ENResource/p2)
+![76ce81dde88c89874261942abc171c9d.png](https://raw.githubusercontent.com/eefaan/Hust-OS-Experiments/master/src/pic/Step2.png)
 ### Step3:
 ![87de08f725998003ccc51f2610402105.png](evernotecid://77DA6CCE-76EB-43BB-8369-649F8CF903C2/appyinxiangcom/22165047/ENResource/p3)
 ### Step4:
