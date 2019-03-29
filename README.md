@@ -28,19 +28,33 @@ __function list:__
 
 __link to "/proc":__
 功能(1)：/proc/sys/kernel/hostname
+
 功能(2)：/proc/uptime
+
 功能(3)：/proc/uptime
+
 功能(4)：/proc/sys/kernel/ostype, /proc/sys/kernel/osrelease
+
 功能(5)：/proc/cpuinfo
+
 功能(6)：/proc/(pid)/stat
+
 功能(7)：/proc/(pid)/stat, /proc/(pid)/statm
+
 功能(8)：/proc/stat
+
 功能(9)：/proc/meminfo
+
 功能(10)：未使用proc文件系统
+
 功能(11)：/proc/stat
+
 功能(12)：/proc/meminfo
+
 功能(13)：未使用proc文件系统
+
 功能(14)：未使用proc文件系统
+
 ### Step5:
 ![b353b46a41aa50e7284e7c391cb07abb.png](evernotecid://77DA6CCE-76EB-43BB-8369-649F8CF903C2/appyinxiangcom/22165047/ENResource/p5)
 
