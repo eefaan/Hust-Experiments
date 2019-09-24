@@ -1,1 +1,0 @@
-cmd_/home/parallels/oslab_mydriver/mydriver.ko := ld -r -m elf_x86_64 -T ./scripts/module-common.lds --build-id  -o /home/parallels/oslab_mydriver/mydriver.ko /home/parallels/oslab_mydriver/mydriver.o /home/parallels/oslab_mydriver/mydriver.mod.o ;  true
