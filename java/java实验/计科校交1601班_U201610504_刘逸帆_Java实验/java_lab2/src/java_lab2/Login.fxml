@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_lab2.LoginController">
+   <children>
+      <CheckBox fx:id="patient_set" layoutX="185.0" layoutY="107.0" mnemonicParsing="false" onAction="#click_patient" text="i'm patient" />
+      <CheckBox fx:id="doctor_set" layoutX="330.0" layoutY="107.0" mnemonicParsing="false" onAction="#click_doctor" text="i'm doctor" />
+      <Label layoutX="180.0" layoutY="174.0" text="Account:" />
+      <TextField fx:id="account" layoutX="254.0" layoutY="169.0" />
+      <Label layoutX="180.0" layoutY="209.0" text="Password:" />
+      <PasswordField fx:id="password" layoutX="254.0" layoutY="204.0" />
+      <Button fx:id="login" layoutX="269.0" layoutY="264.0" mnemonicParsing="false" onAction="#click_login" text="LOG IN" />
+   </children>
+</Pane>

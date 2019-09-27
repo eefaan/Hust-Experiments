@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.201" xmlns:fx="http://javafx.com/fxml/1" fx:controller="java_lab2.DoctorController">
+   <columnConstraints>
+      <ColumnConstraints halignment="LEFT" minWidth="-Infinity" />
+      <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="130.0" />
+      <ColumnConstraints hgrow="NEVER" minWidth="-Infinity" prefWidth="130.0" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" />
+      <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="-Infinity" prefWidth="130.0" />
+      <ColumnConstraints halignment="LEFT" hgrow="NEVER" minWidth="-Infinity" prefWidth="130.0" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="350.0" minHeight="300.0" prefHeight="350.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="50.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="50.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="30.0" minHeight="20.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="71.0" minHeight="0.0" prefHeight="0.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <JFXTabPane fx:id="mainPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" GridPane.columnSpan="2147483647" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+         <tabs>
+          <Tab fx:id="tabRegister" text="挂号列表">
+               <content>
+                  <JFXTreeTableView fx:id="tableRegister" showRoot="false">
+                     <columns>
+                        <TreeTableColumn fx:id="columnRegisterNumber" minWidth="50.0" prefWidth="75.0" style="-fx-alignment: center;" text="挂号编号" />
+                        <TreeTableColumn fx:id="columnRegisterPatientName" minWidth="50.0" prefWidth="75.0" style="-fx-alignment: center;" text="病人名称" />
+                        <TreeTableColumn fx:id="columnRegisterDateTime" minWidth="75.0" prefWidth="75.0" style="-fx-alignment: center;" text="挂号日期时间" />
+                        <TreeTableColumn fx:id="columnRegisterType" minWidth="50.0" prefWidth="50.0" style="-fx-alignment: center;" text="号种类别" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXTreeTableView>
+               </content>
+          </Tab>
+          <Tab fx:id="tabIncome" onSelectionChanged="#tabSelectionChanged" text="收入列表">
+               <content>
+                  <JFXTreeTableView fx:id="tableIncome" showRoot="false">
+                     <columns>
+                        <TreeTableColumn fx:id="columnIncomeDepartmentName" maxWidth="2000.0" prefWidth="50.0" style="-fx-alignment: center;" text="科室名称" />
+                        <TreeTableColumn fx:id="columnIncomeDoctorNumber" maxWidth="2000.0" prefWidth="75.0" style="-fx-alignment: center;" text="医生编号" />
+                        <TreeTableColumn fx:id="columnIncomeDoctorName" maxWidth="2000.0" prefWidth="75.0" style="-fx-alignment: center;" text="医生名称" />
+                        <TreeTableColumn fx:id="columnIncomeRegisterType" maxWidth="2000.0" prefWidth="75.0" style="-fx-alignment: center;" text="号种类别" />
+                        <TreeTableColumn fx:id="columnIncomeRegisterPopulation" maxWidth="2000.0" prefWidth="75.0" style="-fx-alignment: center;" text="挂号人次" />
+                        <TreeTableColumn fx:id="columnIncomeSum" maxWidth="2000.0" prefWidth="96.0" resizable="false" style="-fx-alignment: center;" text="收入合计" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TreeTableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </JFXTreeTableView>
+               </content>
+          </Tab>
+         </tabs>
+         <GridPane.margin>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </GridPane.margin>
+      </JFXTabPane>
+      <JFXTimePicker fx:id="pickerTimeStart" defaultColor="#2196f3" GridPane.columnIndex="2" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXTimePicker>
+      <Label text="结束时间" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <JFXDatePicker fx:id="pickerDateEnd" defaultColor="#2196f3" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXDatePicker>
+      <JFXTimePicker fx:id="pickerTimeEnd" defaultColor="#2196f3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXTimePicker>
+      <Label text="开始时间" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <JFXDatePicker fx:id="pickerDateStart" defaultColor="#2196f3" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXDatePicker>
+      <JFXCheckBox fx:id="checkBoxAllTime" onAction="#checkBoxAllTimeSelected" text="全部时间" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXCheckBox>
+      <JFXCheckBox fx:id="checkBoxToday" onAction="#checkBoxTodaySelected" text="今天" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </JFXCheckBox>
+      <JFXButton fx:id="buttonFilter" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#buttonFilterPressed" style="-fx-background-color: #2196f3;" text="过滤 / 更新" textFill="WHITE" GridPane.columnIndex="4" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.vgrow="NEVER">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </GridPane.margin>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="buttonExit" buttonType="RAISED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#logout_fire" onMouseClicked="#buttonExitClicked" style="-fx-background-color: #2196f3;" text="退出" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="2">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </GridPane.margin>
+      </JFXButton>
+      <Label fx:id="labelWelcome" text="Label" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+      <Label fx:id="labelName" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <Label fx:id="labelAccount" text="Label" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+   </children>
+</GridPane>
