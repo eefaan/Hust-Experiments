@@ -1,0 +1,63 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="hutch">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; I) [Netscape]">
+   <title>Code Portability</title>
+</head>
+<body text="#CCCCCC" bgcolor="#000000" link="#66FF99" vlink="#66FF99" alink="#FF0000">
+
+<center><b><i><font color="#3366FF"><font size=+4>Code Portability</font></font></i></b></center>
+
+<p><b>If you are writing code for platforms that collectively hold about
+2% of the computer software market, portability means something but in
+a market that is about 95% Microsoft operating system based, the advantages
+of size, speed and power easily outweigh the idea of being able to write
+code that can be compiled across different platforms.</b><b></b>
+<p><b>The problem with cross platform code is that it is by necessity,
+lowest common denominator code which generally performs poorly against
+platform specific code.</b><b></b>
+<p><b>There are often debates raging about the differing virtues of portable
+code versus platform specific code but what is not subject to debate is
+the measurement of disk size used or benchmarking in terms of performance.</b><b></b>
+<p><b>Platform specific code has the advantage to a large degree in terms
+of performance but at the price of not being compilable on other platforms.</b><b></b>
+<p><b>Very similar arguments are used by some who are of the view that
+high level languages are are now well enough written to be able to do what
+assembler can do but again, the measure of disk size and benchmarking the
+results tell a different story.</b><b></b>
+<p><b>Well written high level language code in a compiler that does not
+have too many bugs in it often performs well in comparison to badly written
+assembler code but to make the point, well written assembler code will
+outperform any high level language, no matter how well the high level language
+code it is written.</b><b></b>
+<p><b>Something that is missed in the debate is that assembler, in this
+case MASM, manages ALL of the normal high level constructions well. Normal
+functions with return values, procedures without return values, libraries,
+calls to DLLs, Windows resource usage etc.... but with the added advantage
+that it can use correctly written macros which more than edequately compensate
+for the pre-built systems in high level languages.</b><b></b>
+<p><b>Many who are of the OOP orientation conjure up the images of assembler
+programmers whittling out binary files in a hex editor but this is far
+from the way assembler programmers work. The pseudo high level syntax in
+MASM in conjunction with the macro capacity allows very clean code if it
+is written properly yet it is still no compromise pure assembler.</b><b></b>
+<p><b>The rough distinction here is that with an assembler, you get what
+you write where with a compiler, you get more than you write and have little
+control over what is added. There are certainly well designed compilers
+on the market but there is no reason to assume that any or all compilers
+are writen well without testing their output in terms of size or speed.</b><b></b>
+<p><b>Writing assembler for a specific platform, in this case 32 bit windows
+is an endeavour that does not undertake to compromise its performance in
+pursuit of a goal that usually cannot be achieved. It absolutely will not
+run on a MAC but with under 2% of the market, its a matter of "who cares".</b><b></b>
+<p><b>What you get with writing assembler for a specific platform is optimum
+performance for that platform and with 95% of the market using Intel based
+processors under Microsoft operating systems, what you get is the best
+performance on the major platform.</b><b></b>
+<p><b>For programmers who need optimum performance on other platforms,
+there is the same alternative, assemblers are available for MIPS, PPC &amp;
+68000 as well as less well known processors.</b>
+</body>
+</html>

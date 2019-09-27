@@ -1,0 +1,16 @@
+This subdirectory contains 3 stub executable files that pass the command
+line parameters to LINK.EXE for processing.
+
+    1. LIB.EXE
+
+    2. DUMPBIN.EXE
+
+    3. EDITBIN.EXE
+
+The code is identical with the exception of a single piece of BYTE data in
+each, the leading part of the command line passed to LINK.EXE.
+
+These utilities were not provided as free downloads in either the Microsoft
+platformsdk or win98ddk so they have been reproduced complete with source
+code so that they are available to programmers writing assembler with the
+MASM32 package.

@@ -1,0 +1,101 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="hutch">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; I) [Netscape]">
+   <title>Tools</title>
+</head>
+<body text="#CCCCCC" bgcolor="#000000" link="#66FF99" vlink="#66FF99" alink="#FF0000">
+
+<center><b><i><font color="#3366FF"><font size=+4>Tools &amp; Toys</font></font></i></b></center>
+
+<p><b><font color="#FFCC00">EDITOR</font></b>
+<br><b>The editor for MASM32 is <font color="#FFFF00">qeditor.exe</font>.
+It is to your advantage to set up the file associations in File Manager
+so that you can start an ASM file by double clicking on it in either File
+Manager or Explorer. Depending on how the individual computer is set up,
+this can sometimes be a problem in that Explorer will pass variable command
+line parameters enclosed in different formats. The best solution is to
+run "Options" in Explorer and set the options as follows,</b>
+<p><b>&nbsp;&nbsp;&nbsp; 1. Select "<font color="#FFCC00">Show All Files</font>"</b>
+<p><b>&nbsp;&nbsp;&nbsp; 2. Select "<font color="#FFCC00">Display the full
+MS-DOS path in the title bar</font>"</b>
+<p><b>&nbsp;&nbsp;&nbsp; 3. Do <u><font color="#FFFF00">not</font></u>
+select "<font color="#FFCC00">Hide MS-DOS file extensions for file types
+that are registered</font>"</b>
+<p><b>&nbsp;&nbsp;&nbsp; 4. Select "<font color="#FFCC00">Include description
+bar for right and left pains</font>"</b>
+<p><b>The editor comes pre-configured to build all of the example code
+and Iczelion's tutorials directly from the editor. The "PROJECT" menu has
+the range of build option on it to select and it support both GUI and CONSOLE
+applications.</b>
+<center>
+<p><img SRC="Qe.jpg" height=273 width=382></center>
+
+<p><br>
+<br>
+<p><b><font color="#FFCC00">CODE GENERATOR</font></b>
+<br><b><font color="#FFFF00">Prostart.Exe</font> is the code generator
+supplied with MASM32. It will build working EXE files as a starter to a
+project. It has various options for the included components in the source
+code. <font color="#FFFF00">Prostart.Exe </font>is a very useful learning
+tool in that it writes correct API based code for Window based applications.
+This code can be used for starting an application, for prototyping code
+without having to manually write the startup code and also for testing
+ideas quickly.</b>
+<center>
+<p><img SRC="Prostart.jpg" height=376 width=586></center>
+
+<p><b>You will need to create a directory for a new project, select this
+directory and then choose the options you need for the project. You can
+create the project directly from <font color="#FFFF00">Prostart.Exe</font>
+and test it to see if it does what you require. Projects written by <font color="#FFFF00">Prostart.Exe</font>
+are designed to build directly from the editor and they can also be built
+from the batch file that <font color="#FFFF00">Prostart.Exe</font> creates.</b>
+<p><b><font color="#FFCC00">EXAMPLE CODE</font></b>
+<br><b>MASM32 comes with a range of example code to help in designing components
+of a project file. It is in the EXAMPLE1, EXAMPLE2 &amp; EXAMPLE3 directories
+of MASM32.</b>
+<p><b><font color="#FFCC00">TUTORIAL CODE</font></b>
+<br><b>Iczelion has made his set of tutorials available to MASM32 and has
+modified them to work in MASM32. Each tutorial is in its own directory
+which is off the directory <font color="#FFCC00">ICZTUTES</font> in MASM32.</b>
+<p>
+<hr WIDTH="100%">
+<br><b><font color="#FFFF00">NOTE</font> : The tutorial code and the example
+code are different styles written by different people and they are for
+slightly different purposes. Iczelion's tutorials are designed as <u><font color="#FFFF00">learning
+examples</font></u> as well as for the value of the code where the main
+example code is designed as <u><font color="#FFFF00">reference examples</font></u>.
+make sure you understand the code design of both before you mix the source
+code as you can sometimes get compatibility problems if you cut and paste
+from one code design to another.</b>
+<br>
+<hr WIDTH="100%">
+<p><b><font color="#FFCC00">LIBRARIES</font></b>
+<br><b>MASM32 has its own library in the <font color="#FFCC00">M32LIB</font>
+directory which has full source code and a pre-built batch file to build
+the library again if it has been modified or added to. You can use the
+batch file <font color="#FFFF00">MAKE.BAT</font> as an example of how to
+build your own libraries.</b><b></b>
+<p><b>You start with a seperate directory and when you write a library
+module, you copy it to the directory where you want to build the library.
+Create an INCLUDE file that has the prototype for each function in each
+library module and then make a batch file of the same style as the <font color="#FFFF00">MAKE.BAT</font>
+batch file which will build the library for you. You can then use the include
+file and the library in your own programs</b><b></b>
+<p><b>To facilitate the process of writing library modules, the editor
+has an option on the TOOLS menu to "Create Library Module". This is a plug
+in DLL that put a library module skeleton directly into the editor so you
+can easily write new modules of your own design.</b>
+<p><b>Together with MACROS, libraries are very powerful methods of making
+re-usable code that is fast, efficient and reliable to use at the application
+level. Combinations of libraries and MACROS allow the assembler language
+programmer to effectively design their own language that can be written
+as fast as a normal high level language but without the bad habits and
+bloat that most modern high level languages suffer from.</b>
+<br><b></b>&nbsp;
+<br><b></b>&nbsp;
+</body>
+</html>

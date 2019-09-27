@@ -1,0 +1,246 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="hutch">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; I) [Netscape]">
+   <title>Code Design</title>
+</head>
+<body text="#CCCCCC" bgcolor="#000000" link="#66FF99" vlink="#66FF99" alink="#FF0000">
+
+<center><b><i><font color="#3366FF"><font size=+4>Code Design</font></font></i></b></center>
+
+<p><b>With the use of the MASM high level syntax "invoke", Windows API
+code can be written very much like compiler based languages like "C" or
+"Pascal", the only real difference is that you have to pick up the return
+value as a separate line.</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; LOCAL
+ReturnValue :DWORD</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; invoke
+FunctionName, par1,par2,par3,par4</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; mov ReturnValue,
+eax</font></font></tt></b>
+<p><b>This is in place of the less readable form,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; push par4</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; push
+par3</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; push
+par2</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; push
+par1</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; call
+FunctionName</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; mov&nbsp;
+ReturnValue, eax</font></font></tt></b>
+<p><b>There is a considerable advantage in terms of code reliability by
+using the "invoke" syntax in that function calls are type checked against
+the function prototypes in the include files which catches parameter mismatches.</b>
+<p><b>There are some situations where manual stack pushes and function
+calls are useful but unless you enjoy the extra typing and assembly error
+that follow from the lack of type checking, there is advantage in terms
+of both coding speed and reliability by automating the API function calls.
+This is particularly evident when coding message loops with nested conditional
+testing.</b>
+<p><b>For any that need to be convinced, there is a directory in the example
+code called "oldstyle" which shows how slow and error prone the full manual
+technique is and it only builds at the same size as the generic template
+that uses the MASM pseudo high level syntax.</b>
+<p><b>The high level [.if -- .endif] syntax allows a reasonable simulation
+of the C "<font color="#FFCC00">switch</font>" block or Basic's "<font color="#FFCC00">Select
+Case</font>" syntax which can be nested in the normal manner and it is
+here where high level type clear coding has its real advantage.</b><b><tt><font color="#FFFF00"></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .if var
+== 1</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; conditional code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .elseif
+var == 2</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; conditional code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .else</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; default code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .endif</font></font></tt></b><b><tt><font color="#FFFF00"></font></tt></b>
+<p><b>The traditional [cmp eax, value -- je label] produces nightmares
+in the same situation.</b><b><tt><font color="#FFFF00"></font></tt></b>
+<p><b>The use of the high level simulation in MASM improves the code throughput
+of "hack" Windows API coding so that the more difficult areas of loop optimisation
+and other performance related issues can be addressed within a reasonable
+timeframe.</b>
+<p><b>When you use MASM's pseudo high level syntax, you are taking advantage
+of MASM's "macro assembler" capacity, you code does not become bloated
+or compromised in the same way that compilers are. This capacity can be
+extended by writing "macros" that further automate common forms of coding.</b>
+<p><b>The following small macros from MASM32 demonstrates this,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return MACRO arg</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+mov eax, arg</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ret</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENDM</font></font></tt></b>
+<p><b>&nbsp; allows the programmer to exit the message proc by using the
+familiar "C",</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; return
+0</font></font></tt></b>
+<p><b>&nbsp; which is expanded by the assembler into,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; mov eax,
+0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; ret</font></font></tt></b>
+<p><b>Another macro used is,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+szText MACRO Name, Text:VARARG</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LOCAL lbl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jmp lbl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Name db Text,0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+lbl:</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENDM</font></font></tt></b>
+<p><b>&nbsp; which allows text to be directly embedded into the code.</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+szText Msg1,"This is a zero terminated string"</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+invoke MessageBox,hWin,ADDR Msg1,ADDR szDisplayName,MB_OK</font></font></tt></b>
+<p><b>This allows far more intuitive coding than having to go back to the
+initialised .data section using,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Msg1 db "This is a zero terminated string",0</font></font></tt></b>
+<p><b>Embedded data in the .code section has an advantage in that it normally
+is a lot harder to find and hack and it is normally not writable in the
+same way as the .data section. It is also an efficient way to use small
+amounts of data without needing to place it in the .data section.</b>
+<p><b>For programmers who wish to keep the more intuitive placement of
+text near the code that uses it while placing the data in the .data section,
+there is an easy way to do just that, written inline with the source code,</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .data</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Msg1 db "This is data written in the .data section",0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; .code</font></font></tt></b>
+<p><b>&nbsp; works fine. ML.EXE resolves the code and places the data in
+the .data section.</b>
+<p><b>MASM32 has intentionally avoided using complex macros as they are
+not initially easy to understand but there is considerable power and speed
+of coding by understanding and using correctly written macros. The following
+is a slightly more complex macro that makes using a standard message box
+as easy as writing it in Visual Basic where you can use literally quoted
+text or direct addresses of zero terminated strings or combinations of
+both.</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;
+MsgBox hWnd,"Hi, I am written in MASM32","Greetings",MB_OK</font></font></tt></b>
+<p><b>This is the MACRO that produces the MsgBox command.</b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MsgBox MACRO handl, TxtMsg, TxtTitle, styl</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LOCAL Msg1</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+LOCAL Titl</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtMsg>,&lt;ADDR>) eq 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtTitle>,&lt;ADDR>) eq 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.data</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Msg1 db TxtMsg,0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Titl db TxtTitle,0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+invoke MessageBox,handl,ADDR Msg1,ADDR Titl,styl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXITM</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtMsg>,&lt;ADDR>) gt 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtTitle>,&lt;ADDR>) eq 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.data</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Titl db TxtTitle,0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+invoke MessageBox,handl,TxtMsg,ADDR Titl,styl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXITM</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtMsg>,&lt;ADDR>) eq 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtTitle>,&lt;ADDR>) gt 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.data</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Msg1 db TxtMsg,0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.code</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+invoke MessageBox,handl,ADDR Msg1,TxtTitle,styl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXITM</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtMsg>,&lt;ADDR>) gt 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If @InStr(1,&lt;TxtTitle>,&lt;ADDR>) gt 0</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+invoke MessageBox,handl,TxtMsg,TxtTitle,styl</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EXITM</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+EndIf</font></font></tt></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ENDM</font></font></tt></b>
+<p><b>MASM32 has been written without any compromise to the interests or
+format of other languages, it aims at maximising the advantages of writing
+in a true low level language. The format of the include files and the example
+code uses generic assembler data sizes in the form of BYTE, WORD, DWORD,
+QWORD. It does not attempt to implement abstract theories of classes or
+any other layering techniques but simply to make available the true low
+level power of the best available assembler.</b><b></b>
+<p><b>The data sizes are directly related to the register sizes in the
+x86 series of processors where there is an exact correlation between data
+sizes and register sizes.</b><b></b>
+<p><b><tt><font color="#FFCC00"><font size=+1>&nbsp; Register&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DATA size</font></font></tt></b><b></b>
+<p><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; al&nbsp;&nbsp;&nbsp;&nbsp;
+=&nbsp;&nbsp;&nbsp; BYTE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8 bit</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; ax&nbsp;&nbsp;&nbsp;&nbsp;
+=&nbsp;&nbsp;&nbsp; WORD&nbsp;&nbsp;&nbsp;&nbsp; 16 bit</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; eax&nbsp;&nbsp;&nbsp;
+=&nbsp;&nbsp;&nbsp; DWORD&nbsp;&nbsp;&nbsp; 32 bit</font></font></tt></b>
+<br><b><tt><font color="#FFFF00"><font size=+1>&nbsp;&nbsp;&nbsp; mm(0)&nbsp;
+=&nbsp;&nbsp;&nbsp; QWORD&nbsp;&nbsp;&nbsp; 64 bit</font></font></tt></b><b></b>
+<p><b>Compare this direct hardware based simplicity to the current situation
+in 32 bit Windows C++ which has over 60 different data types based around
+abstract class theory and where the names of different data types mean
+different things depending on which operating system version it is built
+on.</b>
+<p><b>The WINDOWS.INC file has had all of the data types converted to generic
+ASM data types to remove the added layer of complexity in the 60 or so
+C++ data types that reduce down to the generic asm BYTE, WORD, DWORD, QWORD.
+This removes one of the major error sources, incorrect data types. There
+are a set of conversions in WINDOWS.INC for programmers who are porting
+code written with C/C++ data types into MASM32.</b>
+<br><b></b>&nbsp;
+<br><b></b>&nbsp;
+</body>
+</html>

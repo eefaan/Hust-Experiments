@@ -1,0 +1,87 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="hutch">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (Win95; I) [Netscape]">
+   <title>How does MASM32 work ?</title>
+</head>
+<body text="#CCCCCC" bgcolor="#000000" link="#66FF99" vlink="#66FF99" alink="#FF0000">
+
+<center><b><i><font color="#3366FF"><font size=+4>How does MASM32 work
+?</font></font></i></b></center>
+
+<p><b>It is designed to plug into a computer that has other programming
+environments set up on it and this places some restrictions on the format.
+To avoid the problems associated with picking up the wrong link versions
+and wrong library directory, MASM32 works with specified paths to all of
+the binary files it needs to build the files.</b><b></b>
+<p><b>In the source code, the paths to the library files are specified
+and in the batch files that are used by the editor to drive the build options,
+the paths of each binary file is specified as well.</b><b></b>
+<p><b>Files from other sources usually do not build from MASM32 without
+some modification, usually placing the following MASM specific directives
+at the beginning of the source file will solve most of the problems. The
+other is to use the "include" &amp; "includelib" syntax for the INCLUDE
+file and LIBRARIES so that their paths can be found.</b><b></b>
+<p><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .386&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; forces 32 bit assembly</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .model
+flat, stdcall&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; memory model and calling
+convention</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; option
+casemap :none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; case sensitive code</font></tt></b><b></b>
+<p><b>MASM32 uses its own version of "windows.inc". It is a file over 800k
+in size and has a very large set of equates and structures in it for 32
+bit windows programming. It should always be put before the system include
+files and libraries.</b><b></b>
+<p><b>EXAMPLE</b><b></b>
+<p><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include
+\masm32\include\windows.inc&nbsp;&nbsp; ; always first</font></tt></b><b><tt><font color="#FFCC00"></font></tt></b>
+<p><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include
+\masm32\include\user32.inc&nbsp;&nbsp;&nbsp; ; system include</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include
+\masm32\include\kernel32.inc&nbsp; ; file next</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; include
+\masm32\include\gdi32.inc</font></tt></b><b><tt><font color="#FFCC00"></font></tt></b>
+<p><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; includelib
+\masm32\lib\user32.lib&nbsp;&nbsp;&nbsp;&nbsp; ; matching system</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; includelib
+\masm32\lib\kernel32.lib&nbsp;&nbsp; ; libraries after that</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; includelib
+\masm32\lib\gdi32.lib</font></tt></b><b></b>
+<p><b>MASM32 uses a generated set of include files for the system functions
+that are derived from the libraries. For each library, you use the include
+file that matches it. To find a function that you need depending on the
+reference material you are using, look in the system include file to see
+which file has the prototype for the function and include the file and
+the matching library.</b><b></b>
+<p><b>Most of the common functions are in the three big system DLLs so
+if you look in,</b><b></b>
+<p><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp; GDI32.INC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; graphics related functions</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp; KERNEL32.INC&nbsp;&nbsp;&nbsp;
+; operating system kernel functions</font></tt></b>
+<br><b><tt><font color="#FFCC00">&nbsp;&nbsp;&nbsp; USER32.INC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+; various user interface &amp; other functions</font></tt></b><b></b>
+<p><b>&nbsp;&nbsp;&nbsp; you will find most of the common functions.</b><b></b>
+<p><b>For functions that are not in the main libraries, usually the Microsoft
+reference material specifies which library the function is in so if you
+look in the include file for that library, you will find the prototype
+for it.</b><b></b>
+<p><b>There are two main reference sources for writing 32 bit assembler
+in Windows, for the assembler instructions and the general architecture
+of x86 series processors, the three (3) volume set of PDF files from Intel
+are the best available and are exhaustively documented in the PIII manual
+set.</b><b></b>
+<p><b>The other is Microsoft reference material. The most common is a help
+file called "WIN32.HLP" which is now a little out of date but still useful.
+It is a help file of about 12 meg in size. If you have the MSDN 2 CD set,
+the information is later and much larger but it also takes up about 800
+meg of disk space when installed. Another alternative is the PLATFORMSDK
+help files but they are also of about the same size.</b>
+<br><b></b>&nbsp;
+<br>&nbsp;
+<br>&nbsp;
+</body>
+</html>
