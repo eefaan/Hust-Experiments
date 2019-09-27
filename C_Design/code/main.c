@@ -198,6 +198,7 @@ int CreatList(SPECIES_NODE **phead)
  */
 void InitInterface()
 {
+    //system("color F0\n");/*白底黑字*/
     WORD att = FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_INTENSITY
                | BACKGROUND_BLUE;  /*黄色前景和蓝色背景*/
 
@@ -2404,11 +2405,14 @@ BOOL StatPlant(void)
 BOOL HelpTopic(void)
 {
     BOOL bRet = TRUE;
-    char *plabel_name[] = {"·系统支持中文输入      ",
-                           "·ALT+字母可快捷选择菜单",
+    char *plabel_name[] = {"·数据单位：面积(分)      ",
+                           "            收成(公斤)    ",
+                           "·系统支持中文输入        ",
+                           "·系统支持含空格字符串输入",
+                           "·ALT+字母可快捷选择菜单  ",
                            "确认"
                           };
-    ShowModule(plabel_name, 3);
+    ShowModule(plabel_name, 6);
     return bRet;
 }
 
@@ -2426,8 +2430,8 @@ BOOL AboutVegeSys(void)
     BOOL bRet = TRUE;
     char *plabel_name[] = {"·作者信息: ",
                            "·本菜农种植信息管理系统由",
-                           "·华中科技大学  计算机学院",
-                           "·校际交流班  刘逸帆  制作",
+                           "  华中科技大学  计算机学院",
+                           "  校际交流班  刘逸帆  制作",
                            "·邮箱: lyf460315457@qq.com",
                            "确认"
                           };
