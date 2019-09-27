@@ -6,16 +6,16 @@
 
 | 目录名 | 课程        | 备注 |
 | ------------------------- | ------------------ | ---------------------------- |
-| C_Lab  | C语言实验   |      |
-| C_OJ   | C语言OJ作业 |      |
+| [C_Lab][1] | C语言实验   |      |
+| [C_OJ][2] | C语言OJ作业 |      |
 
 ## 大二上
 
 | 目录名              | 课程             | 备注                 |
 | ------------------------- | ------------------ | ---------------------------- |
-| C_Design            | C语言课设        | 十字链表、命令行界面 |
-| DataStructure_Lab   | 数据结构实验     |                      |
-| GameDesign_Homework | 游戏开发导论作业 |                      |
+| [C_Design][3]       | C语言课设        | 十字链表、命令行界面 |
+| [DataStructure_Lab][4] | 数据结构实验     |                      |
+| [GameDesign_Homework][5] | 游戏开发导论作业 |                      |
 
 ## 大二下
 
@@ -45,3 +45,16 @@
 | FunctionalProgramming_Lab | 函数式编程实验 | CMU15150         |
 | Interface_Lab             | 接口技术实验   |                  |
 
+
+
+# NOTE
+
+你可以使用[GitZip][102]来下载单个子文件夹。
+
+# LICENSE
+
+<img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。
+
+
+
+[1]:https://github.com/eefaan/HustExperiments/tree/master/C_Lab
