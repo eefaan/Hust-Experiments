@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="digital_clock_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="digital_clock_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="25" />
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/stop" type="logic">
+      <obj_property name="ElementShortName">stop</obj_property>
+      <obj_property name="ObjectShortName">stop</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/ss" type="logic">
+      <obj_property name="ElementShortName">ss</obj_property>
+      <obj_property name="ObjectShortName">ss</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/sm" type="logic">
+      <obj_property name="ElementShortName">sm</obj_property>
+      <obj_property name="ObjectShortName">sm</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/sh" type="logic">
+      <obj_property name="ElementShortName">sh</obj_property>
+      <obj_property name="ObjectShortName">sh</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/usel" type="logic">
+      <obj_property name="ElementShortName">usel</obj_property>
+      <obj_property name="ObjectShortName">usel</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/led" type="logic">
+      <obj_property name="ElementShortName">led</obj_property>
+      <obj_property name="ObjectShortName">led</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/tt" type="logic">
+      <obj_property name="ElementShortName">tt</obj_property>
+      <obj_property name="ObjectShortName">tt</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/sl" type="logic">
+      <obj_property name="ElementShortName">sl</obj_property>
+      <obj_property name="ObjectShortName">sl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/ml" type="logic">
+      <obj_property name="ElementShortName">ml</obj_property>
+      <obj_property name="ObjectShortName">ml</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/hl" type="logic">
+      <obj_property name="ElementShortName">hl</obj_property>
+      <obj_property name="ObjectShortName">hl</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/an" type="array">
+      <obj_property name="ElementShortName">an[7:0]</obj_property>
+      <obj_property name="ObjectShortName">an[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/seg" type="array">
+      <obj_property name="ElementShortName">seg[7:0]</obj_property>
+      <obj_property name="ObjectShortName">seg[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/clk_1HZ" type="logic">
+      <obj_property name="ElementShortName">clk_1HZ</obj_property>
+      <obj_property name="ObjectShortName">clk_1HZ</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/second_cnt1" type="array">
+      <obj_property name="ElementShortName">second_cnt1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">second_cnt1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/second_cnt2" type="array">
+      <obj_property name="ElementShortName">second_cnt2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">second_cnt2[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/minute_cnt1" type="array">
+      <obj_property name="ElementShortName">minute_cnt1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">minute_cnt1[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/minute_cnt2" type="array">
+      <obj_property name="ElementShortName">minute_cnt2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">minute_cnt2[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/second_cnt" type="array">
+      <obj_property name="ElementShortName">second_cnt[3:0]</obj_property>
+      <obj_property name="ObjectShortName">second_cnt[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/u_dscan/u_counter/out" type="array">
+      <obj_property name="ElementShortName">out[2:0]</obj_property>
+      <obj_property name="ObjectShortName">out[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/u_dscan/u_counter/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" fp_name="/digital_clock_tb/DUT/u_dscan/u_divider/clk_N" type="logic">
+      <obj_property name="ElementShortName">clk_N</obj_property>
+      <obj_property name="ObjectShortName">clk_N</obj_property>
+   </wvobject>
+</wave_config>

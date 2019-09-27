@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b25de81c46adb6c4482568152f6b3180
+timeCreated: 1509973072
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: FZShuiHei-M21S
+  fontNames:
+  - FZShuiHei-M21S
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

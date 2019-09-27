@@ -1,0 +1,907 @@
+
+*** Running vivado
+    with args -log lab_4_5_top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source lab_4_5_top.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source lab_4_5_top.tcl -notrace
+Command: synth_design -top lab_4_5_top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 269.168 ; gain = 55.254
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'lab_4_5_top' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_top.v:23]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/divider.v:23]
+	Parameter N bound to: 50000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'lab_4_5datapath' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:90]
+INFO: [Synth 8-638] synthesizing module 'adder_circuit' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:35]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'adder_circuit' (2#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:35]
+INFO: [Synth 8-638] synthesizing module 'register_circuit' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:23]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'register_circuit' (3#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:23]
+INFO: [Synth 8-638] synthesizing module 'multiplex_circuit' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:67]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'multiplex_circuit' (4#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:67]
+INFO: [Synth 8-638] synthesizing module 'memory_circuit' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:43]
+	Parameter DATA_WIDTH bound to: 32 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'C:/Temp/lab_4_5/rom_init.txt' is read successfully [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:55]
+INFO: [Synth 8-256] done synthesizing module 'memory_circuit' (5#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:43]
+INFO: [Synth 8-638] synthesizing module 'compare_circuit' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:76]
+	Parameter WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'compare_circuit' (6#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:76]
+INFO: [Synth 8-256] done synthesizing module 'lab_4_5datapath' (7#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v:90]
+INFO: [Synth 8-638] synthesizing module 'lab_4_5_FSM' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_FSM.v:23]
+	Parameter START bound to: 2'b00 
+	Parameter COMPUTE_SUM bound to: 2'b01 
+	Parameter GET_NEXT bound to: 2'b10 
+	Parameter DONE bound to: 2'b11 
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_FSM.v:48]
+INFO: [Synth 8-256] done synthesizing module 'lab_4_5_FSM' (8#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_FSM.v:23]
+INFO: [Synth 8-638] synthesizing module 'seven_seg_display' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/seven_seg_display.v:23]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized0' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/divider.v:23]
+	Parameter N bound to: 5000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized0' (8#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/Counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Counter' (9#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/Counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'decoder3_8' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/decoder3_8.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/decoder3_8.v:28]
+INFO: [Synth 8-256] done synthesizing module 'decoder3_8' (10#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/decoder3_8.v:23]
+INFO: [Synth 8-638] synthesizing module 'display_sel' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/display_sel.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/display_sel.v:29]
+INFO: [Synth 8-256] done synthesizing module 'display_sel' (11#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/display_sel.v:23]
+INFO: [Synth 8-638] synthesizing module 'sevenseg_dec' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/sevenseg_dec.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/sevenseg_dec.v:29]
+INFO: [Synth 8-256] done synthesizing module 'sevenseg_dec' (12#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/sevenseg_dec.v:23]
+INFO: [Synth 8-256] done synthesizing module 'seven_seg_display' (13#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/seven_seg_display.v:23]
+INFO: [Synth 8-256] done synthesizing module 'lab_4_5_top' (14#1) [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 303.285 ; gain = 89.371
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 303.285 ; gain = 89.371
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc]
+Finished Parsing XDC File [C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 630.246 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 7 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 13 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 28 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 28 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 33 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 60 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 61 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 62 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 63 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 64 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 65 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 66 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 68 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 70 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 71 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 72 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 73 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 74 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 75 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 76 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 77 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-327] inferring latch for variable 'next_state_reg' [C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_FSM.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 4     
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module adder_circuit 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
+Module register_circuit 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module multiplex_circuit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module memory_circuit 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module lab_4_5_FSM 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   5 Input      2 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 1     
+Module divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module decoder3_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module sevenseg_dec 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "COMP/out" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "u_divider/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "u_divider/clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 630.246 ; gain = 416.332
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: 
++------------+------------------+-----------+----------------------+-----------------+--------------------+
+|Module Name | RTL Object       | Inference | Size (Depth x Width) | Primitives      | Hierarchical Name  | 
++------------+------------------+-----------+----------------------+-----------------+--------------------+
+|lab_4_5_top | u_dp/MEM/ram_reg | Implied   | 16 x 32              | RAM16X1S x 32   | lab_4_5_top/ram__2 | 
++------------+------------------+-----------+----------------------+-----------------+--------------------+
+
+Note: The table shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the Distributed RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[31] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[30] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[29] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[28] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[27] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[26] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[25] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[24] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[23] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[22] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[21] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[20] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[19] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[18] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[17] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[16] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[15] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[14] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[13] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[12] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[11] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[10] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[9] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[8] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[7] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[6] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[5] ) is unused and will be removed from module lab_4_5_top.
+WARNING: [Synth 8-3332] Sequential element (\u_dp/R2/q_reg[4] ) is unused and will be removed from module lab_4_5_top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 630.246 ; gain = 416.332
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 7 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 13 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 28 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 28 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 33 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 60 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 61 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 62 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 63 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 64 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 65 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 66 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 68 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 70 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 71 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 72 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 73 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 74 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 75 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 76 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+incorrect set of required parameters for "set_property" at line 77 of file C:/Temp/lab_4_5/lab_4_5.srcs/constrs_1/new/lab_4_5_top.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    24|
+|3     |LUT1     |    63|
+|4     |LUT2     |    16|
+|5     |LUT3     |    53|
+|6     |LUT4     |    45|
+|7     |LUT5     |    20|
+|8     |LUT6     |    61|
+|9     |RAM16X1S |    32|
+|10    |FDRE     |   107|
+|11    |LD       |     2|
+|12    |IBUF     |     3|
+|13    |OBUF     |    17|
++------+---------+------+
+
+Report Instance Areas: 
++------+--------------+------------------------+------+
+|      |Instance      |Module                  |Cells |
++------+--------------+------------------------+------+
+|1     |top           |                        |   445|
+|2     |  u_1HZ       |divider                 |    81|
+|3     |  u_FSM       |lab_4_5_FSM             |    56|
+|4     |  u_disp      |seven_seg_display       |   104|
+|5     |    u_counter |Counter                 |    23|
+|6     |    u_divider |divider__parameterized0 |    81|
+|7     |  u_dp        |lab_4_5datapath         |   182|
+|8     |    MEM       |memory_circuit          |    75|
+|9     |    R1        |register_circuit        |   100|
+|10    |    R2        |register_circuit_0      |     7|
++------+--------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 630.246 ; gain = 45.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 630.246 ; gain = 416.332
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 61 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 34 instances were transformed.
+  LD => LDCE: 2 instances
+  RAM16X1S => RAM32X1S (RAMS32): 32 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 630.246 ; gain = 406.953
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 630.246 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 21 11:09:29 2017...

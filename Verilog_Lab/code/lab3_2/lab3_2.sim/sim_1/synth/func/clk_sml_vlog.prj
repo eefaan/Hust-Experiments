@@ -1,0 +1,6 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "clk_sml_func_synth.v"
+verilog xil_defaultlib  "../../../../lab3_2.srcs/sim_1/new/lab3_2_sml.v"
+
+# Do not sort compile order
+nosort

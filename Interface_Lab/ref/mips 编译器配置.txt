@@ -1,0 +1,4 @@
+MIPS_ELF_ROOT
+C:\PROGRA~1\IMAGIN~1\TOOLCH~1\mips-mti-elf\2015.01-7
+
+C:\Program Files\Imagination Technologies\Toolchains\mips-mti-elf\2015.01-7\bin;C:\Program Files\Imagination Technologies\Internals\msys\bin;

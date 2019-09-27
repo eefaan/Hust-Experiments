@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Mon May 15 09:33:14 2017
+# Process ID: 7528
+# Log file: C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.runs/impl_1/digital_clock.vdi
+# Journal file: C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source digital_clock.tcl -notrace

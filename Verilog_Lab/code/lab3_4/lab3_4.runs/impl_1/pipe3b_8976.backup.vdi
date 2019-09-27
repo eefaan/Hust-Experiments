@@ -1,0 +1,725 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Jun  7 20:42:31 2018
+# Process ID: 8976
+# Current directory: C:/VerilogLab/lab3_4/lab3_4.runs/impl_1
+# Command line: vivado.exe -log pipe3b.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pipe3b.tcl -notrace
+# Log file: C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b.vdi
+# Journal file: C:/VerilogLab/lab3_4/lab3_4.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source pipe3b.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[7]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[8]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[9]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[10]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[11]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[12]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[13]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[14]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'sw[15]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[7]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[8]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[9]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[10]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[11]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[12]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[13]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[14]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:111]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:111]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'led[15]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:112]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:112]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:118]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:118]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:119]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:119]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:137]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:137]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:140]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:140]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:143]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:143]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:144]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:144]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:146]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:146]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:147]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:147]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:149]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:149]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:150]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:150]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:152]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:152]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:153]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:153]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:155]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:155]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:156]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:156]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:159]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:159]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:160]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:160]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:163]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:163]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:166]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:166]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:167]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:167]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:169]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:169]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:170]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:170]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:172]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:172]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:173]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:173]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:175]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:175]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[4]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:176]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:176]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:178]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:178]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[5]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:179]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:179]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:181]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:181]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'an[6]'. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:182]
+INFO: [Common 17-14] Message 'Vivado 12-584' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:182]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:182]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+INFO: [Common 17-14] Message 'Common 17-55' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings. [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc:182]
+Finished Parsing XDC File [C:/VerilogLab/lab3_4/lab3_4.srcs/constrs_1/imports/vivado/Nexys4_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 536.395 ; gain = 312.434
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.557 . Memory (MB): peak = 549.066 ; gain = 12.672
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 16ea3d1f9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 62 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 16ea3d1f9
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 1cda8427a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 2 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 1cda8427a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Opt 31-389] Phase BUFG optimization created 0 cells and removed 0 cells
+
+Phase 5 Shift Register Optimization
+Phase 5 Shift Register Optimization | Checksum: 1cda8427a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1103.781 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1cda8427a
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 2298e8bac
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1103.781 ; gain = 0.000
+23 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1103.781 ; gain = 567.387
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_opt.dcp' has been generated.
+Command: report_drc -file pipe3b_drc_opted.rpt
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-241] No debug cores found in the current design.
+Before running the implement_debug_core command, either use the Set Up Debug wizard (GUI mode)
+or use the create_debug_core and connect_debug_core Tcl commands to insert debug cores into the design.
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Command: report_drc (run_mandatory_drcs) for: incr_eco_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+Command: report_drc (run_mandatory_drcs) for: placer_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1103.781 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 12cdeb4af
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1103.781 ; gain = 0.000
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 17c59e6b4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.907 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 27baf7bc4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.983 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 27baf7bc4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.986 . Memory (MB): peak = 1103.781 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 27baf7bc4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.987 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 2 Global Placement
+Phase 2 Global Placement | Checksum: 1e12981e3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1e12981e3
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c164657a
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 2565046b4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 2565046b4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.5 Timing Path Optimizer
+Phase 3.5 Timing Path Optimizer | Checksum: 1dea86308
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 28ea329bb
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 22d281f89
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 22d281f89
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1103.781 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 22d281f89
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1103.781 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2360a6cd1
+
+Phase 4.1.1.1 BUFG Insertion
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Place 46-41] BUFG insertion identified 0 candidate nets, 0 success, 0 skipped for placement/routing, 0 skipped for timing, 0 skipped for netlist change reason.
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2360a6cd1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+INFO: [Place 30-746] Post Placement Timing Summary WNS=3.956. For the most accurate timing information please run report_timing.
+Phase 4.1.1 Post Placement Optimization | Checksum: 18170016d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+Phase 4.1 Post Commit Optimization | Checksum: 18170016d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 18170016d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+
+Phase 4.3 Placer Reporting
+Phase 4.3 Placer Reporting | Checksum: 18170016d
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+
+Phase 4.4 Final Placement Cleanup
+Phase 4.4 Final Placement Cleanup | Checksum: f251ce75
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: f251ce75
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+Ending Placer Task | Checksum: d4c05f82
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1104.352 ; gain = 0.570
+42 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1104.539 ; gain = 0.188
+INFO: [Common 17-1381] The checkpoint 'C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_placed.dcp' has been generated.
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1104.539 ; gain = 0.000
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1104.539 ; gain = 0.000
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1104.539 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command route_design
+Command: report_drc (run_mandatory_drcs) for: router_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 8c9be210 ConstDB: 0 ShapeSum: 48247d72 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: dc583817
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: dc583817
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: dc583817
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: dc583817
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 907891a3
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.943  | TNS=0.000  | WHS=-0.069 | THS=-0.333 |
+
+Phase 2 Router Initialization | Checksum: 17b067e40
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:29 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 3 Initial Routing
+Phase 3 Initial Routing | Checksum: 192966d66
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.458  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1cfe4a36e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+Phase 4 Rip-up And Reroute | Checksum: 1cfe4a36e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 1cfe4a36e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1cfe4a36e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+Phase 5 Delay and Skew Optimization | Checksum: 1cfe4a36e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 15c50b52e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=3.553  | TNS=0.000  | WHS=0.246  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 15c50b52e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+Phase 6 Post Hold Fix | Checksum: 15c50b52e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.00452627 %
+  Global Horizontal Routing Utilization  = 0.00767263 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 15c50b52e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 15c50b52e
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1af565678
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=3.553  | TNS=0.000  | WHS=0.246  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1af565678
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:34 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.242
+
+Routing Is Done.
+54 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:30 . Memory (MB): peak = 1261.465 ; gain = 156.926
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1261.465 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_routed.dcp' has been generated.
+Command: report_drc -file pipe3b_drc_routed.rpt -pb pipe3b_drc_routed.pb -rpx pipe3b_drc_routed.rpx
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_drc_routed.rpt.
+report_drc completed successfully
+Command: report_methodology -file pipe3b_methodology_drc_routed.rpt -rpx pipe3b_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/VerilogLab/lab3_4/lab3_4.runs/impl_1/pipe3b_methodology_drc_routed.rpt.
+report_methodology completed successfully
+Command: report_power -file pipe3b_power_routed.rpt -pb pipe3b_power_summary_routed.pb -rpx pipe3b_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+61 Infos, 100 Warnings, 100 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  7 20:43:36 2018...

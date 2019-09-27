@@ -1,0 +1,13 @@
+
+****** Webtalk v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source C:/Temp/lab02_combine_logic_v1/lab02_combine_logic.hw/webtalk/labtool_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 100.305 ; gain = 0.016
+
+    while executing
+"webtalk_transmit -clientid 1761312720 -regid "210927163_1777522431_210647680_822" -xml C:/Temp/lab02_combine_logic_v1/lab02_combine_logic.hw/webtalk/u..."
+    (file "C:/Temp/lab02_combine_logic_v1/lab02_combine_logic.hw/webtalk/labtool_webtalk.tcl" line 26)
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 24 08:49:01 2017...

@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Sun May 21 11:09:31 2017
+# Process ID: 7588
+# Log file: C:/Temp/lab_4_5/lab_4_5.runs/impl_1/lab_4_5_top.vdi
+# Journal file: C:/Temp/lab_4_5/lab_4_5.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source lab_4_5_top.tcl -notrace
