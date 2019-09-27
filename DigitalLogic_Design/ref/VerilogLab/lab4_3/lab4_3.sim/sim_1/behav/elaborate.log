@@ -1,0 +1,14 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/WIN/program/vivado2017.2/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 0d4024ce849e4a2d8ee0ff4c986e4994 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot lab4_3_sim_behav xil_defaultlib.lab4_3_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2572] too many parameters for module instance mycom [C:/VerilogLab/lab4_3/lab4_3.srcs/sim_1/new/lab4_3_sim.v:30]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.compare_3
+Compiling module xil_defaultlib.lab4_3_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot lab4_3_sim_behav

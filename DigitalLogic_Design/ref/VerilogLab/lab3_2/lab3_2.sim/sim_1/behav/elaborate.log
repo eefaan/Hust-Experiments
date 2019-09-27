@@ -1,0 +1,14 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/WIN/program/vivado2017.2/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 67e100d422864205af2be7b02eb81a95 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot clk_sml_behav xil_defaultlib.clk_sml xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/VerilogLab/lab3_2/lab3_2.srcs/sources_1/imports/lab3/lab3_2.v" Line 1. Module lab3 doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.lab3
+Compiling module xil_defaultlib.clk_sml
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot clk_sml_behav

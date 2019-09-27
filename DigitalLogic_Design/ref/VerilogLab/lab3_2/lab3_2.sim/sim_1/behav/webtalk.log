@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Jun  7 22:21:25 2018
+# Process ID: 2180
+# Current directory: C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav/xsim.dir/clk_sml_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav/webtalk.log
+# Journal file: C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav/xsim.dir/clk_sml_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/VerilogLab/lab3_2/lab3_2.sim/sim_1/behav/xsim.dir/clk_sml_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Jun  7 22:21:28 2018. For additional details about this file, please refer to the WebTalk help file at E:/WIN/program/vivado2017.2/Vivado/2017.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun  7 22:21:28 2018...

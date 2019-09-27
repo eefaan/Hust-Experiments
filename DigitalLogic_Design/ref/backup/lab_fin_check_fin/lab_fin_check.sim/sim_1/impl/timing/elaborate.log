@@ -1,0 +1,11 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/WIN/program/vivado2017.2/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto b40f79190e2841328a242ccb88f27f69 --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot washing_machine_sim_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.washing_machine_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 4 for port state_OBUF [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v:82]
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port Q [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v:83]
+WARNING: [VRFC 10-278] actual bit length 3 differs from formal bit length 1 for port num_reg[0]_1 [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v:85]
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port num_reg[1] [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v:86]
+ERROR: [VRFC 10-529] concurrent assignment to a non-net clk is not permitted [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v:82]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

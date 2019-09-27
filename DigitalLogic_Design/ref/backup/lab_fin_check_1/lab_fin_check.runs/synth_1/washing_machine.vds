@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Wed Sep 26 21:12:37 2018
+# Process ID: 6540
+# Current directory: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/synth_1
+# Command line: vivado.exe -log washing_machine.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source washing_machine.tcl
+# Log file: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/synth_1/washing_machine.vds
+# Journal file: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source washing_machine.tcl -notrace
+Command: synth_design -top washing_machine -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4784 
+WARNING: [Synth 8-2507] parameter declaration becomes local in divider with formal parameter declaration list [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/imports/divider.v:30]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 318.781 ; gain = 95.105
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'washing_machine' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/washing_machine.v:1]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/imports/divider.v:23]
+	Parameter N bound to: 80000000 - type: integer 
+	Parameter M bound to: 20000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/imports/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'FSM' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/FSM.v:22]
+	Parameter START bound to: 4'b0000 
+	Parameter XI_1_IN bound to: 4'b0001 
+	Parameter XI_2_WASH bound to: 4'b0010 
+	Parameter PIAO_1_OUT bound to: 4'b0011 
+	Parameter PIAO_2_DRY bound to: 4'b0100 
+	Parameter PIAO_3_IN bound to: 4'b0101 
+	Parameter PIAO_4_RI bound to: 4'b0110 
+	Parameter TUO_1_OUT bound to: 4'b0111 
+	Parameter TUO_2_DRY bound to: 4'b1000 
+	Parameter FINISH bound to: 4'b1001 
+	Parameter SHUT_DOWN bound to: 4'b1010 
+	Parameter PAUSE bound to: 4'b1011 
+INFO: [Synth 8-638] synthesizing module 'light_control' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/new/light_control.v:23]
+INFO: [Synth 8-256] done synthesizing module 'light_control' (2#1) [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/new/light_control.v:23]
+INFO: [Synth 8-638] synthesizing module 'timer' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/timer.v:1]
+INFO: [Synth 8-256] done synthesizing module 'timer' (3#1) [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/timer.v:1]
+INFO: [Synth 8-638] synthesizing module 'ssdisp' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/ssdisp.v:23]
+INFO: [Synth 8-638] synthesizing module 'bin_to_BCD' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/bin_to_BCD.v:23]
+INFO: [Synth 8-256] done synthesizing module 'bin_to_BCD' (4#1) [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/bin_to_BCD.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ssdisp' (5#1) [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/ssdisp.v:23]
+ERROR: [Synth 8-91] ambiguous clock in event control [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/FSM.v:101]
+ERROR: [Synth 8-285] failed synthesizing module 'FSM' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/FSM.v:22]
+ERROR: [Synth 8-285] failed synthesizing module 'washing_machine' [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/sources_1/imports/sources_1/new/washing_machine.v:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 351.184 ; gain = 127.508
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+13 Infos, 1 Warnings, 0 Critical Warnings and 4 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 26 21:12:49 2018...

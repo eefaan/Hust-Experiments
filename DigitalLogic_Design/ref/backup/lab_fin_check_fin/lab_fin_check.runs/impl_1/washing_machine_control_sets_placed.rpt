@@ -1,0 +1,79 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Wed Sep 26 23:37:48 2018
+| Host         : DESKTOP-KM458MG running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file washing_machine_control_sets_placed.rpt
+| Design       : washing_machine
+| Device       : xc7a100t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    12 |
+| Unused register locations in slices containing registers |    44 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              26 |           19 |
+| No           | No                    | Yes                    |               6 |            4 |
+| No           | Yes                   | No                     |              68 |           20 |
+| Yes          | No                    | No                     |              24 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------+-----------------------------------------------+------------------------------+------------------+----------------+
+|       Clock Signal       |                 Enable Signal                 |       Set/Reset Signal       | Slice Load Count | Bel Load Count |
++--------------------------+-----------------------------------------------+------------------------------+------------------+----------------+
+|  pause_con_IBUF_BUFG     |                                               | rst_IBUF_BUFG                |                1 |              1 |
+|  clk_IBUF_BUFG           |                                               |                              |                2 |              2 |
+|  weight_change_IBUF_BUFG |                                               | rst_IBUF_BUFG                |                1 |              2 |
+|  mode_change_IBUF_BUFG   |                                               | rst_IBUF_BUFG                |                2 |              3 |
+|  clk_div/CLK             |                                               |                              |                2 |              3 |
+|  temp_OBUF_BUFG          |                                               | rst_IBUF_BUFG                |                4 |              4 |
+|  temp_OBUF_BUFG          | my_machine_fsm/my_timer/water_line[7]_i_1_n_0 |                              |                3 |              8 |
+| ~rst_IBUF_BUFG           |                                               |                              |                7 |             10 |
+|  temp_OBUF_BUFG          |                                               |                              |                8 |             11 |
+|  temp_OBUF_BUFG          | my_machine_fsm/my_timer/E[0]                  |                              |                8 |             16 |
+|  clk_IBUF_BUFG           |                                               | clk_div/clear                |                8 |             32 |
+|  clk_IBUF_BUFG           |                                               | clk_div/counter_f[0]_i_1_n_0 |                8 |             32 |
++--------------------------+-----------------------------------------------+------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 2      |                     2 |
+| 3      |                     2 |
+| 4      |                     1 |
+| 8      |                     1 |
+| 10     |                     1 |
+| 11     |                     1 |
+| 16+    |                     3 |
++--------+-----------------------+
+
+

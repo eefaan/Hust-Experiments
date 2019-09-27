@@ -1,0 +1,21 @@
+Vivado Simulator 2015.2
+Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2015.2/bin/unwrapped/win64.o/xelab.exe -wto 868d248dad2b4c978b9227d1ec8c06ed --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot digital_clock_tb_behav xil_defaultlib.digital_clock_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.divider(N=1)
+Compiling module xil_defaultlib.divider(N=5000)
+Compiling module xil_defaultlib.Counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.display_sel
+Compiling module xil_defaultlib.sevenseg_dec
+Compiling module xil_defaultlib.dynamic_scan
+Compiling module xil_defaultlib.digital_clock
+Compiling module xil_defaultlib.digital_clock_tb
+Compiling module xil_defaultlib.glbl
+Waiting for 2 sub-compilation(s) to finish...
+Built simulation snapshot digital_clock_tb_behav

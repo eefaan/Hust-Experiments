@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/new/FSM.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/new/bin_to_BCD.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/new/counter.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/imports/decoder3_8.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/new/display.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/new/light_control.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/imports/sevenseg_decoder.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/new/ssdisp.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/imports/sum_rom.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sources_1/imports/sources_1/new/timer.v"
+verilog xil_defaultlib  "../../../lab_fin_check.srcs/sim_1/imports/imports/washing_machine_sim.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

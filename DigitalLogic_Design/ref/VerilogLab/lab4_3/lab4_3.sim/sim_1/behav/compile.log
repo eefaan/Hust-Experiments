@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/VerilogLab/lab4_3/lab4_3.srcs/sources_1/new/compare_3.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module compare_3
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/VerilogLab/lab4_3/lab4_3.srcs/sim_1/new/lab4_3_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab4_3_sim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/VerilogLab/lab4_3/lab4_3.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1528438738">
+  <File Type="PWROPT-DRC" Name="lab4_cal_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="lab4_cal_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="lab4_cal_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="lab4_cal_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="lab4_cal.tcl"/>
+  <File Type="OPT-HWDEF" Name="lab4_cal.hwdef"/>
+  <File Type="RDI-RDI" Name="lab4_cal.vdi"/>
+  <File Type="OPT-DCP" Name="lab4_cal_opt.dcp"/>
+  <File Type="OPT-DRC" Name="lab4_cal_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="lab4_cal_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="lab4_cal_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="lab4_cal_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="lab4_cal_placed.dcp"/>
+  <File Type="PLACE-IO" Name="lab4_cal_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="lab4_cal_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="lab4_cal_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="lab4_cal_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="lab4_cal_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="lab4_cal_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="lab4_cal_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="lab4_cal_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="lab4_cal_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="lab4_cal_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="lab4_cal_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="lab4_cal_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="lab4_cal_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="lab4_cal_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="lab4_cal_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="lab4_cal_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="lab4_cal_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="lab4_cal_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="lab4_cal.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="lab4_cal_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="lab4_cal.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="lab4_cal_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="lab4_cal.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="lab4_cal_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="lab4_cal.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="lab4_cal_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="lab4_cal_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="lab4_cal_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="lab4_cal_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="lab4_cal_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="lab4_cal_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="lab4_cal_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="lab4_cal_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="lab4_cal_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="lab4_cal_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="lab4_cal_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="lab4_cal_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="lab4_cal_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="lab4_cal_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="lab4_cal_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="lab4_cal.bit"/>
+  <File Type="BITSTR-RBT" Name="lab4_cal.rbt"/>
+  <File Type="BITSTR-NKY" Name="lab4_cal.nky"/>
+  <File Type="BITSTR-BMM" Name="lab4_cal_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="lab4_cal.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="lab4_cal.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/FSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/adder_circuit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/adder_circuit.v"/>
+        <Attr Name="ImportTime" Val="1527860835"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/compare_circuit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/compare_circuit.v"/>
+        <Attr Name="ImportTime" Val="1527861951"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/datapath.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/datapath.v"/>
+        <Attr Name="ImportTime" Val="1527860024"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/decoder3_8.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/divider.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/memory_circuit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/memory_circuit.v"/>
+        <Attr Name="ImportTime" Val="1527861869"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/multiplexer_circuit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/multiplexer_circuit.v"/>
+        <Attr Name="ImportTime" Val="1527860821"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/new/register_circuit.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/sources_1/new/register_circuit.v"/>
+        <Attr Name="ImportTime" Val="1527861498"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sevenseg_decoder.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sum_rom.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/lab4_cal.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="lab4_cal"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Desktop/Nexys4_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/verilog/lab4/lab4/lab4.srcs/constrs_1/imports/Desktop/Nexys4_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1527852187"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

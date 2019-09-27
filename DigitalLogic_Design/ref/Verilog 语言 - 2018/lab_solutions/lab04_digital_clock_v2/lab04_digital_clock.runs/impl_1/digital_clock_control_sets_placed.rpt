@@ -1,0 +1,64 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (win64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Mon May 15 09:33:41 2017
+| Host         : foxtrot024-PC running 64-bit Service Pack 1  (build 7601)
+| Command      : report_control_sets -verbose -file digital_clock_control_sets_placed.rpt
+| Design       : digital_clock
+| Device       : xc7a100t
+------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    11 |
+| Minimum Number of register sites lost to control set restrictions |    36 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               7 |            4 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              69 |           20 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              24 |           14 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------+------------------------+---------------------------------+------------------+----------------+
+|      Clock Signal      |      Enable Signal     |         Set/Reset Signal        | Slice Load Count | Bel Load Count |
++------------------------+------------------------+---------------------------------+------------------+----------------+
+|  u_dscan/u_divider/clk |                        |                                 |                2 |              3 |
+|  clk_1HZ_BUFG          | second_cnt2[3]_i_1_n_0 | FSM_sequential_state[2]_i_1_n_0 |                1 |              4 |
+|  clk_1HZ_BUFG          | second_cnt1[3]_i_1_n_0 | FSM_sequential_state[2]_i_1_n_0 |                4 |              4 |
+|  clk_1HZ_BUFG          | minute_cnt2[3]_i_1_n_0 | FSM_sequential_state[2]_i_1_n_0 |                2 |              4 |
+|  clk_1HZ_BUFG          | minute_cnt1[3]_i_1_n_0 | FSM_sequential_state[2]_i_1_n_0 |                2 |              4 |
+|  clk_1HZ_BUFG          | hour_cnt2[3]_i_1_n_0   | FSM_sequential_state[2]_i_1_n_0 |                2 |              4 |
+|  clk_1HZ_BUFG          | hour_cnt1[3]_i_1_n_0   | FSM_sequential_state[2]_i_1_n_0 |                3 |              4 |
+|  clk100MHZ_IBUF_BUFG   |                        |                                 |                2 |              4 |
+|  clk_1HZ_BUFG          |                        | FSM_sequential_state[2]_i_1_n_0 |                4 |              7 |
+|  clk100MHZ_IBUF_BUFG   |                        | u_dscan/u_divider/clk_N         |                8 |             31 |
+|  clk100MHZ_IBUF_BUFG   |                        | u_1HZ/counter[31]_i_1_n_0       |                8 |             31 |
++------------------------+------------------------+---------------------------------+------------------+----------------+
+
+

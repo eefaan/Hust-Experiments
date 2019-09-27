@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Sep 27 17:18:21 2018
+# Process ID: 3420
+# Current directory: C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/impl/timing
+# Command line: wbtcv.exe -mode batch -source C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/impl/timing/xsim.dir/timer_sim_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/impl/timing/webtalk.log
+# Journal file: C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/impl/timing\webtalk.jou
+#-----------------------------------------------------------
+source C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/impl/timing/xsim.dir/timer_sim_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu Sep 27 17:18:22 2018...

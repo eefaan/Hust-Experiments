@@ -1,0 +1,1066 @@
+
+*** Running vivado
+    with args -log digital_clock.vds -m64 -mode batch -messageDb vivado.pb -notrace -source digital_clock.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source digital_clock.tcl -notrace
+Command: synth_design -top digital_clock -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 269.254 ; gain = 53.477
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'digital_clock' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/digital_clock.v:23]
+	Parameter S_reset bound to: 3'b000 
+	Parameter S_run bound to: 3'b001 
+	Parameter S_stop bound to: 3'b010 
+	Parameter S_set bound to: 3'b011 
+	Parameter S_second bound to: 3'b100 
+	Parameter S_minute bound to: 3'b101 
+	Parameter S_hour bound to: 3'b110 
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/divider.v:23]
+	Parameter N bound to: 50000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'dynamic_scan' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/dynamic_scan.v:23]
+INFO: [Synth 8-638] synthesizing module 'divider__parameterized0' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/divider.v:23]
+	Parameter N bound to: 5000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider__parameterized0' (1#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/divider.v:23]
+INFO: [Synth 8-638] synthesizing module 'Counter' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/Counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'Counter' (2#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/Counter.v:23]
+INFO: [Synth 8-638] synthesizing module 'decoder3_8' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/decoder3_8.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/decoder3_8.v:28]
+INFO: [Synth 8-256] done synthesizing module 'decoder3_8' (3#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/decoder3_8.v:23]
+INFO: [Synth 8-638] synthesizing module 'display_sel' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/display_sel.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/display_sel.v:36]
+INFO: [Synth 8-256] done synthesizing module 'display_sel' (4#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/display_sel.v:23]
+INFO: [Synth 8-638] synthesizing module 'sevenseg_dec' [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/sevenseg_dec.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/sevenseg_dec.v:29]
+INFO: [Synth 8-256] done synthesizing module 'sevenseg_dec' (5#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/sevenseg_dec.v:23]
+INFO: [Synth 8-256] done synthesizing module 'dynamic_scan' (6#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/dynamic_scan.v:23]
+INFO: [Synth 8-256] done synthesizing module 'digital_clock' (7#1) [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/sources_1/new/digital_clock.v:23]
+WARNING: [Synth 8-3917] design digital_clock has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design digital_clock has port AN[2] driven by constant 1
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 303.422 ; gain = 87.645
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 303.422 ; gain = 87.645
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc]
+Finished Parsing XDC File [C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 640.836 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 7 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 13 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 17 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 17 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 21 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 21 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 25 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 25 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 28 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 28 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 33 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 37 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 41 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 41 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 45 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 45 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 48 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 48 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 60 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 61 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 62 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 63 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 64 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 65 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 66 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 68 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 70 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 71 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 72 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 73 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 74 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 75 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 76 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 77 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 82 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 82 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 85 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 85 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'digital_clock'
+INFO: [Synth 8-5544] ROM "second_cnt2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "minute_cnt2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hour_cnt2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "led" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "second_led" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "minute_led" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "hour_led" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+                 S_reset |                              000 |                              000
+                   S_run |                              001 |                              001
+                  S_stop |                              010 |                              010
+                S_second |                              011 |                              100
+                S_minute |                              100 |                              101
+                  S_hour |                              101 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'digital_clock'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 6     
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                4 Bit    Registers := 6     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+	  16 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 12    
+	   6 Input      4 Bit        Muxes := 4     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 14    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module digital_clock 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 6     
++---Registers : 
+	                4 Bit    Registers := 6     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 12    
+	   6 Input      4 Bit        Muxes := 4     
+	  10 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 4     
+	   6 Input      1 Bit        Muxes := 14    
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module divider__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module decoder3_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      8 Bit        Muxes := 1     
+Module sevenseg_dec 
+Detailed RTL Component Info : 
++---Muxes : 
+	  16 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "u_divider/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "u_divider/clk_N" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+WARNING: [Synth 8-3917] design digital_clock has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design digital_clock has port AN[2] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 640.836 ; gain = 425.059
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 640.836 ; gain = 425.059
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 7 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 7 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 13 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 13 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 17 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 17 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 21 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 21 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 25 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 25 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 28 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 28 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 33 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 33 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 37 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 37 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 41 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 41 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 45 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 45 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 48 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 48 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 60 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 60 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 61 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 61 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 62 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 62 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 63 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 63 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 64 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 64 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 65 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 65 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 66 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 66 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 68 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 68 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 70 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 70 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 71 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 71 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 72 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 72 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 73 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 73 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 74 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 74 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 75 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 75 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 76 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 76 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 77 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 77 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 82 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 82 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+incorrect argument "-dict" for "set_property" at line 85 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+incorrect set of required parameters for "set_property" at line 85 of file C:/Temp/lab04_digital_clock_v2/lab04_digital_clock.srcs/constrs_1/new/digital_clock.xdc
+---------------------------------------------------------------------
+Usage:
+  set_property
+    [-help]
+    [-quiet]
+    attribute
+    value
+    object
+    [{>|>>} <stdoutFile>]
+---------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    65|
+|4     |LUT2   |    12|
+|5     |LUT3   |    20|
+|6     |LUT4   |    33|
+|7     |LUT5   |    27|
+|8     |LUT6   |    59|
+|9     |FDRE   |   100|
+|10    |IBUF   |     8|
+|11    |OBUF   |    21|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+------------------------+------+
+|      |Instance      |Module                  |Cells |
++------+--------------+------------------------+------+
+|1     |top           |                        |   363|
+|2     |  u_1HZ       |divider                 |    82|
+|3     |  u_dscan     |dynamic_scan            |   128|
+|4     |    u_counter |Counter                 |    47|
+|5     |    u_divider |divider__parameterized0 |    81|
++------+--------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 640.836 ; gain = 425.059
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 640.836 ; gain = 45.488
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 640.836 ; gain = 425.059
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 24 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+48 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 640.836 ; gain = 415.680
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 640.836 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May 15 09:33:13 2017...

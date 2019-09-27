@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Jun  7 21:25:25 2018
+# Process ID: 2436
+# Current directory: C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/behav/xsim.dir/lab3_4_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/behav/webtalk.log
+# Journal file: C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/behav/xsim.dir/lab3_4_sim_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 61.129 ; gain = 0.145
+INFO: [Common 17-206] Exiting Webtalk at Thu Jun  7 21:25:33 2018...

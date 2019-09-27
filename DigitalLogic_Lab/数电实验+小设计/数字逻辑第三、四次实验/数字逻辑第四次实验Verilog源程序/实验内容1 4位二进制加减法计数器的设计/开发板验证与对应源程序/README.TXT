@@ -1,0 +1,3 @@
+counter.v为实验内容1中四位二进制加减法计数器电路的verilog文件
+fpga_counter.v为实验内容1中基于四位二进制加减法计数器电路实现的初值为2的模8计数器电路的verilog文件
+Nexys4_Master.xdc为实验内容1中用于绑定引脚的约束文件

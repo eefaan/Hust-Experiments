@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/VerilogLab/lab3_4/lab3_4.sim/sim_1/synth/func/lab3_4_sim_func_synth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Divider
+INFO: [VRFC 10-311] analyzing module pipe3b
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/VerilogLab/lab3_4/lab3_4.srcs/sim_1/new/lab3_4_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab3_4_sim

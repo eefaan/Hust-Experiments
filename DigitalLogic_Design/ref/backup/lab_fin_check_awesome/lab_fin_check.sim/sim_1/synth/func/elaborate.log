@@ -1,0 +1,91 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: E:/WIN/program/vivado2017.2/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto b40f79190e2841328a242ccb88f27f69 --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot washing_machine_sim_func_synth xil_defaultlib.washing_machine_sim xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4100] "C:/VerilogLab/lab_fin_check/lab_fin_check.sim/sim_1/synth/func/washing_machine_sim_func_synth.v" Line 15. Module FSM has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/IBUF.v" Line 29. Module IBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/LUT4.v" Line 30. Module LUT4 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUF.v" Line 25. Module OBUF has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/LUT1.v" Line 27. Module LUT1 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/LUT1.v" Line 62. Module x_lut1_mux2 has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/FDRE.v" Line 27. Module FDRE_default has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/OBUFT.v" Line 26. Module OBUFT has a timescale but at least one module in design doesn't have timescale.
+WARNING: [XSIM 43-4100] "/wrk/2017.2/nightly/2017_06_15_1909853/data/verilog/src/unisims/BUFG.v" Line 27. Module BUFG has a timescale but at least one module in design doesn't have timescale.
+INFO: [Common 17-14] Message 'XSIM 43-4100' appears 50 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.OBUF
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.OBUFT
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.LUT5
+Compiling module xil_defaultlib.bin_to_BCD
+Compiling module xil_defaultlib.bin_to_BCD_0
+Compiling module unisims_ver.latchsre_ldce
+Compiling module unisims_ver.LDCE
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module xil_defaultlib.ssdisp
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.CARRY4
+Compiling module xil_defaultlib.timer
+Compiling module xil_defaultlib.FSM
+Compiling module xil_defaultlib.sum_rom
+Compiling module xil_defaultlib.counter
+Compiling module xil_defaultlib.decoder3_8
+Compiling module xil_defaultlib.sevenseg_decoder
+Compiling module xil_defaultlib.washing_machine_sim
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot washing_machine_sim_func_synth

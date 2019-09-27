@@ -1,0 +1,3 @@
+lab3_4.v为实验内容3中3位移位寄存器修改后前后仿真一致的verilog文件
+divider.v为实验内容3中对开发板时钟进行分频的分频电路的verilog文件
+Nexys4_Master.xdc为实验内容3中用于绑定引脚的约束文件

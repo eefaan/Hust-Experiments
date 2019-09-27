@@ -1,0 +1,81 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu Sep 27 04:56:34 2018
+# Process ID: 6076
+# Current directory: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/impl_1
+# Command line: vivado.exe -log washing_machine.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source washing_machine.tcl -notrace
+# Log file: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/impl_1/washing_machine.vdi
+# Journal file: C:/VerilogLab/lab_fin_check/lab_fin_check.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source washing_machine.tcl -notrace
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2017.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:120]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:120]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Red'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Green'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB1_Blue'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Red'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Green'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'RGB2_Blue'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:164]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:164]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:165]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc:165]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/VerilogLab/lab_fin_check/lab_fin_check.srcs/constrs_1/imports/imports/Nexys4_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+link_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 538.305 ; gain = 314.695
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a100t-csg324'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+Command: report_drc (run_mandatory_drcs) for: opt_checks
+INFO: [DRC 23-27] Running DRC with 2 threads
+report_drc (run_mandatory_drcs) completed successfully
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.611 . Memory (MB): peak = 549.996 ; gain = 11.691

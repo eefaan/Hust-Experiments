@@ -1,0 +1,15 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_FSM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab_4_5_FSM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_datapath.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register_circuit
+INFO: [VRFC 10-311] analyzing module adder_circuit
+INFO: [VRFC 10-311] analyzing module memory_circuit
+INFO: [VRFC 10-311] analyzing module multiplex_circuit
+INFO: [VRFC 10-311] analyzing module compare_circuit
+INFO: [VRFC 10-311] analyzing module lab_4_5datapath
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Temp/lab_4_5/lab_4_5.srcs/sources_1/new/lab_4_5_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab_4_5_top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Temp/lab_4_5/lab_4_5.srcs/sim_1/new/lab_4_5_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lab_4_5_top_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Temp/lab_4_5/lab_4_5.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

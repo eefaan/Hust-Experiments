@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Fri Jun  8 12:13:00 2018
+# Process ID: 9104
+# Current directory: C:/VerilogLab/v_lab3/v_lab3.runs/synth_1
+# Command line: vivado.exe -log dynamic_scan.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dynamic_scan.tcl
+# Log file: C:/VerilogLab/v_lab3/v_lab3.runs/synth_1/dynamic_scan.vds
+# Journal file: C:/VerilogLab/v_lab3/v_lab3.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source dynamic_scan.tcl -notrace
