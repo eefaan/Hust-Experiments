@@ -1,0 +1,25 @@
+0.6
+2017.2
+Jun 15 2017
+18:52:51
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.sim/sim_1/behav/glbl.v,1497407496,verilog,,,,glbl,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sim_1/imports/new/datapath_sim.v,1551250343,verilog,,,,datapath_sim,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v,1550544088,verilog,,,,ALU,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v,1550667905,verilog,,,C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/instruction_def.v;C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ctrl_encode_def.v,Ctrl;Ctrl4,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/EX_MEM.v,1551249049,verilog,,,,EX_MEM,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ID_EX.v,1551249044,verilog,,,,ID_EX,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/IF_ID.v,1551249016,verilog,,,,IF_ID,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MEM_WB.v,1551249053,verilog,,,,MEM_WB,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v,1550622194,verilog,,,,MUX4_32,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/PCreg.v,1550562576,verilog,,,,PCreg,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/RAM.v,1550661745,verilog,,,,RAM,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ROM.v,1550626947,verilog,,,,ROM,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v,1551246018,verilog,,,,counter,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ctrl_encode_def.v,1550544091,verilog,,,,,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/datapath.v,1551250125,verilog,,,,datapath,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/extend.v,1550537026,verilog,,,,sign_extend;unsign_extend,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward.v,1551198629,verilog,,,,forward,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward_decode.v,1551198025,verilog,,,,forward_decode,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/instruction_def.v,1550544090,verilog,,,,,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regUsed.v,1551244004,verilog,,,,regUsed,,,,,,,,
+C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regfile.v,1551178293,verilog,,,,REGFILE,,,,,,,,

@@ -1,0 +1,701 @@
+
+*** Running vivado
+    with args -log cpu28_pipeline.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu28_pipeline.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source cpu28_pipeline.tcl -notrace
+Command: synth_design -top cpu28_pipeline -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t-csg324'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 1744 
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:91]
+WARNING: [Synth 8-1849] concatenation with unsized literal; will interpret as 32 bits [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:91]
+WARNING: [Synth 8-2507] parameter declaration becomes local in divider with formal parameter declaration list [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:32]
+WARNING: [Synth 8-2507] parameter declaration becomes local in divider with formal parameter declaration list [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:33]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 318.406 ; gain = 94.586
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'cpu28_pipeline' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/cpu28_pipeline.v:23]
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/cpu28_pipeline.v:51]
+INFO: [Synth 8-638] synthesizing module 'divider' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:22]
+	Parameter N bound to: 2000000 - type: integer 
+	Parameter F bound to: 20000 - type: integer 
+	Parameter S bound to: 80000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'divider' (1#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:22]
+INFO: [Synth 8-638] synthesizing module 'display' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:28]
+INFO: [Synth 8-638] synthesizing module 'sum_rom' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:50]
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:56]
+WARNING: [Synth 8-567] referenced signal 'sum_out' should be on the sensitivity list [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:55]
+INFO: [Synth 8-256] done synthesizing module 'sum_rom' (2#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:50]
+INFO: [Synth 8-638] synthesizing module 'counter_display' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:74]
+INFO: [Synth 8-256] done synthesizing module 'counter_display' (3#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:74]
+INFO: [Synth 8-638] synthesizing module 'decoder3_8' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:91]
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:99]
+WARNING: [Synth 8-567] referenced signal 'rst' should be on the sensitivity list [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:97]
+WARNING: [Synth 8-567] referenced signal 'shut' should be on the sensitivity list [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:97]
+INFO: [Synth 8-256] done synthesizing module 'decoder3_8' (4#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:91]
+INFO: [Synth 8-638] synthesizing module 'sevenseg_decoder' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:119]
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:124]
+INFO: [Synth 8-256] done synthesizing module 'sevenseg_decoder' (5#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:119]
+INFO: [Synth 8-256] done synthesizing module 'display' (6#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Display.v:28]
+INFO: [Synth 8-638] synthesizing module 'datapath' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/datapath.v:28]
+	Parameter IM_DATA bound to: C:\2_19.hex - type: string 
+INFO: [Synth 8-638] synthesizing module 'PCreg' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/PCreg.v:22]
+INFO: [Synth 8-256] done synthesizing module 'PCreg' (7#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/PCreg.v:22]
+INFO: [Synth 8-638] synthesizing module 'ROM' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ROM.v:1]
+	Parameter Nmem bound to: 512 - type: integer 
+	Parameter ROM_DATA bound to: C:\2_19.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'C:\2_19.hex' is read successfully [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ROM.v:12]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (8#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ROM.v:1]
+INFO: [Synth 8-638] synthesizing module 'IF_ID' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/IF_ID.v:1]
+INFO: [Synth 8-256] done synthesizing module 'IF_ID' (9#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/IF_ID.v:1]
+INFO: [Synth 8-638] synthesizing module 'Ctrl' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:4]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:48]
+INFO: [Synth 8-256] done synthesizing module 'Ctrl' (10#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:4]
+INFO: [Synth 8-638] synthesizing module 'Ctrl4' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:426]
+INFO: [Synth 8-256] done synthesizing module 'Ctrl4' (11#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:426]
+INFO: [Synth 8-638] synthesizing module 'REGFILE' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regfile.v:2]
+	Parameter ADDR bound to: 5 - type: integer 
+	Parameter NUM bound to: 32 - type: integer 
+	Parameter SIZE bound to: 32 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regfile.v:19]
+INFO: [Synth 8-256] done synthesizing module 'REGFILE' (12#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regfile.v:2]
+INFO: [Synth 8-638] synthesizing module 'unsign_extend' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/extend.v:31]
+	Parameter in_width bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'unsign_extend' (13#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/extend.v:31]
+INFO: [Synth 8-638] synthesizing module 'sign_extend' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/extend.v:22]
+	Parameter in_width bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'sign_extend' (14#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/extend.v:22]
+INFO: [Synth 8-638] synthesizing module 'ID_EX' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ID_EX.v:1]
+INFO: [Synth 8-256] done synthesizing module 'ID_EX' (15#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ID_EX.v:1]
+INFO: [Synth 8-638] synthesizing module 'ALU' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:23]
+WARNING: [Synth 8-6014] Unused sequential element compare_flag_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:81]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (16#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:23]
+INFO: [Synth 8-638] synthesizing module 'EX_MEM' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/EX_MEM.v:1]
+INFO: [Synth 8-256] done synthesizing module 'EX_MEM' (17#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/EX_MEM.v:1]
+INFO: [Synth 8-638] synthesizing module 'MUX4_32' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:1]
+	Parameter width bound to: 4 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:9]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_32' (18#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:1]
+INFO: [Synth 8-638] synthesizing module 'RAM' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/RAM.v:23]
+WARNING: [Synth 8-6014] Unused sequential element j was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/RAM.v:40]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (19#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/RAM.v:23]
+INFO: [Synth 8-638] synthesizing module 'MEM_WB' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MEM_WB.v:1]
+INFO: [Synth 8-256] done synthesizing module 'MEM_WB' (20#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MEM_WB.v:1]
+INFO: [Synth 8-638] synthesizing module 'MUX4_32__parameterized0' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:1]
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:9]
+INFO: [Synth 8-256] done synthesizing module 'MUX4_32__parameterized0' (20#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/MUX4_32.v:1]
+INFO: [Synth 8-638] synthesizing module 'forward' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward.v:1]
+INFO: [Synth 8-638] synthesizing module 'regUsed' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regUsed.v:1]
+INFO: [Synth 8-256] done synthesizing module 'regUsed' (21#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/regUsed.v:1]
+INFO: [Synth 8-638] synthesizing module 'forward_decode' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward_decode.v:1]
+INFO: [Synth 8-256] done synthesizing module 'forward_decode' (22#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward_decode.v:1]
+INFO: [Synth 8-256] done synthesizing module 'forward' (23#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/forward.v:1]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'counter' (24#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:23]
+INFO: [Synth 8-256] done synthesizing module 'datapath' (25#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/datapath.v:28]
+INFO: [Synth 8-256] done synthesizing module 'cpu28_pipeline' (26#1) [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/cpu28_pipeline.v:23]
+WARNING: [Synth 8-3331] design RAM has unconnected port ld
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[31]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[30]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[29]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[28]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[27]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[26]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[25]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[24]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[23]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[22]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[21]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[20]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[19]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[18]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[17]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[16]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[15]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[14]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[13]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[12]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[1]
+WARNING: [Synth 8-3331] design ROM has unconnected port addr[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 379.125 ; gain = 155.305
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 379.125 ; gain = 155.305
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/constrs_1/imports/Desktop/Nexys4DDR_Master.xdc]
+Finished Parsing XDC File [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/constrs_1/imports/Desktop/Nexys4DDR_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/constrs_1/imports/Desktop/Nexys4DDR_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu28_pipeline_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu28_pipeline_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 729.734 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 729.734 ; gain = 505.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 729.734 ; gain = 505.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 729.734 ; gain = 505.914
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6014] Unused sequential element counter_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:48]
+WARNING: [Synth 8-6014] Unused sequential element counter_f_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:58]
+WARNING: [Synth 8-6014] Unused sequential element counter_s_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:66]
+INFO: [Synth 8-5546] ROM "memory" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "JMP" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SignedExt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SLLV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "LB" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "BLTZ" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Beq" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Bne" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Mem2R" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "MemW" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "Alusrc" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "RegW" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "JAL" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "RegDst" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "syscall" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "Aluctrl" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SLLV" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "SB" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "BLTZ" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[0]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[1]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[2]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[3]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[4]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[5]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[6]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[7]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[8]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[9]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[10]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[11]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[12]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[13]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[14]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[15]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[16]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[17]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[18]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[19]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[20]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[21]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[22]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[23]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[24]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[25]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[26]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[27]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[28]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[29]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[30]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "REG_FILE_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/ALU.v:49]
+WARNING: [Synth 8-6014] Unused sequential element out_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:31]
+WARNING: [Synth 8-327] inferring latch for variable 'Aluctrl_reg' [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/Ctrl.v:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 729.734 ; gain = 505.914
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |RAM__GB0            |           1|     37360|
+|2     |RAM__GB1            |           1|      8746|
+|3     |datapath__GC0       |           1|     19360|
+|4     |cpu28_pipeline__GC0 |           1|      1101|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 70    
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 29    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 109   
+	 283 Input     32 Bit        Muxes := 1     
+	  14 Input     32 Bit        Muxes := 1     
+	   4 Input     32 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 449   
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	  17 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	  17 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 16    
+	   2 Input      1 Bit        Muxes := 38    
+	   4 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cpu28_pipeline 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 50    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 100   
+	   2 Input      8 Bit        Muxes := 448   
+Module PCreg__1 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module ROM 
+Detailed RTL Component Info : 
++---Muxes : 
+	 283 Input     32 Bit        Muxes := 1     
+Module IF_ID 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 2     
+Module Ctrl 
+Detailed RTL Component Info : 
++---Muxes : 
+	  17 Input      4 Bit        Muxes := 1     
+	  17 Input      1 Bit        Muxes := 5     
+	  16 Input      1 Bit        Muxes := 16    
+Module Ctrl4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
+Module REGFILE 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 32    
+Module ID_EX 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 6     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 14    
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
++---XORs : 
+	   2 Input     32 Bit         XORs := 1     
++---Muxes : 
+	  14 Input     32 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module EX_MEM 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
+Module MUX4_32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+Module MEM_WB 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 5     
+	                1 Bit    Registers := 5     
+Module MUX4_32__parameterized0__1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module MUX4_32__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module PCreg 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module datapath 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 9     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 9     
+	   2 Input      4 Bit        Muxes := 1     
+Module divider 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 3     
++---Registers : 
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 3     
+Module counter_display 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
+Module decoder3_8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+DSP Report: Generating DSP Result0, operation Mode is: A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: Generating DSP Result0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+DSP Report: operator Result0 is absorbed into DSP Result0.
+WARNING: [Synth 8-6014] Unused sequential element PC/data_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/PCreg.v:33]
+WARNING: [Synth 8-6014] Unused sequential element all_counter/out_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:31]
+WARNING: [Synth 8-6014] Unused sequential element con_counter/out_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:31]
+WARNING: [Synth 8-6014] Unused sequential element no_con_counter/out_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/counter.v:31]
+WARNING: [Synth 8-6014] Unused sequential element clk_div/clk_S_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:68]
+WARNING: [Synth 8-6014] Unused sequential element clk_div/counter_s_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:66]
+INFO: [Synth 8-5544] ROM "my_disp/my_3_8/" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element clk_div/counter_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:48]
+WARNING: [Synth 8-6014] Unused sequential element clk_div/counter_f_reg was removed.  [C:/VerilogLab/cpu_pipeline/cpu_pipeline.srcs/sources_1/imports/new/divider.v:58]
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[29]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[30]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[31]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[28]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[27]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[26]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[25]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[24]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[23]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[22]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[21]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[20]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[19]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[18]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[17]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[16]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[15]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[14]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[13]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[13]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[12]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[11]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[11]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[10]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[10]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[9]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[9]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[8]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[0]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[1]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[1]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[2]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[2]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[3]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[4]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[5]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[0]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[0]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[1]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[1]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[2]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[2]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[3]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[3]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[4]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[4]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[5]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[5]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[6]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/seIMM_ex_reg[7]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[14]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[14]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[15]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[15]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[11]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[11]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[12]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[12]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IR_ex_reg[13]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[13]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_datapathi_2/\myIF_ID/IR_id_reg[30] )
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[16]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[8]' (FDRE) to 'my_datapathi_2/myID_EX/IR_ex_reg[8]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[24]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[20]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[28]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[18]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[10]' (FDRE) to 'my_datapathi_2/myID_EX/IR_ex_reg[10]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[26]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[6]' (FDRE) to 'my_datapathi_2/myID_EX/IR_ex_reg[6]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[22]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[30]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[17]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[17]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[19]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[9]' (FDRE) to 'my_datapathi_2/myID_EX/IR_ex_reg[9]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[25]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[19]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[21]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[19]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[29]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[19]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[19]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[23]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[27]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[23]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[7]' (FDRE) to 'my_datapathi_2/myID_EX/IR_ex_reg[7]'
+INFO: [Synth 8-3886] merging instance 'my_datapathi_2/myID_EX/IMM_ex_reg[23]' (FDRE) to 'my_datapathi_2/myID_EX/IMM_ex_reg[31]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:10 . Memory (MB): peak = 729.734 ; gain = 505.914
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping  Report (see note below)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|ALU         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 30     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|ALU         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 47     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |RAM__GB0            |           1|      6400|
+|2     |RAM__GB1            |           1|       205|
+|3     |datapath__GC0       |           1|      9852|
+|4     |cpu28_pipeline__GC0 |           1|       360|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 800.633 ; gain = 576.813
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:27 . Memory (MB): peak = 819.035 ; gain = 595.215
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++------+--------------------+------------+----------+
+|      |RTL Partition       |Replication |Instances |
++------+--------------------+------------+----------+
+|1     |RAM__GB0            |           1|      6400|
+|2     |RAM__GB1            |           1|       205|
+|3     |datapath__GC0       |           1|      9852|
+|4     |cpu28_pipeline__GC0 |           1|       360|
++------+--------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:34 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:35 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:35 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:36 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:36 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:36 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:01:37 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     2|
+|2     |CARRY4  |   387|
+|3     |DSP48E1 |     3|
+|4     |LUT1    |   270|
+|5     |LUT2    |   261|
+|6     |LUT3    |  1266|
+|7     |LUT4    |   274|
+|8     |LUT5    |   642|
+|9     |LUT6    |  1829|
+|10    |MUXF7   |   544|
+|11    |MUXF8   |    66|
+|12    |FDCE    |    64|
+|13    |FDRE    |  3250|
+|14    |LD      |     4|
+|15    |IBUF    |    10|
+|16    |OBUF    |    15|
++------+--------+------+
+
+Report Instance Areas: 
++------+-------------------+--------------------------+------+
+|      |Instance           |Module                    |Cells |
++------+-------------------+--------------------------+------+
+|1     |top                |                          |  8887|
+|2     |  clk_div          |divider                   |   243|
+|3     |  my_datapath      |datapath                  |  8603|
+|4     |    my24control    |Ctrl                      |     4|
+|5     |    IR             |ROM                       |   230|
+|6     |    PC             |PCreg                     |    33|
+|7     |    all_counter    |counter                   |    36|
+|8     |    con_counter    |counter_0                 |    36|
+|9     |    led_reg        |PCreg_1                   |    32|
+|10    |    myEX_MEM       |EX_MEM                    |  1185|
+|11    |    myID_EX        |ID_EX                     |   914|
+|12    |    myIF_ID        |IF_ID                     |   109|
+|13    |    myMEM_WB       |MEM_WB                    |   261|
+|14    |    myalu          |ALU                       |  1396|
+|15    |    myforward      |forward                   |    31|
+|16    |    myram          |RAM                       |  2345|
+|17    |    myregfile      |REGFILE                   |  1856|
+|18    |    no_con_counter |counter_2                 |    71|
+|19    |    r1_ex          |MUX4_32__parameterized0   |    32|
+|20    |    r2_ex          |MUX4_32__parameterized0_3 |    32|
+|21    |  my_disp          |display                   |    14|
+|22    |    my_coun        |counter_display           |    14|
++------+-------------------+--------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:37 . Memory (MB): peak = 872.563 ; gain = 648.742
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:17 ; elapsed = 00:01:28 . Memory (MB): peak = 872.563 ; gain = 298.133
+Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:37 . Memory (MB): peak = 872.563 ; gain = 648.742
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 404 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+190 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:01:42 . Memory (MB): peak = 872.563 ; gain = 656.508
+INFO: [Common 17-1381] The checkpoint 'C:/VerilogLab/cpu_pipeline/cpu_pipeline.runs/synth_1/cpu28_pipeline.dcp' has been generated.
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 872.563 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Wed Feb 27 15:15:27 2019...

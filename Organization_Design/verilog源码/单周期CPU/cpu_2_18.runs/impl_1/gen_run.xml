@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1550667949">
+  <File Type="PWROPT-DRC" Name="cpu28_drc_pwropted.rpt"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="cpu28_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="cpu28_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="cpu28_power_routed.rpx"/>
+  <File Type="PA-TCL" Name="cpu28.tcl"/>
+  <File Type="OPT-HWDEF" Name="cpu28.hwdef"/>
+  <File Type="RDI-RDI" Name="cpu28.vdi"/>
+  <File Type="OPT-DCP" Name="cpu28_opt.dcp"/>
+  <File Type="OPT-DRC" Name="cpu28_drc_opted.rpt"/>
+  <File Type="OPT-TIMING" Name="cpu28_timing_summary_opted.rpt"/>
+  <File Type="PWROPT-DCP" Name="cpu28_pwropt.dcp"/>
+  <File Type="PWROPT-TIMING" Name="cpu28_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="cpu28_placed.dcp"/>
+  <File Type="PLACE-IO" Name="cpu28_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="cpu28_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="cpu28_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="cpu28_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="cpu28_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="cpu28_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="cpu28_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="cpu28_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="cpu28_postplace_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="cpu28_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="cpu28_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="cpu28_drc_physopted.rpt"/>
+  <File Type="PHYSOPT-TIMING" Name="cpu28_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="cpu28_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="cpu28_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="cpu28_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="cpu28_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="cpu28_drc_routed.pb"/>
+  <File Type="BG-BIN" Name="cpu28.bin"/>
+  <File Type="ROUTE-DRC-RPX" Name="cpu28_drc_routed.rpx"/>
+  <File Type="BG-DRC" Name="cpu28.drc"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="cpu28_methodology_drc_routed.rpt"/>
+  <File Type="BITSTR-MSK" Name="cpu28.msk"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="cpu28_methodology_drc_routed.rpx"/>
+  <File Type="BG-BGN" Name="cpu28.bgn"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="cpu28_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR" Name="cpu28_power_routed.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="cpu28_power_summary_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="cpu28_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="cpu28_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="cpu28_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="cpu28_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="cpu28_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="cpu28_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="cpu28_clock_utilization_routed.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="cpu28_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="cpu28_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="cpu28_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="cpu28_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="cpu28_timing_summary_postroute_physopted.rpx"/>
+  <File Type="BG-BIT" Name="cpu28.bit"/>
+  <File Type="BITSTR-RBT" Name="cpu28.rbt"/>
+  <File Type="BITSTR-NKY" Name="cpu28.nky"/>
+  <File Type="BITSTR-BMM" Name="cpu28_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="cpu28.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="cpu28.sysdef"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/ALU.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/ALU.v"/>
+        <Attr Name="ImportTime" Val="1550544088"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/ctrl_encode_def.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/ctrl_encode_def.v"/>
+        <Attr Name="ImportTime" Val="1550544091"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/instruction_def.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/instruction_def.v"/>
+        <Attr Name="ImportTime" Val="1550544090"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/Ctrl_1.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/Ctrl_1.v"/>
+        <Attr Name="ImportTime" Val="1550567056"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/Display.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/Display.v"/>
+        <Attr Name="ImportTime" Val="1550544076"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/MUX4_32.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/MUX4_32.v"/>
+        <Attr Name="ImportTime" Val="1550544083"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/PCreg.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/RAM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/ROM.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/ROM.v"/>
+        <Attr Name="ImportTime" Val="1550544082"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/counter.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/counter.v"/>
+        <Attr Name="ImportTime" Val="1550544077"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/datapath.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/divider.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/divider.v"/>
+        <Attr Name="ImportTime" Val="1550544079"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/extend.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/regfile.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/regfile.v"/>
+        <Attr Name="ImportTime" Val="1550544123"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/cpu28.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/MUX2_5.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/MUX2_5.v"/>
+        <Attr Name="ImportTime" Val="1550544115"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/from_others/mux2_32.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/from_others/mux2_32.v"/>
+        <Attr Name="ImportTime" Val="1550544113"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/divider.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/counter.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/MUX4_32.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/ctrl_encode_def.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/regfile.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/instruction_def.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../Users/leo/Desktop/from_others/ALU.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="cpu28"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/Desktop/Nexys4DDR_Master.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Users/leo/Desktop/Nexys4DDR_Master.xdc"/>
+        <Attr Name="ImportTime" Val="1418199484"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
