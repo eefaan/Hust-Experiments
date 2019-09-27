@@ -3,7 +3,7 @@ Hust-OS-Experiments on 2019.3.10
 
 ## Problems
 ### Step1:
-![1b4eab2de59802ec710bb0b24560cc21.png](https://raw.githubusercontent.com/eefaan/Hust-OS-Experiments/master/src/pic/Step1.png)
+![1b4eab2de59802ec710bb0b24560cc21.png](https://raw.githubusercontent.com/eefaan/Hust-Experiments/master/Hust-OS-Experiments/src/pic/Step1.png)
 ### Step2:
 ![76ce81dde88c89874261942abc171c9d.png](https://raw.githubusercontent.com/eefaan/Hust-OS-Experiments/master/src/pic/Step2.png)
 ### Step3:
