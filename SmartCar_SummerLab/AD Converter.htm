@@ -1,0 +1,4640 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>PIC18 Peripheral Libraries</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-style:italic;}
+h3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h4
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.6in;
+	margin-bottom:.0001pt;
+	text-indent:-.6in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.7in;
+	text-indent:-.7in;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-style:italic;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.8in;
+	text-indent:-.8in;
+	font-size:11.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.9in;
+	text-indent:-.9in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.1in;
+	text-indent:-1.1in;
+	font-size:11.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin:0in;
+	margin-bottom:.0001pt;
+	line-height:200%;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.25in;
+	margin-bottom:.0001pt;
+	line-height:200%;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-style:italic;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:20.0pt;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+p.MsoCommentText, li.MsoCommentText, div.MsoCommentText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	text-align:center;
+	font-size:16.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{margin:0in;
+	margin-bottom:.0001pt;
+	background:navy;
+	font-size:10.0pt;
+	font-family:Tahoma;}
+p.MsoCommentSubject, li.MsoCommentSubject, div.MsoCommentSubject
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:8.0pt;
+	font-family:Tahoma;
+	layout-grid-mode:line;}
+span.Computer
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted, li.Bulleted, div.Bulleted
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody, li.CellBody, div.CellBody
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading, li.CellHeading, div.CellHeading
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote, li.Footnote, div.Footnote
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented, li.Indented, div.Indented
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered, li.Numbered, div.Numbered
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered1, li.Numbered1, div.Numbered1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote, li.TableFootnote, div.TableFootnote
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle, li.TableTitle, div.TableTitle
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold, li.NormalBold, div.NormalBold
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note, li.Note, div.Note
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents, li.TableofContents, div.TableofContents
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer1
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted1, li.Bulleted1, div.Bulleted1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody1, li.CellBody1, div.CellBody1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading1, li.CellHeading1, div.CellHeading1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote1, li.Footnote1, div.Footnote1
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented1, li.Indented1, div.Indented1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered2, li.Numbered2, div.Numbered2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered11, li.Numbered11, div.Numbered11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote1, li.TableFootnote1, div.TableFootnote1
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle1, li.TableTitle1, div.TableTitle1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold1, li.NormalBold1, div.NormalBold1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar1
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note1, li.Note1, div.Note1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char1
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed1
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents1, li.TableofContents1, div.TableofContents1
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer2
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted2, li.Bulleted2, div.Bulleted2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody2, li.CellBody2, div.CellBody2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading2, li.CellHeading2, div.CellHeading2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote2, li.Footnote2, div.Footnote2
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented2, li.Indented2, div.Indented2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered3, li.Numbered3, div.Numbered3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered12, li.Numbered12, div.Numbered12
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote2, li.TableFootnote2, div.TableFootnote2
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle2, li.TableTitle2, div.TableTitle2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold2, li.NormalBold2, div.NormalBold2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar2
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note2, li.Note2, div.Note2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char2
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed2
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents2, li.TableofContents2, div.TableofContents2
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.TableofContents3, li.TableofContents3, div.TableofContents3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer3
+	{font-family:"Courier New";
+	color:windowtext;}
+p.CellBody3, li.CellBody3, div.CellBody3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading3, li.CellHeading3, div.CellHeading3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.TableTitle3, li.TableTitle3, div.TableTitle3
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold3, li.NormalBold3, div.NormalBold3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar3
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char3
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.Computer4
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted3, li.Bulleted3, div.Bulleted3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody4, li.CellBody4, div.CellBody4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading4, li.CellHeading4, div.CellHeading4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote3, li.Footnote3, div.Footnote3
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented3, li.Indented3, div.Indented3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered4, li.Numbered4, div.Numbered4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered13, li.Numbered13, div.Numbered13
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote3, li.TableFootnote3, div.TableFootnote3
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle4, li.TableTitle4, div.TableTitle4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold4, li.NormalBold4, div.NormalBold4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar4
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note3, li.Note3, div.Note3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.StyleComputerBoldItalicRed3
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents4, li.TableofContents4, div.TableofContents4
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer5
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted4, li.Bulleted4, div.Bulleted4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody5, li.CellBody5, div.CellBody5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading5, li.CellHeading5, div.CellHeading5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote4, li.Footnote4, div.Footnote4
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented4, li.Indented4, div.Indented4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered5, li.Numbered5, div.Numbered5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered14, li.Numbered14, div.Numbered14
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote4, li.TableFootnote4, div.TableFootnote4
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle5, li.TableTitle5, div.TableTitle5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold5, li.NormalBold5, div.NormalBold5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar5
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note4, li.Note4, div.Note4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char4
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed4
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents5, li.TableofContents5, div.TableofContents5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer6
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted5, li.Bulleted5, div.Bulleted5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody6, li.CellBody6, div.CellBody6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading6, li.CellHeading6, div.CellHeading6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote5, li.Footnote5, div.Footnote5
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented5, li.Indented5, div.Indented5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered6, li.Numbered6, div.Numbered6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered15, li.Numbered15, div.Numbered15
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote5, li.TableFootnote5, div.TableFootnote5
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle6, li.TableTitle6, div.TableTitle6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold6, li.NormalBold6, div.NormalBold6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar6
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note5, li.Note5, div.Note5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char5
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed5
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents6, li.TableofContents6, div.TableofContents6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Heading2Char6
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.Computer7
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted6, li.Bulleted6, div.Bulleted6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody7, li.CellBody7, div.CellBody7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading7, li.CellHeading7, div.CellHeading7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote6, li.Footnote6, div.Footnote6
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented6, li.Indented6, div.Indented6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered7, li.Numbered7, div.Numbered7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered16, li.Numbered16, div.Numbered16
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote6, li.TableFootnote6, div.TableFootnote6
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle7, li.TableTitle7, div.TableTitle7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold7, li.NormalBold7, div.NormalBold7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar7
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note6, li.Note6, div.Note6
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.StyleComputerBoldItalicRed6
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents7, li.TableofContents7, div.TableofContents7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer8
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted7, li.Bulleted7, div.Bulleted7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody8, li.CellBody8, div.CellBody8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading8, li.CellHeading8, div.CellHeading8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote7, li.Footnote7, div.Footnote7
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented7, li.Indented7, div.Indented7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered8, li.Numbered8, div.Numbered8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered17, li.Numbered17, div.Numbered17
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote7, li.TableFootnote7, div.TableFootnote7
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle8, li.TableTitle8, div.TableTitle8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold8, li.NormalBold8, div.NormalBold8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar8
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note7, li.Note7, div.Note7
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char7
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed7
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents8, li.TableofContents8, div.TableofContents8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.TableofContents9, li.TableofContents9, div.TableofContents9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.TableTitle9, li.TableTitle9, div.TableTitle9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer9
+	{font-family:"Courier New";
+	color:windowtext;}
+p.CellBody9, li.CellBody9, div.CellBody9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading9, li.CellHeading9, div.CellHeading9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+span.Computer10
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted8, li.Bulleted8, div.Bulleted8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody10, li.CellBody10, div.CellBody10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading10, li.CellHeading10, div.CellHeading10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote8, li.Footnote8, div.Footnote8
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented8, li.Indented8, div.Indented8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered9, li.Numbered9, div.Numbered9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered18, li.Numbered18, div.Numbered18
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote8, li.TableFootnote8, div.TableFootnote8
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle10, li.TableTitle10, div.TableTitle10
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold9, li.NormalBold9, div.NormalBold9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar9
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note8, li.Note8, div.Note8
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char8
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed8
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents10, li.TableofContents10, div.TableofContents10
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.TableofContents11, li.TableofContents11, div.TableofContents11
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.TableTitle11, li.TableTitle11, div.TableTitle11
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer11
+	{font-family:"Courier New";
+	color:windowtext;}
+p.CellBody11, li.CellBody11, div.CellBody11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading11, li.CellHeading11, div.CellHeading11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.NormalBold10, li.NormalBold10, div.NormalBold10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar10
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Computer12
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted9, li.Bulleted9, div.Bulleted9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody12, li.CellBody12, div.CellBody12
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading12, li.CellHeading12, div.CellHeading12
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote9, li.Footnote9, div.Footnote9
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented9, li.Indented9, div.Indented9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered10, li.Numbered10, div.Numbered10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered19, li.Numbered19, div.Numbered19
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote9, li.TableFootnote9, div.TableFootnote9
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle12, li.TableTitle12, div.TableTitle12
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold11, li.NormalBold11, div.NormalBold11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar11
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note9, li.Note9, div.Note9
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char9
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed9
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+p.TableofContents12, li.TableofContents12, div.TableofContents12
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:12.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.Computer13
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted10, li.Bulleted10, div.Bulleted10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody13, li.CellBody13, div.CellBody13
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading13, li.CellHeading13, div.CellHeading13
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote10, li.Footnote10, div.Footnote10
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented10, li.Indented10, div.Indented10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered20, li.Numbered20, div.Numbered20
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered110, li.Numbered110, div.Numbered110
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote10, li.TableFootnote10, div.TableFootnote10
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle13, li.TableTitle13, div.TableTitle13
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold12, li.NormalBold12, div.NormalBold12
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar12
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note10, li.Note10, div.Note10
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char10
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed10
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+span.Computer14
+	{font-family:"Courier New";
+	color:windowtext;}
+p.Bulleted11, li.Bulleted11, div.Bulleted11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.CellBody14, li.CellBody14, div.CellBody14
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;}
+p.CellHeading14, li.CellHeading14, div.CellHeading14
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	text-align:center;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	font-weight:bold;}
+p.Footnote11, li.Footnote11, div.Footnote11
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Indented11, li.Indented11, div.Indented11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered21, li.Numbered21, div.Numbered21
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.Numbered111, li.Numbered111, div.Numbered111
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableFootnote11, li.TableFootnote11, div.TableFootnote11
+	{margin-top:3.0pt;
+	margin-right:.25in;
+	margin-bottom:3.0pt;
+	margin-left:42.5pt;
+	text-indent:-11.5pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;}
+p.TableTitle14, li.TableTitle14, div.TableTitle14
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:1.0in;
+	text-indent:-1.0in;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.NormalBold13, li.NormalBold13, div.NormalBold13
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.NormalBoldChar13
+	{font-family:Arial;
+	color:black;
+	font-weight:bold;}
+p.Note11, li.Note11, div.Note11
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	text-indent:-.5in;
+	line-height:14.0pt;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:Arial;
+	color:black;
+	font-weight:bold;}
+span.Heading2Char11
+	{font-family:Arial;
+	layout-grid-mode:line;
+	font-weight:bold;
+	font-style:italic;}
+span.StyleComputerBoldItalicRed11
+	{font-family:"Courier New";
+	color:windowtext;
+	font-weight:bold;
+	font-style:italic;}
+ /* Page Definitions */
+ @page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=MsoTitle>A/D Converter Functions</p>
+
+<p class=MsoTitle>&nbsp;</p>
+
+<p class=TableofContents>Table of Contents</p>
+
+<p class=MsoToc1><span
+class=MsoHyperlink><a href="#_Toc178051882">1<span style='font-size:12.0pt;
+line-height:200%;font-family:"Times New Roman";color:windowtext;layout-grid-mode:
+both;font-weight:normal;text-decoration:none'>    </span>Introduction<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>2</span></a></span></p>
+
+<p class=MsoToc1><span class=MsoHyperlink><a href="#_Toc178051883">2<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-weight:normal;text-decoration:none'>    </span>Function
+Descriptions<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051884">2.1<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>BusyADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051885">2.2<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>CloseADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051886">2.3<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>ConvertADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051887">2.4<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>OpenADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc178051888">2.4.1<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+layout-grid-mode:both;text-decoration:none'>      </span>OpenADC (ADC_V1)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>3</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc178051889">2.4.2<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+layout-grid-mode:both;text-decoration:none'>      </span>OpenADC (ADC_V2)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>5</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc178051890">2.4.3<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+layout-grid-mode:both;text-decoration:none'>      </span>OpenADC (ADC_V3, 4, 5,
+6)<span style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>7</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc178051891">2.4.4<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+layout-grid-mode:both;text-decoration:none'>      </span>OpenADC (ADC_V7)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>10</span></a></span></p>
+
+<p class=MsoToc3><span class=MsoHyperlink><a href="#_Toc178051892">2.4.5<span
+style='font-size:12.0pt;font-family:"Times New Roman";color:windowtext;
+layout-grid-mode:both;text-decoration:none'>      </span>OpenADC (ADC_V8, 9)<span
+style='color:windowtext;display:none;text-decoration:none'> </span><span
+style='color:windowtext;display:none;text-decoration:none'>13</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051893">2.5<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>ReadADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051894">2.6<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>SetChanADC<span
+style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>16</span></a></span></p>
+
+<p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc178051895">2.7<span
+style='font-size:12.0pt;line-height:200%;font-family:"Times New Roman";
+color:windowtext;layout-grid-mode:both;font-style:normal;text-decoration:none'>      </span>Macro
+definitions<span style='color:windowtext;display:none;text-decoration:none'>. </span><span
+style='color:windowtext;display:none;text-decoration:none'>17</span></a></span></p>
+
+<p class=MsoToc2><span style='font-size:12.0pt;line-height:200%;font-family:
+"Times New Roman";layout-grid-mode:both;font-style:normal'>&nbsp;</span></p>
+
+<b><span style='font-size:12.0pt;font-family:Arial;layout-grid-mode:line'><br
+clear=all style='page-break-before:always'>
+</span></b>
+
+<h1><a name="_Toc178051882">1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Introduction</a></h1>
+
+<p class=MsoNormal>The A/D peripheral is supported with the following
+functions:</p>
+
+<p class=TableTitle>Table:             A/D Converter Functions</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=158 valign=top style='width:1.65in;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 2.25pt;padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Function</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Description</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>BusyADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Is A/D converter currently performing a conversion?</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>CloseADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Disable the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ConvertADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Start an A/D conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>OpenADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ReadADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Read the results of an A/D conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>SetChanADC</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Select A/D channel to be used.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Based on the different control registers, configuration bits
+and their positions in the control register, all PIC18 devices are divided into
+9 different versions. Wherever required, separate functions have been designed
+to support these versions, so before calling the LIB functions care has to be
+taken to know the version of the configured device and to call the appropriate
+function with correct number of arguments. </p>
+
+<p class=MsoNormal>Below is the table to find the ADC version for the
+configured device:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>TABLE: VERSION vs. DEVICES </b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=158 valign=top style='width:1.65in;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 2.25pt;padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Version name</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Device number</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V1</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18C242, 18C252, 18C442, 18C452, 18F242, 18F252,</p>
+  <p class=MsoNormal>18F442, 18F452, 18F24,8 18F258, 18F448, 18F458</p>
+  <p class=MsoNormal>18F2439, 18F2539, 18F4439, 18F4539</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V2</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18C601, 18C801, 18C658, 18C858, 18F6620, 18F6720,</p>
+  <p class=MsoNormal>18F8620, 18F8720, 18F6520, 18F8520</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V3</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F1220, 18F1320</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V4</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F1230, 18F1330</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V5</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F2220, 18F2320, 18F4220, 18F4320, 18F2420,</p>
+  <p class=MsoNormal>18F2520, 18F4420, 18F4520, 18F2423, 18F2523,</p>
+  <p class=MsoNormal>18F4423, 18F4523, 18F2455, 18F2550, 18F4455,</p>
+  <p class=MsoNormal>18F4550, 18F2410, 18F2510, 18F2515, 18F2610,</p>
+  <p class=MsoNormal>18F4410, 18F4510, 18F4515, 18F4610, 18F2525,</p>
+  <p class=MsoNormal>18F2620, 18F4525, 18F4620, 18F6310, 18F6410</p>
+  <p class=MsoNormal>18F8310, 18F8410, 18F6390, 18F6490, 18F8390,</p>
+  <p class=MsoNormal>18F8490, 18F6527, 18F6622, 18F6627, 18F6722,</p>
+  <p class=MsoNormal>18F8527, 18F8622, 18F8627, 18F8722, 18F6585,</p>
+  <p class=MsoNormal>18F6680, 18F8585, 18F8680, 18F6525, 18F6621,</p>
+  <p class=MsoNormal>18F8525, 18F8621</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V6</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F24J10, 18F25J10, 18F44J10, 18F45J10, 18F63J11,</p>
+  <p class=MsoNormal>18F64J11, 18F65J11, 18F83J11, 18F84J11, 18F85J11,</p>
+  <p class=MsoNormal>18F63J90, 18F64J90, 18F65J90, 18F83J90, 18F84J90,</p>
+  <p class=MsoNormal>18F85J90, 18F65J10, 18F65J15, 18F66J10, 18F66J15,</p>
+  <p class=MsoNormal>18F67J10, 18F85J10, 18F85J15, 18F86J10, 18F86J15,</p>
+  <p class=MsoNormal>18F87J10, 18F66J60, 18F66J65, 18F67J60, 18F86J60,</p>
+  <p class=MsoNormal>18F86J65, 18F87J60, 18F96J60, 18F96J65, 18F97J60</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V7</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F2331, 18F2431, 18F4331, 18F4431</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V8</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F23K20, 18F24K20, 18F25K20, 18F43K20, 18F44K20,</p>
+  <p class=MsoNormal>18F45K20</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V9</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F66J11, 18F66J16, 18F67J11, 18F86J11, 18F86J16</p>
+  <p class=MsoNormal>18F87J11, 18F65J50, 18F66J50, 18F66J55, 18F67J50</p>
+  <p class=MsoNormal>18F85J50, 18F86J50, 18F86J55, 18F87J50</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>ADC_V10</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=MsoNormal>18F13K50, 18LF13K50, 18F14K50, 18LF14K50</p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-left:0in;text-indent:0in'>&nbsp;</h1>
+
+<h1><a name="_Toc178051883">2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Function Descriptions</a></h1>
+
+<h2><a name="_Toc178051884">2.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>BusyADC</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Is the A/D converter currently performing a conversion?</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>char BusyADC( void );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function indicates if the A/D peripheral is in the process
+  of converting a value.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Return Value:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>1 if the A/D peripheral is performing a conversion.</p>
+  <p class=CellBody>0 if the A/D peripheral isn’t performing a conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcbusy.c</span></p>
+  <p class=CellBody><span class=Computer>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc178051885">2.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>CloseADC</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Disable the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>void CloseADC( void );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function disables the A/D converter and A/D interrupt
+  mechanism.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcclose.c</span></p>
+  <p class=CellBody><span class=Computer>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc178051886">2.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ConvertADC</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Starts the A/D conversion process.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>void ConvertADC( void );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function starts an A/D conversion. The <span
+  class=Computer>BusyADC()</span> function or A/D interrupt may be used to
+  detect completion of the conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcconv.c</span></p>
+  <p class=CellBody><span class=Computer>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc178051887">2.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC</a></h2>
+
+<h3><a name="_Toc178051888">2.4.1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (ADC_V1)</a></h3>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>For<span style='font-size:9.0pt'> <b>ADC</b><b>_V1</b></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D convertor.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>void OpenADC( unsigned char <b><i>config</i></b>,</span></p>
+  <p class=CellBody><span class=Computer>              unsigned char <b><i>config2</i></b>
+  );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation (‘|’), configurable
+  either way as shown in the example at the end of this file, with a value from
+  each of the categories listed below. These values are defined in the file <span
+  class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>  Internal
+  RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D voltage reference source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_8ANA_0REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = V<span style='text-transform:
+  uppercase'>dd</span>, V<span style='text-transform:uppercase'>ref</span>- = V<span
+  style='text-transform:uppercase'>ss</span>,<br>
+                                                All analog channels</p>
+  <p class=CellBody>            <span class=Computer>ADC_7ANA_1REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref</span>- = V<span style='text-transform:uppercase'>ss</span> </p>
+  <p class=CellBody>                                                   All
+  analog channels except AN3</p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA_2REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref- = AN2</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA_0REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = V<span style='text-transform:
+  uppercase'>dd</span>, V<span style='text-transform:uppercase'>ref</span>- = V<span
+  style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA_1REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref</span>- = V<span style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA_0REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = V<span style='text-transform:
+  uppercase'>dd</span>, V<span style='text-transform:uppercase'>ref</span>- = V<span
+  style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA_2REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref- = AN2</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA_1REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref</span>- = V<span style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA_2REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref- = AN2</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA_0REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = V<span style='text-transform:
+  uppercase'>dd</span>, V<span style='text-transform:uppercase'>ref</span>- = V<span
+  style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA_2REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref- = AN2</span></p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA_1REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3,</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA_2REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = AN3, V<span style='text-transform:
+  uppercase'>ref- = AN2</span><br>
+                                                AN0 is analog input</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA_0REF</span>           V<span
+  style='text-transform:uppercase'>ref</span>+ = V<span style='text-transform:
+  uppercase'>dd</span>, V<span style='text-transform:uppercase'>ref</span>- = V<span
+  style='text-transform:uppercase'>ss</span></p>
+  <p class=CellBody>                                                    AN0 is
+  analog input</p>
+  <p class=CellBody>            <span class=Computer>ADC_0ANA_0REF</span>           All
+  digital I/O</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), user configurable, with a value from each of the categories listed
+  below. These values are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Channel:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>    Interrupts
+  enabled</p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_OFF</span>  Interrupts
+  disabled</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D peripheral to the POR state
+  and configures the A/D-related Special Function Registers (SFRs) according to
+  the options specified.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32    &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_1ANA_0REF,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0        &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF    );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32    |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_1ANA_0REF,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0        |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF    );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc178051889">2.4.2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (ADC_V2)</a></h3>
+
+<p class=MsoNormal>For<b> </b><b><span style='font-size:9.0pt'>ADC</span></b><b><span
+style='font-size:9.0pt'>_V2</span></b></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody> <b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>void OpenADC( unsigned char <b><i>config</i></b>,</span></p>
+  <p class=CellBody><span class=Computer>              unsigned char <b><i>config2</i></b>
+  );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation (‘|’), configurable
+  either way as shown on the example at the end of this file, with a value from
+  each of the categories listed below. These values are defined in the file <span
+  class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2</span>                F<span
+  style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>                F<span
+  style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>                F<span
+  style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16</span>              F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>              F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>              F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>              Internal
+  RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D port configuration:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer><span lang=DE>ADC_1ANA</span></span><span
+  lang=DE>        analog:AN0                    digital:AN1-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_2ANA</span></span><span lang=DE>        analog:AN0-AN1             digital:AN2-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_3ANA</span></span><span lang=DE>        analog:AN0-AN2             digital:AN3-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_4ANA</span></span><span lang=DE>        analog:AN0-AN3             digital:AN4-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_5ANA</span></span><span lang=DE>        analog:AN0-AN4             digital:AN5-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_6ANA</span></span><span lang=DE>        analog:AN0-AN5             digital:AN6-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_7ANA</span></span><span lang=DE>        analog:AN0-AN6             digital:AN7-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_8ANA</span></span><span lang=DE>        analog:AN0-AN7             digital:AN8-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_9ANA</span></span><span lang=DE>        analog:AN0-AN8             digital:AN9-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_10ANA</span></span><span lang=DE>      analog:AN0-AN9             digital:AN10-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_11ANA</span></span><span lang=DE>      analog:AN0-AN10           digital:AN11-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_12ANA</span></span><span lang=DE>      analog:AN0-AN11           digital:AN12-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_13ANA</span></span><span lang=DE>      analog:AN0-AN12           digital:AN13-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_14ANA</span></span><span lang=DE>      analog:AN0-AN13           digital:AN14-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer>ADC_15ANA</span>      All
+  analog</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), user configurable, with a value from each of the categories listed
+  below. These values are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Channel:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>         Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>         Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>         Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>         Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>         Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>         Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>         Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>         Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>         Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>         Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>       Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>       Channel
+  11</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH12</span>       Channel
+  12</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH13</span>       Channel
+  13</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH14</span>       Channel
+  14</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH15</span>       Channel
+  15</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>       
+  Interrupts enabled</p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_OFF</span>     
+  Interrupts disabled</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=MsoAcetate><b><span style='font-size:10.0pt;font-family:Arial'>&nbsp;</span></b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b><span style='font-family:"Courier New"'>A/D </span></b><b><span
+  style='font-family:"Courier New"'>V<span style='text-transform:uppercase'>ref</span>+
+  and V<span style='text-transform:uppercase'>ref-</span> configuration:</span></b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>ADC_REF_VDD_VREFMINUS      
+  </span>VREF+ = VDD &amp; VREF- = Ext.</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>ADC_REF_VREFPLUS_VREFMINUS 
+  </span>VREF+ = Ext. &amp; VREF- = Ext.<span style='font-family:"Courier New"'> 
+  </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>ADC_REF_VREFPLUS_VSS       
+  </span>VREF+ = Ext. &amp; VREF- = VSS</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>ADC_REF_VDD_VSS             </span>VREF+
+  = VDD &amp; VREF- = VSS</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D-related registers to the POR
+  state and then configures the clock, result format, voltage reference, port
+  and channel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32    &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_14ANA,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0        &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF    );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32    |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_14ANA,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0        |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF    );</span></p>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc178051890">2.4.3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (ADC_V3, 4, 5, 6)</a></h3>
+
+<p class=MsoNormal>For<b> </b><b><span style='font-size:9.0pt'>ADC</span></b><b><span
+style='font-size:9.0pt'>_V3, ADC_V4, ADC_V5 </span></b><span style='font-size:
+9.0pt'>and<b> ADC_V6</b></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D convertor.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>void OpenADC(unsigned char <span class=Computer><b><i>config</i></b></span>,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config2</i></b></span>
+  ,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>portconfig</i></b></span>);</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file, with a value from each of the categories listed below. These values are
+  defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>  F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>  Internal
+  RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D acquisition time select:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_0_TAD</span>      0
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_2_TAD</span>      2
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_4_TAD</span>      4
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_6_TAD</span>      6
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_8_TAD</span>      8
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_12_TAD</span>    12
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_16_TAD</span>    16
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_20_TAD</span>    20
+  Tad</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file, with a value from each of the categories listed below. These values are
+  defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Channel:</b></p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V3:</span></b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V4:</span></b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>For <b><span style='font-size:9.0pt;layout-grid-mode:line'>ADC_V5
+  </span></b><span style='font-size:9.0pt;layout-grid-mode:line'>and<b> ADC_V6:</b></span></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>          Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>          Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>        Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>        Channel
+  11</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH12</span>        Channel
+  12</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH13</span>        Channel
+  13</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH14</span>        Channel
+  14</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH15</span>        Channel
+  15</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>    Interrupts
+  enabled</p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_OFF</span>  Interrupts
+  disabled</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Vref+ and Vref- configuration:</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    ADC_REF_VDD_VREFMINUS       </span>VREF+ = VDD &amp; VREF- = Ext.</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    ADC_REF_VREFPLUS_VREFMINUS  </span>VREF+ = Ext. &amp; VREF- = Ext.<span style='font-family:"Courier New"'> 
+  </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    ADC_REF_VREFPLUS_VSS        </span>VREF+ = Ext. &amp; VREF- = VSS</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    ADC_REF_VDD_VSS             </span>VREF+ = VDD &amp; VREF- = VSS</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Portconfig</i></b></span></p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V3:</span></b></p>
+  <p class=CellBody>The value of portconfig can be any value from 0 to 127, few
+  are defined</p>
+  <p class=CellBody>below</p>
+  <p class=CellBody>            <span class=Computer>ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA</span>        analog:AN0                    </p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA</span>        analog:AN0-AN1             </p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA</span>        analog:AN0-AN2             </p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA</span>        analog:AN0-AN3             </p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA</span>        analog:AN0-AN4             </p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA</span>        analog:AN0-AN5             </p>
+  <p class=CellBody>            <span class=Computer>ADC_7ANA</span>        analog:AN0-AN6             </p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V4:</span></b></p>
+  <p class=CellBody>The value of portconfig can be any value from 0 to 15, few
+  are defined below</p>
+  <p class=CellBody>            <span class=Computer>ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA</span>        analog:AN0                    </p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA</span>        analog:AN0-AN1             </p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA</span>        analog:AN0-AN2             </p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA</span>        analog:AN0-AN3             </p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V5</span></b><span style='font-size:9.0pt;layout-grid-mode:line'>
+  and<b> ADC_V6:</b></span></p>
+  <p class=CellBody><span class=Computer>      </span><span class=Computer><span
+  lang=DE>ADC_0ANA</span></span><span lang=DE>        All digital</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_1ANA</span></span><span lang=DE>        analog:AN0                    digital:AN1-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_2ANA</span></span><span lang=DE>        analog:AN0-AN1             digital:AN2-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_3ANA</span></span><span lang=DE>        analog:AN0-AN2             digital:AN3-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_4ANA</span></span><span lang=DE>        analog:AN0-AN3             digital:AN4-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_5ANA</span></span><span lang=DE>        analog:AN0-AN4             digital:AN5-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_6ANA</span></span><span lang=DE>        analog:AN0-AN5             digital:AN6-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_7ANA</span></span><span lang=DE>        analog:AN0-AN6             digital:AN7-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_8ANA</span></span><span lang=DE>        analog:AN0-AN7             digital:AN8-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_9ANA</span></span><span lang=DE>        analog:AN0-AN8             digital:AN9-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_10ANA</span></span><span lang=DE>      analog:AN0-AN9             digital:AN10-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_11ANA</span></span><span lang=DE>      analog:AN0-AN10           digital:AN11-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_12ANA</span></span><span lang=DE>      analog:AN0-AN11           digital:AN12-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_13ANA</span></span><span lang=DE>      analog:AN0-AN12           digital:AN13-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer><span
+  lang=DE>ADC_14ANA</span></span><span lang=DE>      analog:AN0-AN13           digital:AN14-AN15</span></p>
+  <p class=CellBody><span lang=DE>            </span><span class=Computer>ADC_15ANA</span>      All
+  analog</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D-related registers to the POR
+  state and then configures the clock, result format, voltage reference, port
+  and channel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          &amp;</span></p>
+  <p class=CellBody>                   <span class=Computer>ADC_REF_VDD_VSS 
+  &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF, 12  );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_REF_VDD_VSS  |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_OFF, 12  );</span></p>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc178051891">2.4.4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (ADC_V7)</a></h3>
+
+<p class=NormalBold>For<span style='font-weight:normal'> </span><span style='font-size:9.0pt'>ADC</span><span style='font-size:9.0pt'>_V7</span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>void OpenADC(unsigned char <span class=Computer><b><i>config1</i></b></span>,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config2</i></b></span>
+  ,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config3</i></b></span>);</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config1</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file, with a value from each of the categories listed below. These values are
+  defined in the file <span class=Computer>adc.h</span>.</p>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D conversion type:</b></p>
+  <p class=CellBody><b>            </b><span class=Computer>ADC_CONV_CONTINUOUS    
+  </span>            </p>
+  <p class=CellBody><b>            </b><span class=Computer>ADC_CONV_SINGLE_SHOT  
+  </span></p>
+  <p class=CellBody><b>A/D conversion mode:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_MODE_MULTI_CH</span></p>
+  <p class=CellBody><b>            </b><span class=Computer>ADC_MODE_SINGLE_CH</span></p>
+  <p class=CellBody><b>A/D conversion sequence select:</b></p>
+  <p class=CellBody><b>            </b><span class=Computer>ADC_CONV_SEQ_SEQM1</span>                 
+  Sequence mode 1</p>
+  <p class=CellBody><span class=Computer>      ADC_CONV_SEQ_SEQM2   </span>Sequence
+  mode 2</p>
+  <p class=CellBody><span class=Computer>      ADC_CONV_SEQ_STNM1   </span>Simultaneous
+  mode 1</p>
+  <p class=CellBody><span class=Computer>      ADC_CONV_SEQ_STNM2   </span>Simultaneous
+  mode 2</p>
+  <p class=CellBody><b>A/D result buffer depth Interrupt select control:</b></p>
+  <p class=CellBody><b><span style='font-family:"Courier New"'>      </span></b><span style='font-family:"Courier New"'>INT</span><span style='font-family:"Courier New"'>_EACH_WR_BUF  
+  </span>Interrupt when each is written to BUF</p>
+  <p class=CellBody>             <span style='font-family:"Courier New"'>INT</span><span
+  style='font-family:"Courier New"'>_2_4_WR_BUF    </span>Interrupt at 2nd
+  &amp; 4th words are written to</p>
+  <p class=CellBody>                                                    BUF<sup><span
+  style='font-family:"Courier New"'> </span></sup><span style='font-family:
+  "Courier New"'> </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      INT_4_WR_BUF        </span>Interrupt at 4th word is written to BUF<span style='font-family:"Courier New"'>
+  </span></p>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>    Interrupts
+  enabled</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      </span><span
+  class=Computer>ADC_INT_OFF</span>  Interrupts disabled<span style='font-family:
+  "Courier New"'> </span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), user configurable, with a value from each of the categories listed
+  below. These values are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Vref+ and Vref- configuration:</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_REF_VDD_VREFMINUS       </span>VREF+ = VDD &amp; VREF- = Ext.</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_REF_VREFPLUS_VREFMINUS  </span>VREF+ = Ext. &amp; VREF- = Ext.<span style='font-family:"Courier New"'> 
+  </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_REF_VREFPLUS_VSS        </span>VREF+ = Ext. &amp; VREF- = VSS</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_REF_VDD_VSS             </span>VREF+ = VDD &amp; VREF- = VSS</p>
+  <p class=CellBody><b>A/D FIFO buffer control:</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_FIFO_EN</span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>     ADC_FIFO_DIS</span></p>
+  <p class=CellBody><b>A/D Trigger Source:</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    
+  ADC_TRIG_EXT_INT0     </span>External INT0 starts A/D</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    
+  ADC_TRIG_TMR_5        </span>TMR5 starts A/D</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    
+  ADC_TRIG_INP_CAP      </span>Input Capture starts A/D<span style='font-family:
+  "Courier New"'> </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    
+  ADC_TRIG_CCP2_COM     </span>CCP2 Compare starts A/D<span style='font-family:
+  "Courier New"'> </span></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>    
+  ADC_TRIG_PCPWM        </span>PCPWM rising edge starts A/D</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config3</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file, with a value from each of the categories listed below. These values are
+  defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D acquisition time select:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_0_TAD</span>        0
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_2_TAD </span>      2
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_4_TAD</span>        4
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_6_TAD</span>        6
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_8_TAD</span>        8
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_10_TAD</span>      10
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_12_TAD</span>      12
+  Tad</p>
+  <p class=CellBody><span class=Computer>      ADC_16_TAD</span>      16 Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_20_TAD</span>      20
+  Tad</p>
+  <p class=CellBody><span class=Computer>      ADC_24_TAD</span>      24 Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_28_TAD</span>      28
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_32_TAD</span>      32
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_36_TAD</span>      36
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_40_TAD</span>      40
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_48_TAD</span>      48
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_64_TAD</span>      64
+  Tad</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2   </span>F<span
+  style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>      F<span
+  style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>      F<span
+  style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16  </span>F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>    F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>   
+  Internal RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Channel selection:</b></p>
+  <p class=CellBody><b>Channel from group A</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRA_AN0()   
+  </span>select AN0 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRA_AN4()   
+  </span>select AN4 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRA_AN8()   
+  </span>select AN8 as analog</p>
+  <p class=CellBody><b>Channel from group B</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRB_AN1()   
+  </span>select AN1 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRB_AN5()   
+  </span>select AN5 as analog</p>
+  <p class=CellBody><b>Channel from group C</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRC_AN2()   
+  </span>select AN2 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRC_AN6()    </span>select AN6 as analog</p>
+  <p class=CellBody><b>Channel from group D</b></p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRD_AN3()    </span>select AN3 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ADC_CH_GRD_AN7()   
+  </span>select AN7 as analog</p>
+  <p class=CellBody><span style='font-family:"Courier New"'>      ALL_CH_DIGITAL()    </span>Make all Channels Digital</p>
+  <p class=CellBody><b><u>NOTE:</u></b><span style='font-family:"Courier New"'>
+  AN5 </span>to<span style='font-family:"Courier New"'> AN8</span> are not
+  available in PIC18F2X31 devices.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D-related registers to the POR
+  state and then configures the clock, result format, voltage reference,
+  conversion type, conversion mode, triggering sources, FIFO buffer control and
+  conversion sequence select.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_CONV_CONTINUOUS</span>    <span
+  class=Computer>&amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_MODE_MULTI_CH    &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CONV_SEQ_SEQM2,</span></p>
+  <p class=CellBody><span class=Computer>         </span><span
+  style='font-family:"Courier New"'>ADC_REF_VDD_VSS<span class=Computer>     
+  &amp;</span></span></p>
+  <p class=CellBody>                   <span style='font-family:"Courier New"'>ADC_FIFO_DIS<span
+  class=Computer>         &amp;</span></span></p>
+  <p class=CellBody><span class=Computer>         </span><span
+  style='font-family:"Courier New"'>ADC_TRIG_INP_CAP</span><span
+  class=Computer>,     </span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST       &amp; </span></p>
+  <p class=CellBody><span class=Computer>         ADC_10_TAD</span>                     
+  <span style='font-size:8.0pt;font-family:"Courier New"'> </span><span
+  style='font-family:"Courier New"'>&amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_FOSC_8           </span></p>
+  <p class=CellBody><span class=Computer>         );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_CONV_CONTINUOUS</span>    |</p>
+  <p class=CellBody><span class=Computer>         ADC_MODE_MULTI_CH    |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CONV_SEQ_SEQM2,</span></p>
+  <p class=CellBody><span class=Computer>         </span><span
+  style='font-family:"Courier New"'>ADC_REF_VDD_VSS<span class=Computer>      |</span></span></p>
+  <p class=CellBody>                   <span style='font-family:"Courier New"'>ADC_FIFO_DIS<span
+  class=Computer>         |</span></span></p>
+  <p class=CellBody><span class=Computer>         </span><span
+  style='font-family:"Courier New"'>ADC_TRIG_INP_CAP</span><span
+  class=Computer>,     </span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST       | </span></p>
+  <p class=CellBody><span class=Computer>         ADC_10_TAD</span>                      
+  |</p>
+  <p class=CellBody><span class=Computer>         ADC_FOSC_8           </span></p>
+  <p class=CellBody><span class=Computer>         );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>&nbsp;</b></span></p>
+  </td>
+ </tr>
+</table>
+
+<h3><a name="_Toc178051892">2.4.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (</a>ADC_V8, 9)</h3>
+
+<p class=NormalBold><span style='font-weight:normal'>For </span>ADC_V8 <span style='font-weight:normal'>and</span> ADC_V9</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D convertor.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>void OpenADC(unsigned char <span class=Computer><b><i>config</i></b></span>,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config2</i></b></span>
+  ,</p>
+  <p class=CellBody>             unsigned int <span class=Computer><b><i>portconfig</i></b></span>);</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file,, with a value from each of the categories listed below. These values
+  are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2</span>        
+  F<span style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>        
+  F<span style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>         F<span
+  style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>      
+  Internal RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D acquisition time select:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_0_TAD</span>        0
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_2_TAD</span>        2
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_4_TAD</span>        4
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_6_TAD</span>        6
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_8_TAD</span>        8
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_12_TAD</span>      12
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_16_TAD</span>      16
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_20_TAD</span>      20
+  Tad</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file,, with a value from each of the categories listed below. These values
+  are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Channel:</b></p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V8:</span></b></p>
+  <p class=CellBody><b>             </b><span class=Computer>ADC_CH0</span>         Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>          Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>          Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>        Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>        Channel
+  11</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH12</span>        Channel
+  12        </p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V9:</span></b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          <b>Unused
+  Channel</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>          Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>          Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>        Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>        Channel
+  11</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH12</span>        Channel
+  12</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH13</span>        Channel
+  13</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH14</span>        Channel
+  14</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH15</span>        Channel
+  15</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>    Interrupts
+  enabled</p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_OFF</span>  Interrupts
+  disabled</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Vref+ and Vref- configuration:</b></p>
+  <p class=CellBody><span class=Computer>    </span><span style='font-family:
+   "Courier New"'>ADC</span><span style='font-family:"Courier New"'>_REF_VDD_VREFMINUS       </span>VREF+ = VDD &amp; VREF- = Ext.</p>
+  <p class=CellBody><span class=Computer>    </span><span style='font-family:
+   "Courier New"'>ADC</span><span style='font-family:"Courier New"'>_REF_VREFPLUS_VREFMINUS  </span>VREF+ = Ext. &amp; VREF- = Ext.</p>
+  <p class=CellBody><span class=Computer>    </span><span style='font-family:
+   "Courier New"'>ADC</span><span style='font-family:"Courier New"'>_REF_VREFPLUS_VSS        </span>VREF+ = Ext. &amp; VREF- = VSS</p>
+  <p class=CellBody><span class=Computer>    </span><span style='font-family:
+   "Courier New"'>ADC</span><span style='font-family:"Courier New"'>_REF_VDD_VSS               </span>VREF+ = VDD &amp; VREF- = VSS</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Portconfig</i></b></span></p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V8:</span></b></p>
+  <p class=CellBody>The portconfig can have 8192 different combination, few are
+  defined below</p>
+  <p class=CellBody>            <span class=Computer>ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA</span>        analog:AN0                    </p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA</span>        analog:AN0-AN1             </p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA</span>        analog:AN0-AN2             </p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA</span>        analog:AN0-AN3             </p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA</span>        analog:AN0-AN4             </p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA</span>        analog:AN0-AN5             </p>
+  <p class=CellBody>            <span class=Computer>ADC_7ANA</span>        analog:AN0-AN6             </p>
+  <p class=CellBody><span class=Computer>      ADC_8ANA</span>        analog:AN0-AN7             </p>
+  <p class=CellBody>            <span class=Computer>ADC_9ANA</span>        analog:AN0-AN8                         </p>
+  <p class=CellBody><span class=Computer>      ADC_10ANA</span>      analog:AN0-AN9                         </p>
+  <p class=CellBody>             <span class=Computer>ADC_11ANA</span>     analog:AN0-AN10                       </p>
+  <p class=CellBody>             <span class=Computer>ADC_12ANA</span>     analog:AN0-AN11           </p>
+  <p class=CellBody>For<b> </b><b><span style='font-size:9.0pt;layout-grid-mode:
+  line'>ADC_V9:</span></b></p>
+  <p class=CellBody>The portconfig can have 16384 different combinations, few
+  are defined below</p>
+  <p class=CellBody><span class=Computer>      ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA</span>        analog:AN0                    </p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA</span>        analog:AN0-AN1             </p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA</span>        analog:AN0-AN2             </p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA</span>        analog:AN0-AN3             </p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA</span>        analog:AN0-AN4             </p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA</span>        analog:AN0-AN6             </p>
+  <p class=CellBody>            <span class=Computer>ADC_7ANA</span>        analog:AN0-AN7             </p>
+  <p class=CellBody>            <span class=Computer>ADC_8ANA</span>        analog:AN0-AN8             </p>
+  <p class=CellBody>            <span class=Computer>ADC_9ANA</span>        analog:AN0-AN9             </p>
+  <p class=CellBody>            <span class=Computer>ADC_10ANA</span>      analog:AN0-AN10           </p>
+  <p class=CellBody>            <span class=Computer>ADC_11ANA</span>      analog:AN0-AN11           </p>
+  <p class=CellBody>            <span class=Computer>ADC_12ANA</span>      analog:AN0-AN12           </p>
+  <p class=CellBody>            <span class=Computer>ADC_13ANA</span>      analog:AN0-AN13           </p>
+  <p class=CellBody>            <span class=Computer>ADC_14ANA</span>      analog:AN0-AN14           </p>
+  <p class=CellBody>            <span class=Computer>ADC_15ANA</span>      All
+  analog</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D-related registers to the POR
+  state and then configures the clock, result format, voltage reference, port
+  and channel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          &amp;</span></p>
+  <p class=CellBody>                   <span class=Computer>ADC_REF_VDD_VSS 
+  &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_ON, ADC_10ANA );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_REF_VDD_VSS  |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_ON, ADC_10ANA );</span></p>
+  </td>
+ </tr>
+</table>
+
+<h3>2.4.6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>OpenADC (ADC_V10)</h3>
+
+<p class=NormalBold><span style='font-weight:normal'>For </span>ADC_V10</p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Configure the A/D convertor.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>void OpenADC(unsigned char <span class=Computer><b><i>config</i></b></span>,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config2</i></b></span>
+  ,</p>
+  <p class=CellBody>             unsigned char <span class=Computer><b><i>config3,</i></b></span></p>
+  <p class=CellBody>             unsigned int <span class=Computer><b><i>portconfig</i></b></span>);</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND operation
+  (‘<span class=Computer>&amp;</span>’) or bitwise OR operation (‘|’), configurable
+  either way as shown in the example at the end of this file,, with a value
+  from each of the categories listed below. These values are defined in the
+  file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D clock source:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_2</span>         F<span
+  style='text-transform:uppercase'>osc</span> / 2</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_4</span>        
+  F<span style='text-transform:uppercase'>osc</span> / 4</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_8</span>        
+  F<span style='text-transform:uppercase'>osc</span> / 8</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_16</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 16</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_32</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 32</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_64</span>       F<span
+  style='text-transform:uppercase'>osc</span> / 64</p>
+  <p class=CellBody>            <span class=Computer>ADC_FOSC_RC</span>      
+  Internal RC Oscillator</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D result justification:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_RIGHT_JUST</span>        Result
+  in Least Significant bits</p>
+  <p class=CellBody>            <span class=Computer>ADC_LEFT_JUST</span>          Result
+  in Most Significant bits</p>
+  </td>
+ </tr>
+ <tr style='page-break-inside:avoid'>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D acquisition time select:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_0_TAD</span>        0
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_2_TAD</span>        2
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_4_TAD</span>        4
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_6_TAD</span>        6
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_8_TAD</span>        8
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_12_TAD</span>      12
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_16_TAD</span>      16
+  Tad</p>
+  <p class=CellBody>            <span class=Computer>ADC_20_TAD</span>      20
+  Tad</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>config2</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file,, with a value from each of the categories listed below. These values
+  are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Channel:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>          Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>          Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>        Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>        Channel
+  11</p>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Misc options:</b></p>
+  <p class=MsoNormal>           TEMP_REF_BANDGAP  Temperature reference from
+  BandGap</p>
+  <p class=MsoNormal>           DAC1                 DAC </p>
+  <p class=CellBody>           FVR1                Fixed Voltage reference</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Interrupts:</b></p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_ON</span>    Interrupts
+  enabled</p>
+  <p class=CellBody>            <span class=Computer>ADC_INT_OFF</span>  Interrupts
+  disabled</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Config3</i></b></span></p>
+  <p class=CellBody>A bitmask that is created by performing either bitwise AND
+  operation (‘<span class=Computer>&amp;</span>’) or bitwise OR operation
+  (‘|’), configurable either way as shown in the example at the end of this
+  file,, with a value from each of the categories listed below. These values
+  are defined in the file <span class=Computer>adc.h</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>A/D Vref+ and Vref- configuration:</b></p>
+  <p class=MsoNormal style='margin-left:.5in'><span class=Computer><span
+  style='layout-grid-mode:both'>ADC_REF_VDD_VDD</span></span>           <span
+  style='layout-grid-mode:both'>VREF+ = AVDD</span></p>
+  <p class=MsoNormal>            <span class=Computer><span style='layout-grid-mode:
+  both'>ADC_REF_VDD_VREFPLUS</span></span>  <span style='layout-grid-mode:both'>VREF+
+  = ext. source at VREF+</span></p>
+  <p class=MsoNormal style='margin-left:.5in'><span class=Computer><span
+  style='layout-grid-mode:both'>ADC_REF_VDD_FVREF    </span></span>VREF+ =
+  FVREF+</p>
+  <p class=MsoNormal style='margin-left:.5in'><span class=Computer><span
+  style='layout-grid-mode:both'>ADC_REF_VDD_VSS</span></span>              VREF-
+  = AVSS</p>
+  <p class=MsoNormal><span class=Computer><span style='layout-grid-mode:both'>     
+  ADC_REF_VDD_VREFMINUS </span></span>VREF- = ext. source at VREF-</p>
+  <p class=CellBody>&nbsp;</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>&nbsp;</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Portconfig</i></b></span></p>
+  <p class=CellBody>The portconfig can have 16384 different combinations, few
+  are defined below</p>
+  <p class=CellBody><span class=Computer>      ADC_0ANA</span>        All
+  digital</p>
+  <p class=CellBody>            <span class=Computer>ADC_1ANA</span>        analog:AN0                    </p>
+  <p class=CellBody>            <span class=Computer>ADC_2ANA</span>        analog:AN0-AN1             </p>
+  <p class=CellBody>            <span class=Computer>ADC_3ANA</span>        analog:AN0-AN2             </p>
+  <p class=CellBody>            <span class=Computer>ADC_4ANA</span>        analog:AN0-AN3             </p>
+  <p class=CellBody>            <span class=Computer>ADC_5ANA</span>        analog:AN0-AN4             </p>
+  <p class=CellBody>            <span class=Computer>ADC_6ANA</span>        analog:AN0-AN6             </p>
+  <p class=CellBody>            <span class=Computer>ADC_7ANA</span>        analog:AN0-AN7             </p>
+  <p class=CellBody>            <span class=Computer>ADC_8ANA</span>        analog:AN0-AN8             </p>
+  <p class=CellBody>            <span class=Computer>ADC_9ANA</span>        analog:AN0-AN9             </p>
+  <p class=CellBody>            <span class=Computer>ADC_10ANA</span>      analog:AN0-AN10           </p>
+  <p class=CellBody>            <span class=Computer>ADC_11ANA</span>      analog:AN0-AN11           </p>
+  <p class=CellBody>            <span class=Computer>ADC_12ANA</span>      analog:AN0-AN12           </p>
+  <p class=CellBody>            <span class=Computer>ADC_13ANA</span>      analog:AN0-AN13           </p>
+  <p class=CellBody>            <span class=Computer>ADC_14ANA</span>      analog:AN0-AN14           </p>
+  <p class=CellBody>            <span class=Computer>ADC_15ANA</span>      All
+  analog</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function resets the A/D-related registers to the POR
+  state and then configures the clock, result format, voltage reference, port
+  and channel.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcopen.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b>With AND mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          &amp;</span></p>
+  <p class=CellBody>                   <span class=Computer>ADC_REF_VDD_VSS 
+  &amp;</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_ON, ADC_10ANA );</span></p>
+  <p class=CellBody><span class=Computer><b>With OR mask:</b></span></p>
+  <p class=CellBody><span class=Computer>OpenADC( ADC_FOSC_32      |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+  <p class=CellBody><span class=Computer>         ADC_CH0          |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_REF_VDD_VSS  |</span></p>
+  <p class=CellBody><span class=Computer>         ADC_INT_ON, ADC_10ANA );</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc178051893">2.5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>ReadADC</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Read the result of an A/D conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>int ReadADC( void );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function reads the 16-bit result of an A/D conversion.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Return Value:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>This function returns the 16-bit signed result of the A/D
+  conversion. Based on the configuration of the A/D converter (e.g., using the <span
+  class=Computer>OpenADC()</span> function), the result will be contained in
+  the Least Significant or Most Significant bits of the 16-bit result.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcread.c</span></p>
+  <p class=CellBody><span class=Computer>&nbsp;</span></p>
+  </td>
+ </tr>
+</table>
+
+<h2><a name="_Toc178051894">2.6<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>SetChanADC</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Function:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Select the channel used as input to the A/D converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Include:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adc.h</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Prototype:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>void SetChanADC( unsigned char <b><i>channel</i></b>
+  );</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Arguments:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer><b><i>Channel</i></b></span></p>
+  <p class=CellBody>One of the following values (defined in adc.h):</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH0</span>          Channel
+  0</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH1</span>          Channel
+  1</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH2</span>          Channel
+  2</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH3</span>          Channel
+  3</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH4</span>          Channel
+  4</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH5</span>          Channel
+  5</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH6</span>          Channel
+  6</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH7</span>          Channel
+  7</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH8</span>          Channel
+  8</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH9</span>          Channel
+  9</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH10</span>        Channel
+  10</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH11</span>        Channel
+  11</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH12</span>        Channel
+  12</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH13</span>        Channel
+  13</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH14</span>        Channel
+  14</p>
+  <p class=CellBody>            <span class=Computer>ADC_CH15</span>        Channel
+  15</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Remarks:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody>Selects the pin that will be used as input to the A/D
+  converter.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>File Name:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>adcsetch.c</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=120 valign=top style='width:1.25in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><b>Code Example:</b></p>
+  </td>
+  <td width=456 valign=top style='width:4.75in;padding:0in 0in 0in 0in'>
+  <p class=CellBody><span class=Computer>SetChanADC( ADC_CH0 );</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc178051895">2.7<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Macro definitions</a></h2>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:.4pt;border-collapse:collapse'>
+ <tr>
+  <td width=158 valign=top style='width:1.65in;border:solid windowtext 1.0pt;
+  border-bottom:double windowtext 2.25pt;padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Macros</p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:solid windowtext 1.0pt;
+  border-left:none;border-bottom:double windowtext 2.25pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellHeading>Description</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_INT_ENABLE()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Enables A/D interrupt i.e. sets PEIE and ADIE bits.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_INT_DISABLE()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Disables the A/D interrupt.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_SEVT_ENABLE()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Enables the Special Event Trigger bit, this macro is
+  available for <b><span style='font-size:9.0pt'>ADC_V4</span></b> only.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_SEVT_DISABLE()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Disables the Special Event Trigger bit, this macro is
+  available for <b><span style='font-size:9.0pt'>ADC_V4</span></b> only.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_CALIB()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Enables the A/D calibration bit, this macro is available
+  for <b><span style='font-size:9.0pt'>ADC_V6 </span></b><span
+  style='font-size:9.0pt'>and<b> ADC_V9</b></span><b> </b>only.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=158 style='width:1.65in;border:solid windowtext 1.0pt;border-top:
+  none;padding:0in 0in 0in 0in'>
+  <p class=MsoNormal><span class=Computer>ADC_NO_CALIB()</span></p>
+  </td>
+  <td width=345 valign=top style='width:258.45pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  padding:0in 0in 0in 0in'>
+  <p class=CellBody>Disables the A/D calibration bit, this macro is available
+  for <b><span style='font-size:9.0pt'>ADC_V6 </span></b><span
+  style='font-size:9.0pt'>and<b> ADC_V9</b></span><b> </b>only.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=NormalBold>&nbsp;</p>
+
+<p class=NormalBold>Example Use of the A/D Converter Routines with AND mask:</p>
+
+<p class=MsoNormal><span class=Computer>#include &lt;p18cxxx.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer>#include &lt;adc.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer>#include &lt;delays.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer>&nbsp;</span></p>
+
+<p class=MsoNormal><span class=Computer>int result;</span></p>
+
+<p class=MsoNormal><span class=Computer>&nbsp;</span></p>
+
+<p class=MsoNormal><span class=Computer>void main( void )</span></p>
+
+<p class=MsoNormal><span class=Computer>{</span></p>
+
+<p class=MsoNormal><span class=Computer>  // configure A/D convertor</span></p>
+
+<p class=CellBody><span class=Computer>  OpenADC( ADC_FOSC_32      &amp;</span></p>
+
+<p class=CellBody><span class=Computer>           ADC_RIGHT_JUST   &amp;</span></p>
+
+<p class=CellBody><span class=Computer>           ADC_12_TAD,</span></p>
+
+<p class=CellBody><span class=Computer>           ADC_CH0          &amp;</span></p>
+
+<p class=CellBody>                     <span class=Computer>ADC_REF_VDD_VSS 
+&amp;</span></p>
+
+<p class=CellBody><span class=Computer>           ADC_INT_OFF, ADC_CH10 );</span></p>
+
+<p class=MsoNormal><span class=Computer>  </span></p>
+
+<p class=MsoNormal><span class=Computer>  Delay10TCYx( 5 );     // Delay for
+50TCY</span></p>
+
+<p class=MsoNormal><span class=Computer>  ConvertADC();         // Start
+conversion</span></p>
+
+<p class=MsoNormal><span class=Computer>  while( BusyADC() );   // Wait for
+completion</span></p>
+
+<p class=MsoNormal><span class=Computer>  result = ReadADC();   // Read result</span></p>
+
+<p class=MsoNormal><span class=Computer>  CloseADC();           // Disable A/D
+converter</span></p>
+
+<p class=MsoNormal><span class=Computer>}</span></p>
+
+<p class=NormalBold>&nbsp;</p>
+
+<p class=NormalBold>Example Use of the A/D Converter Routines with OR mask:</p>
+
+<p class=MsoNormal><span class=Computer>#include &lt;p18cxxx.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer><b><span style='color:navy'>#define 
+USE_OR_MASKS</span></b></span><span class=Computer><b><br>
+</b></span><span class=Computer>#include &lt;adc.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer>#include &lt;delays.h&gt;</span></p>
+
+<p class=MsoNormal><span class=Computer>&nbsp;</span></p>
+
+<p class=MsoNormal><span class=Computer>int result;</span></p>
+
+<p class=MsoNormal><span class=Computer>&nbsp;</span></p>
+
+<p class=MsoNormal><span class=Computer>void main( void )</span></p>
+
+<p class=MsoNormal><span class=Computer>{</span></p>
+
+<p class=MsoNormal><span class=Computer>  // configure A/D convertor</span></p>
+
+<p class=CellBody><span class=Computer>  OpenADC( ADC_FOSC_32      |</span></p>
+
+<p class=CellBody><span class=Computer>         ADC_RIGHT_JUST   |</span></p>
+
+<p class=CellBody><span class=Computer>         ADC_12_TAD,</span></p>
+
+<p class=CellBody><span class=Computer>         ADC_CH0          |</span></p>
+
+<p class=CellBody>                   <span class=Computer>ADC_REF_VDD_VSS  |</span></p>
+
+<p class=CellBody><span class=Computer>         ADC_INT_OFF, ADC_CH10 );</span></p>
+
+<p class=MsoNormal><span class=Computer>  Delay10TCYx( 5 );     // Delay for
+50TCY</span></p>
+
+<p class=MsoNormal><span class=Computer>  ConvertADC();         // Start
+conversion</span></p>
+
+<p class=MsoNormal><span class=Computer>  while( BusyADC() );   // Wait for
+completion</span></p>
+
+<p class=MsoNormal><span class=Computer>  result = ReadADC();   // Read result</span></p>
+
+<p class=MsoNormal><span class=Computer>  CloseADC();           // Disable A/D
+converter</span></p>
+
+<p class=MsoNormal><span class=Computer>}</span></p>
+
+</div>
+
+</body>
+
+</html>

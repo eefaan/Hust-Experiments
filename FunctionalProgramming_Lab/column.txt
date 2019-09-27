@@ -1,0 +1,19 @@
+L1 - 什么是函数编程、函数编程特点、模式匹配
+L2 - ML语法
+L3 - ML函数、程序的正确性：归纳法（简单、完全）、程序的有效性：基于归纳法的时间分析
+L4 - fastexp、compare、排序、helper
+L5 - 排序性能分析、tree（定义、SplitAt、Merge、性能分析span）
+L6 - 多态类型（’a list -> ‘a list * ‘a list）
+L7 - 高阶函数 map : (’a -> ’b) -> (’a list -> ’b list)
+L8 - 高阶函数编程实例
+•以排序算法为例
+•设计通用排序函数解决排序类问题(Developing an abstract and general solution to a family of problems)
+•分析多态类型和高阶函数的好处(The benefits of polymorphic types and
+higher-order functions)
+•柯里化和高阶函数的部分求解(Currying and partial evaluation)
+L9 - 以找零问题为例
+•柯里化和高阶函数的部分求解
+•子集求解问题的延伸
+•用柯里化思路设计程序代码和说明
+•大规模程序设计思路和方法
+L10 - 错误处理、异常的声明(declaring)/抛出(raising)/处理(handling)
