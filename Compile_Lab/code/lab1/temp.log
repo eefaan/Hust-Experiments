@@ -1,0 +1,386 @@
+<COMMENT_TYPE1, // example program>
+<TYPE, int>
+<ID, i>
+<COMMA, ,>
+<ID, j>
+<SEMI, ;>
+<TYPE, int>
+<ID, fun>
+<LP, (>
+<TYPE, int>
+<ID, a>
+<COMMA, ,>
+<TYPE, float>
+<ID, b>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, m>
+<SEMI, ;>
+<TYPE, int>
+<ID, d>
+<SEMI, ;>
+<ID, d>
+<ASSIGNPLUS, +=>
+<LP, (>
+<INT, 12>
+<PLUS, +>
+<INT, 6>
+<RP, )>
+<SEMI, ;>
+<IF, if>
+<LP, (>
+<ID, a>
+<RELOP, >>
+<ID, b>
+<RP, )>
+<ID, m>
+<ASSIGNOP, =>
+<ID, a>
+<SEMI, ;>
+<ELSE, else>
+<ID, m>
+<ASSIGNOP, =>
+<ID, b>
+<SEMI, ;>
+<RETURN, return>
+<INT, 0>
+<SEMI, ;>
+<RC, }>
+<TYPE, float>
+<ID, x>
+<COMMA, ,>
+<ID, y>
+<SEMI, ;>
+<COMMENT_TYPE2, /* Q:
+	数据类型至少包括char类型、int类型和float类型
+	基本运算至少包括算术运算、比较运算、逻辑运算、自增自减运算和复合赋值运算
+	控制语句至少包括if语句和while语句
+	其它选项：数组、结构，for循环等等
+*/>
+<COMMENT_TYPE1, // my comment test 1>
+<COMMENT_TYPE2, /* my comment test 2 */>
+<TYPE, char>
+<ID, a_char>
+<SEMI, ;>
+<TYPE, int>
+<ID, b_int>
+<SEMI, ;>
+<TYPE, float>
+<ID, c_float>
+<SEMI, ;>
+<TYPE, void>
+<ID, my_func>
+<LP, (>
+<TYPE, char>
+<ID, a>
+<COMMA, ,>
+<TYPE, int>
+<ID, b>
+<COMMA, ,>
+<TYPE, float>
+<ID, c>
+<RP, )>
+<LC, {>
+<COMMENT_TYPE1, // local var assign>
+<TYPE, int>
+<ID, test>
+<ASSIGNOP, =>
+<INT, 10>
+<SEMI, ;>
+<TYPE, int>
+<ID, x>
+<COMMA, ,>
+<ID, y>
+<COMMA, ,>
+<ID, z>
+<SEMI, ;>
+<COMMENT_TYPE1, // 算术运算>
+<ID, x>
+<ASSIGNOP, =>
+<ID, y>
+<PLUS, +>
+<ID, z>
+<SEMI, ;>
+<ID, x>
+<ASSIGNOP, =>
+<ID, a>
+<PLUS, +>
+<ID, b>
+<DIV, />
+<ID, c>
+<STAR, *>
+<ID, z>
+<SEMI, ;>
+<ID, x>
+<ASSIGNOP, =>
+<ID, b>
+<DIV, />
+<ID, c>
+<STAR, *>
+<ID, z>
+<PLUS, +>
+<ID, a>
+<SEMI, ;>
+<IF, if>
+<LP, (>
+<ID, x>
+<AND, &&>
+<ID, y>
+<RP, )>
+<LC, {>
+<ID, x>
+<SELFADD, ++>
+<SEMI, ;>
+<SELFADD, ++>
+<ID, x>
+<SEMI, ;>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<SELFADD, ++>
+<SEMI, ;>
+<COMMENT_TYPE1, // equal x+(y++)>
+<SELFADD, ++>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<SEMI, ;>
+<COMMENT_TYPE1, // equal (++x)+y>
+<ID, x>
+<SELFADD, ++>
+<PLUS, +>
+<ID, y>
+<SEMI, ;>
+<RC, }>
+<ELSE, else>
+<LC, {>
+<TYPE, int>
+<ID, test_assign>
+<ASSIGNOP, =>
+<ID, b>
+<PLUS, +>
+<ID, x>
+<MINUS, ->
+<ID, x>
+<DIV, />
+<ID, y>
+<STAR, *>
+<ID, z>
+<SEMI, ;>
+<RC, }>
+<WHILE, while>
+<LP, (>
+<ID, x>
+<OR, ||>
+<ID, y>
+<RP, )>
+<LC, {>
+<ID, y>
+<SELFDEC, -->
+<SEMI, ;>
+<SELFDEC, -->
+<ID, y>
+<SEMI, ;>
+<RC, }>
+<RETURN, return>
+<CHAR, 's'>
+<SEMI, ;>
+<RETURN, return>
+<CHAR, '\n'>
+<SEMI, ;>
+<RETURN, return>
+
+Error type A :Mysterious character "'" at Line 54
+<ID, sss>
+
+Error type A :Mysterious character "'" at Line 54
+<SEMI, ;>
+<RC, }>
+<TYPE, int>
+<ID, z>
+<COMMA, ,>
+<ID, s>
+<SEMI, ;>
+ 外部变量定义：
+   类型： int
+   变量名：
+      ID： i
+      ID： j
+ 函数定义：
+   类型： int
+   函数名：fun
+   函数形参：
+      类型：int, 参数名：a
+      类型：float, 参数名：b
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                m
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                d
+      复合语句的语句部分：
+         表达式语句：
+            ASSIGNPLUS
+               ID： d
+               PLUS
+                  INT：12
+                  INT：6
+         条件语句(IF_THEN_ELSE)：
+            条件：
+               >
+                  ID： a
+                  ID： b
+            IF子句：
+               表达式语句：
+                  ASSIGNOP
+                     ID： m
+                     ID： a
+            ELSE子句：
+               表达式语句：
+                  ASSIGNOP
+                     ID： m
+                     ID： b
+         返回语句：
+            INT：0
+ 外部变量定义：
+   类型： float
+   变量名：
+      ID： x
+      ID： y
+ 外部变量定义：
+   类型： char
+   变量名：
+      ID： a_char
+ 外部变量定义：
+   类型： int
+   变量名：
+      ID： b_int
+ 外部变量定义：
+   类型： float
+   变量名：
+      ID： c_float
+ 函数定义：
+   类型： void
+   函数名：my_func
+   函数形参：
+      类型：float, 参数名：a
+      类型：int, 参数名：b
+      类型：float, 参数名：c
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                test ASSIGNOP
+                     INT：10
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                x
+                y
+                z
+      复合语句的语句部分：
+         表达式语句：
+            ASSIGNOP
+               ID： x
+               PLUS
+                  ID： y
+                  ID： z
+         表达式语句：
+            ASSIGNOP
+               ID： x
+               PLUS
+                  ID： a
+                  STAR
+                     DIV
+                        ID： b
+                        ID： c
+                     ID： z
+         表达式语句：
+            ASSIGNOP
+               ID： x
+               PLUS
+                  STAR
+                     DIV
+                        ID： b
+                        ID： c
+                     ID： z
+                  ID： a
+         条件语句(IF_THEN_ELSE)：
+            条件：
+               AND
+                  ID： x
+                  ID： y
+            IF子句：
+               复合语句：
+                  复合语句的变量定义：
+                  复合语句的语句部分：
+                     表达式语句：
+                        BSELFADD
+                           ID： x
+                     表达式语句：
+                        FSELFADD
+                           ID： x
+                     表达式语句：
+                        PLUS
+                           ID： x
+                           BSELFADD
+                              ID： y
+                     表达式语句：
+                        PLUS
+                           FSELFADD
+                              ID： x
+                           ID： y
+                     表达式语句：
+                        PLUS
+                           BSELFADD
+                              ID： x
+                           ID： y
+            ELSE子句：
+               复合语句：
+                  复合语句的变量定义：
+                     LOCAL VAR_NAME：
+                        类型： int
+                        VAR_NAME：
+                            test_assign ASSIGNOP
+                                        MINUS
+                                          PLUS
+                                             ID： b
+                                             ID： x
+                                          STAR
+                                             DIV
+                                                ID： x
+                                                ID： y
+                                             ID： z
+                  复合语句的语句部分：
+         循环语句：
+            循环条件：
+               OR
+                  ID： x
+                  ID： y
+            循环体：
+               复合语句：
+                  复合语句的变量定义：
+                  复合语句的语句部分：
+                     表达式语句：
+                        BSELFDEC
+                           ID： y
+                     表达式语句：
+                        FSELFDEC
+                           ID： y
+         返回语句：
+            CHAR：s
+         返回语句：
+            CHAR：\
+         返回语句：
+            ID： sss
+ 外部变量定义：
+   类型： int
+   变量名：
+      ID： z
+      ID： s

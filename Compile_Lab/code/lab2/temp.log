@@ -1,0 +1,505 @@
+<TYPE, int>
+<ID, i>
+<COMMA, ,>
+<ID, j>
+<SEMI, ;>
+<COMMENT_TYPE1, // 1.重复定义>
+<TYPE, int>
+<ID, i>
+<COMMA, ,>
+<ID, j>
+<SEMI, ;>
+<TYPE, int>
+<ID, fun>
+<LP, (>
+<TYPE, int>
+<ID, a>
+<COMMA, ,>
+<TYPE, float>
+<ID, b>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, m>
+<SEMI, ;>
+<IF, if>
+<LP, (>
+<ID, a>
+<RELOP, >>
+<ID, b>
+<RP, )>
+<ID, m>
+<ASSIGNOP, =>
+<ID, a>
+<SEMI, ;>
+<ELSE, else>
+<ID, m>
+<ASSIGNOP, =>
+<ID, b>
+<SEMI, ;>
+<RETURN, return>
+<ID, m>
+<SEMI, ;>
+<RC, }>
+<COMMENT_TYPE1, // 2.函数名重复>
+<TYPE, int>
+<ID, fun>
+<LP, (>
+<RP, )>
+<LC, {>
+<RC, }>
+<COMMENT_TYPE1, // 3.参数定义重复>
+<TYPE, int>
+<ID, fun2>
+<LP, (>
+<TYPE, int>
+<ID, a>
+<COMMA, ,>
+<TYPE, float>
+<ID, a>
+<RP, )>
+<LC, {>
+<RC, }>
+<TYPE, int>
+<ID, fun3>
+<LP, (>
+<TYPE, int>
+<ID, myint>
+<COMMA, ,>
+<TYPE, float>
+<ID, myfloat>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, i>
+<SEMI, ;>
+<TYPE, int>
+<ID, a>
+<COMMA, ,>
+<ID, b>
+<COMMA, ,>
+<ID, c>
+<SEMI, ;>
+<TYPE, float>
+<ID, x>
+<COMMA, ,>
+<ID, y>
+<COMMA, ,>
+<ID, z>
+<SEMI, ;>
+<ID, fun>
+<LP, (>
+<ID, a>
+<COMMA, ,>
+<ID, x>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 4.参数类型不符>
+<ID, fun>
+<LP, (>
+<ID, a>
+<COMMA, ,>
+<ID, b>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 5.参数太多>
+<ID, fun>
+<LP, (>
+<ID, a>
+<COMMA, ,>
+<ID, x>
+<COMMA, ,>
+<ID, c>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 6.参数太少>
+<ID, fun>
+<LP, (>
+<ID, b>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 7.变量未定义>
+<ID, p>
+<ASSIGNOP, =>
+<INT, 10>
+<SEMI, ;>
+<COMMENT_TYPE1, // 8.函数名，类型不匹配>
+<ID, fun>
+<ASSIGNOP, =>
+<INT, 10>
+<SEMI, ;>
+<ID, x>
+<ASSIGNOP, =>
+<ID, fun>
+<SEMI, ;>
+<COMMENT_TYPE1, // 9.赋值语句需要左值>
+<INT, 10>
+<ASSIGNOP, =>
+<ID, i>
+<SEMI, ;>
+<COMMENT_TYPE1, // 10.函数未定义>
+<ID, fun4>
+<LP, (>
+<ID, x>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 11.x不是函数>
+<ID, x>
+<LP, (>
+<ID, y>
+<RP, )>
+<SEMI, ;>
+<COMMENT_TYPE1, // 12.返回值类型错误>
+<RETURN, return>
+<FLOAT, 2.0>
+<SEMI, ;>
+<RETURN, return>
+<INT, 0>
+<SEMI, ;>
+<RC, }>
+<TYPE, int>
+<ID, fun4>
+<LP, (>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, x>
+<SEMI, ;>
+<COMMENT_TYPE1, // 13.continue error>
+<SEMI, ;>
+<WHILE, while>
+<LP, (>
+<INT, 1>
+<RP, )>
+<LC, {>
+<SEMI, ;>
+<SEMI, ;>
+<RC, }>
+<COMMENT_TYPE1, // 14.break error>
+<SEMI, ;>
+<COMMENT_TYPE1, // 15.++/-->
+<LP, (>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<RP, )>
+<SELFADD, ++>
+<SEMI, ;>
+<SELFADD, ++>
+<LP, (>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<RP, )>
+<SEMI, ;>
+<LP, (>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<RP, )>
+<SELFDEC, -->
+<SEMI, ;>
+<SELFDEC, -->
+<LP, (>
+<ID, x>
+<PLUS, +>
+<ID, y>
+<RP, )>
+<SEMI, ;>
+<RETURN, return>
+<INT, 0>
+<SEMI, ;>
+<RC, }>
+<TYPE, float>
+<ID, x>
+<COMMA, ,>
+<ID, y>
+<SEMI, ;>
+ 外部变量定义：
+   类型： int
+   变量名：
+      ID： i
+      ID： j
+ 外部变量定义：
+   类型： int
+   变量名：
+      ID： i
+      ID： j
+ 函数定义：
+   类型： int
+   函数名：fun
+   函数形参：
+      类型：int, 参数名：a
+      类型：float, 参数名：b
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                m
+      复合语句的语句部分：
+         条件语句(IF_THEN_ELSE)：
+            条件：
+               >
+                  ID： a
+                  ID： b
+            IF子句：
+               表达式语句：
+                  ASSIGNOP
+                     ID： m
+                     ID： a
+            ELSE子句：
+               表达式语句：
+                  ASSIGNOP
+                     ID： m
+                     ID： b
+         返回语句：
+            ID： m
+ 函数定义：
+   类型： int
+   函数名：fun
+      无参函数
+   复合语句：
+      复合语句的变量定义：
+      复合语句的语句部分：
+ 函数定义：
+   类型： int
+   函数名：fun2
+   函数形参：
+      类型：int, 参数名：a
+      类型：float, 参数名：a
+   复合语句：
+      复合语句的变量定义：
+      复合语句的语句部分：
+ 函数定义：
+   类型： int
+   函数名：fun3
+   函数形参：
+      类型：int, 参数名：myint
+      类型：float, 参数名：myfloat
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                i
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                a
+                b
+                c
+         LOCAL VAR_NAME：
+            类型： float
+            VAR_NAME：
+                x
+                y
+                z
+      复合语句的语句部分：
+         表达式语句：
+            函数调用：
+               函数名：fun
+               第1个实际参数表达式：
+                  ID： a
+               第2个实际参数表达式：
+                  ID： x
+
+         表达式语句：
+            函数调用：
+               函数名：fun
+               第1个实际参数表达式：
+                  ID： a
+               第2个实际参数表达式：
+                  ID： b
+
+         表达式语句：
+            函数调用：
+               函数名：fun
+               第1个实际参数表达式：
+                  ID： a
+               第2个实际参数表达式：
+                  ID： x
+               第3个实际参数表达式：
+                  ID： c
+
+         表达式语句：
+            函数调用：
+               函数名：fun
+               第1个实际参数表达式：
+                  ID： b
+
+         表达式语句：
+            ASSIGNOP
+               ID： p
+               INT：10
+         表达式语句：
+            ASSIGNOP
+               ID： fun
+               INT：10
+         表达式语句：
+            ASSIGNOP
+               ID： x
+               ID： fun
+         表达式语句：
+            ASSIGNOP
+               INT：10
+               ID： i
+         表达式语句：
+            函数调用：
+               函数名：fun4
+               第1个实际参数表达式：
+                  ID： x
+
+         表达式语句：
+            函数调用：
+               函数名：x
+               第1个实际参数表达式：
+                  ID： y
+
+         返回语句：
+            FLAOT：2.000000
+         返回语句：
+            INT：0
+ 函数定义：
+   类型： int
+   函数名：fun4
+      无参函数
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                x
+      复合语句的语句部分：
+         表达式语句：
+         循环语句：
+            循环条件：
+               INT：1
+            循环体：
+               复合语句：
+                  复合语句的变量定义：
+                  复合语句的语句部分：
+                     表达式语句：
+                     表达式语句：
+         表达式语句：
+         表达式语句：
+            BSELFADD
+               PLUS
+                  ID： x
+                  ID： y
+         表达式语句：
+            FSELFADD
+               PLUS
+                  ID： x
+                  ID： y
+         表达式语句：
+            BSELFDEC
+               PLUS
+                  ID： x
+                  ID： y
+         表达式语句：
+            FSELFDEC
+               PLUS
+                  ID： x
+                  ID： y
+         返回语句：
+            INT：0
+ 外部变量定义：
+   类型： float
+   变量名：
+      ID： x
+      ID： y
+在3行,i 变量重复定义
+在3行,j 变量重复定义
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V      0
+     j     v2      0     int    V      4
+   fun     v5      0     int    F      0
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+     m     v8      1     int    V     24
+在14行,fun 函数重复定义
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V      0
+     j     v2      0     int    V      4
+   fun     v5      0     int    F     28
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+在16行,a 参数名重复定义
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V     12
+     j     v2      0     int    V      4
+   fun     v5      0     int    F     28
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+  fun2    v01      0     int    F      0
+     a    v11      1     int    P     12
+在25行, 参数类型不匹配
+在27行, 函数调用参数太多
+在29行, 函数调用参数太少
+在31行,p 变量未定义
+在33行,fun 是函数名，类型不匹配
+在34行,fun 是函数名，类型不匹配
+在36行, 赋值语句需要左值
+在38行,fun4 函数未定义
+在40行,x 不是一个函数
+在42行,返回值类型错误 
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V     12
+     j     v2      0     int    V      4
+   fun     v5      0     int    F     28
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+  fun2    v01      0     int    F     24
+     a    v11      1     int    P     12
+  fun3    v31      0     int    F      0
+ myint    v41      1     int    P     12
+myfloat    v51      1   float    P     16
+     i    v61      1     int    V     24
+     a    v71      1     int    V     28
+     b    v81      1     int    V     32
+     c    v91      1     int    V     36
+     x    v02      1   float    V     40
+     y    v12      1   float    V     48
+     z    v22      1   float    V     56
+        temp1      1     int    T     64
+        temp2      1     int    T     64
+        temp3      1     int    T     64
+        temp4      1     int    T     64
+        temp5      1     int    T     64
+        temp6      1     int    T     64
+        temp7      1   float    T     64
+        temp8      1     int    T     64
+在49行,CONTINUE 在循环体外不应使用continue
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V     12
+     j     v2      0     int    V      4
+   fun     v5      0     int    F     28
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+  fun2    v01      0     int    F     24
+     a    v11      1     int    P     12
+  fun3    v31      0     int    F     68
+ myint    v41      1     int    P     12
+myfloat    v51      1   float    P     16
+  fun4    v32      0     int    F      0
+     x    v42      1     int    V     12
+在55行,BREAK 在循环体外不应使用break
+在57行, 自增语句需要对左值进行操作
+在58行, 自增语句需要对左值进行操作
+在59行, 自减语句需要对左值进行操作
+在60行, 自减语句需要对左值进行操作
+变量名  别 名  层 号   类  型  标记  偏移量
+     i     v1      0     int    V     12
+     j     v2      0     int    V      4
+   fun     v5      0     int    F     28
+     a     v6      1     int    P     12
+     b     v7      1   float    P     16
+  fun2    v01      0     int    F     24
+     a    v11      1     int    P     12
+  fun3    v31      0     int    F     68
+ myint    v41      1     int    P     12
+myfloat    v51      1   float    P     16
+  fun4    v32      0     int    F      0
+     x    v42      1     int    V     12
+        temp9      1     int    T     16

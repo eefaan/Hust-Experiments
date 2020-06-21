@@ -1,0 +1,408 @@
+<COMMENT_TYPE1, // int i,j;>
+<COMMENT_TYPE1, //>
+<COMMENT_TYPE1, // int fun(int x, int y){>
+<COMMENT_TYPE1, // 	int z;>
+<COMMENT_TYPE1, // 	z = x + 3;>
+<COMMENT_TYPE1, // 	return z;>
+<COMMENT_TYPE1, // }>
+<COMMENT_TYPE1, //>
+<COMMENT_TYPE1, // int main(){>
+<COMMENT_TYPE1, // 	int x = fun(1,2);>
+<COMMENT_TYPE1, // 	return x;>
+<COMMENT_TYPE1, // }>
+<COMMENT_TYPE1, // int fibo(int a){>
+<COMMENT_TYPE1, // 	if(a == 1 || a == 2) return 1;>
+<COMMENT_TYPE1, // 	return fibo(a - 1) + fibo(a - 2);>
+<COMMENT_TYPE1, // }>
+<COMMENT_TYPE1, // int main(){>
+<COMMENT_TYPE1, // 	int m,n,i;>
+<COMMENT_TYPE1, // 	// m = read();>
+<COMMENT_TYPE1, // 	m = 10;>
+<COMMENT_TYPE1, // 	i = 1;>
+<COMMENT_TYPE1, // 	while(i<=m){>
+<COMMENT_TYPE1, // 		n = fibo(i);>
+<COMMENT_TYPE1, // 		// write(n);>
+<COMMENT_TYPE1, // 		i = i + 1;>
+<COMMENT_TYPE1, // 	}>
+<COMMENT_TYPE1, // 	return 1;>
+<COMMENT_TYPE1, // }>
+<TYPE, int>
+<ID, fibo>
+<LP, (>
+<TYPE, int>
+<ID, a>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, add_1>
+<COMMA, ,>
+<ID, add_2>
+<COMMA, ,>
+<ID, sum>
+<SEMI, ;>
+<IF, if>
+<LP, (>
+<ID, a>
+<RELOP, ==>
+<INT, 0>
+<OR, ||>
+<ID, a>
+<RELOP, ==>
+<INT, 1>
+<RP, )>
+<RETURN, return>
+<INT, 1>
+<SEMI, ;>
+<ID, add_2>
+<ASSIGNOP, =>
+<INT, 1>
+<SEMI, ;>
+<ID, sum>
+<ASSIGNOP, =>
+<INT, 1>
+<SEMI, ;>
+<ID, a>
+<ASSIGNOP, =>
+<ID, a>
+<MINUS, ->
+<INT, 1>
+<SEMI, ;>
+<WHILE, while>
+<LP, (>
+<ID, a>
+<RP, )>
+<LC, {>
+<ID, add_1>
+<ASSIGNOP, =>
+<ID, add_2>
+<SEMI, ;>
+<ID, add_2>
+<ASSIGNOP, =>
+<ID, sum>
+<SEMI, ;>
+<ID, sum>
+<ASSIGNOP, =>
+<ID, add_1>
+<PLUS, +>
+<ID, add_2>
+<SEMI, ;>
+<ID, a>
+<ASSIGNOP, =>
+<ID, a>
+<MINUS, ->
+<INT, 1>
+<SEMI, ;>
+<RC, }>
+<RETURN, return>
+<ID, sum>
+<SEMI, ;>
+<RC, }>
+<TYPE, int>
+<ID, main>
+<LP, (>
+<RP, )>
+<LC, {>
+<TYPE, int>
+<ID, i>
+<ASSIGNOP, =>
+<INT, 0>
+<COMMA, ,>
+<ID, n>
+<SEMI, ;>
+<WHILE, while>
+<LP, (>
+<ID, i>
+<RELOP, !=>
+<INT, 9>
+<RP, )>
+<LC, {>
+<ID, n>
+<ASSIGNOP, =>
+<ID, fibo>
+<LP, (>
+<ID, i>
+<RP, )>
+<SEMI, ;>
+<ID, i>
+<ASSIGNOP, =>
+<ID, i>
+<PLUS, +>
+<INT, 1>
+<SEMI, ;>
+<RC, }>
+<RETURN, return>
+<ID, i>
+<SEMI, ;>
+<RC, }>
+ 函数定义：
+   类型： int
+   函数名：fibo
+   函数形参：
+      类型：int, 参数名：a
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                add_1
+                add_2
+                sum
+      复合语句的语句部分：
+         条件语句(IF_THEN)：
+            条件：
+               OR
+                  ==
+                     ID： a
+                     INT：0
+                  ==
+                     ID： a
+                     INT：1
+            IF子句：
+               返回语句：
+                  INT：1
+         表达式语句：
+            ASSIGNOP
+               ID： add_2
+               INT：1
+         表达式语句：
+            ASSIGNOP
+               ID： sum
+               INT：1
+         表达式语句：
+            ASSIGNOP
+               ID： a
+               MINUS
+                  ID： a
+                  INT：1
+         循环语句：
+            循环条件：
+               ID： a
+            循环体：
+               复合语句：
+                  复合语句的变量定义：
+                  复合语句的语句部分：
+                     表达式语句：
+                        ASSIGNOP
+                           ID： add_1
+                           ID： add_2
+                     表达式语句：
+                        ASSIGNOP
+                           ID： add_2
+                           ID： sum
+                     表达式语句：
+                        ASSIGNOP
+                           ID： sum
+                           PLUS
+                              ID： add_1
+                              ID： add_2
+                     表达式语句：
+                        ASSIGNOP
+                           ID： a
+                           MINUS
+                              ID： a
+                              INT：1
+         返回语句：
+            ID： sum
+ 函数定义：
+   类型： int
+   函数名：main
+      无参函数
+   复合语句：
+      复合语句的变量定义：
+         LOCAL VAR_NAME：
+            类型： int
+            VAR_NAME：
+                i ASSIGNOP
+                  INT：0
+                n
+      复合语句的语句部分：
+         循环语句：
+            循环条件：
+               !=
+                  ID： i
+                  INT：9
+            循环体：
+               复合语句：
+                  复合语句的变量定义：
+                  复合语句的语句部分：
+                     表达式语句：
+                        ASSIGNOP
+                           ID： n
+                           函数调用：
+                              函数名：fibo
+                              第1个实际参数表达式：
+                                 ID： i
+
+                     表达式语句：
+                        ASSIGNOP
+                           ID： i
+                           PLUS
+                              ID： i
+                              INT：1
+         返回语句：
+            ID： i
+变量名  别 名  层 号   类  型  标记  偏移量
+  fibo     v1      0     int    F      0
+     a     v2      1     int    P     12
+ add_1     v3      1     int    V     16
+ add_2     v4      1     int    V     20
+   sum     v5      1     int    V     24
+        temp1      1     int    T     28
+        temp2      1     int    T     28
+        temp3      1     int    T     28
+        temp4      1     int    T     28
+        temp5      1     int    T     28
+        temp6      1     int    T     28
+        temp7      1     int    T     32
+        temp8      2     int    T     28
+        temp9      2     int    T     28
+       temp01      2     int    T     32
+变量名  别 名  层 号   类  型  标记  偏移量
+  fibo     v1      0     int    F      0
+     a     v2      1     int    P     12
+ add_1     v3      1     int    V     16
+ add_2     v4      1     int    V     20
+   sum     v5      1     int    V     24
+        temp1      1     int    T     28
+        temp2      1     int    T     28
+        temp3      1     int    T     28
+        temp4      1     int    T     28
+        temp5      1     int    T     28
+        temp6      1     int    T     28
+        temp7      1     int    T     32
+变量名  别 名  层 号   类  型  标记  偏移量
+  fibo     v1      0     int    F     36
+     a     v2      1     int    P     12
+  main     v6      0     int    F      0
+     i     v7      1     int    V     12
+       temp11      1     int    T     16
+     n     v8      1     int    V     20
+       temp21      1     int    T     24
+       temp31      2     int    T     24
+       temp41      2     int    T     24
+       temp51      2     int    T     28
+变量名  别 名  层 号   类  型  标记  偏移量
+  fibo     v1      0     int    F     36
+     a     v2      1     int    P     12
+  main     v6      0     int    F      0
+     i     v7      1     int    V     12
+       temp11      1     int    T     16
+     n     v8      1     int    V     20
+       temp21      1     int    T     24
+
+FUNCTION fibo :
+  PARAM v2
+  temp1 := #0
+  IF v2 == temp1 GOTO label3
+  GOTO label4
+LABEL label4 :
+  temp2 := #1
+  IF v2 == temp2 GOTO label3
+  GOTO label2
+LABEL label3 :
+  temp3 := #1
+  RETURN temp3
+LABEL label2 :
+  temp4 := #1
+  v4 := temp4
+  temp5 := #1
+  v5 := temp5
+  temp6 := #1
+  temp7 := v2 - temp6
+  v2 := temp7
+LABEL label01 :
+  IF v2 != #0 GOTO label9
+  GOTO label8
+LABEL label9 :
+  v3 := v4
+  v4 := v5
+  temp8 := v3 + v4
+  v5 := temp8
+  temp9 := #1
+  temp01 := v2 - temp9
+  v2 := temp01
+  GOTO label01
+LABEL label8 :
+  RETURN v5
+LABEL label1 :
+
+FUNCTION main :
+  temp11 := #0
+  v7 := temp11
+LABEL label71 :
+  temp21 := #9
+  IF v7 != temp21 GOTO label61
+  GOTO label51
+LABEL label61 :
+  ARG v7
+  temp31 := CALL fibo
+  v8 := temp31
+  temp41 := #1
+  temp51 := v7 + temp41
+  v7 := temp51
+  GOTO label71
+LABEL label51 :
+  RETURN v7
+LABEL label41 :
+----------------
+.text
+j main
+
+fibo :
+  add $s2,$zero,$a0
+  addi $t1,$zero,0
+  beq $s2,$t1,label3
+  j label4
+label4:
+  addi $t2,$zero,1
+  beq $s2,$t2,label3
+  j label2
+label3:
+  addi $t3,$zero,1
+  add $v0,$zero,$t3
+  jr $ra
+label2:
+  addi $t4,$zero,1
+  add $s4,$zero,$t4
+  addi $t5,$zero,1
+  add $s5,$zero,$t5
+  addi $t6,$zero,1
+  sub $t7,$s2,$t6
+  add $s2,$zero,$t7
+label01:
+  bne $s2,0,label9
+  j label8
+label9:
+  add $s3,$zero,$s4
+  add $s4,$zero,$s5
+  add $t8,$s3,$s4
+  add $s5,$zero,$t8
+  addi $t9,$zero,1
+  sub $t0,$s2,$t9
+  add $s2,$zero,$t0
+  j label01
+label8:
+  add $v0,$zero,$s5
+  jr $ra
+label1:
+
+main :
+  addi $t1,$zero,0
+  add $s7,$zero,$t1
+label71:
+  addi $t2,$zero,9
+  bne $s7,$t2,label61
+  j label51
+label61:
+  add $a0,$zero,$s7
+  jal fibo
+  add $t3,$zero,$v0
+  add $s0,$zero,$t3
+  addi $t4,$zero,1
+  add $t5,$s7,$t4
+  add $s7,$zero,$t5
+  j label71
+label51:
+  add $v0,$zero,$s7
+  jr $ra
+label41:
