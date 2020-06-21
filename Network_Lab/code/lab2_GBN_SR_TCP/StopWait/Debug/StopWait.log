@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Professional\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets(1879,5): warning : The referenced project '..\netsimlib\netsimlib.vcxproj' does not exist.
+  SRReceiver.cpp
+  StopWait.vcxproj -> C:\Users\leo\source\repos\rdt_win_student\StopWait\Debug\StopWait.exe

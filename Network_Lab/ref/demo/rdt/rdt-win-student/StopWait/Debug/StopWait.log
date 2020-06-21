@@ -1,0 +1,7 @@
+﻿  stdafx.cpp
+  StopWaitRdtSender.cpp
+  StopWaitRdtReceiver.cpp
+  StopWait.cpp
+  正在生成代码...
+stdafx.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  StopWait.vcxproj -> D:\DotNetProject\VS2017\Rdt\Debug\StopWait.exe

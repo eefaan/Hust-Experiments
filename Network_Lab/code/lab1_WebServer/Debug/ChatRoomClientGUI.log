@@ -1,0 +1,9 @@
+﻿  Server.cpp
+  正在生成代码...
+  正在编译...
+  SessionSocket.cpp
+  ChatRoomClientGUIDlg.cpp
+  ChatRoomClientGUI.cpp
+  正在生成代码...
+ChatRoomClientGUI.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  ChatRoomClientGUI.vcxproj -> C:\Users\leo\source\repos\test_fin1\Debug\ChatRoomClientGUI.exe
